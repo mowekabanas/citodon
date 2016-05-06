@@ -1,6 +1,6 @@
 {
-  "name": "base",
-  "version": "1.0.0",
+  "name": "citodon",
+  "version": "0.0.0",
   "description": "Mowe Foundation Base",
   "main": "GulpFile.js",
   "devDependencies": {
@@ -29,11 +29,7 @@
     "foundation",
     "base"
   ],
-  "author": {
-    "name": "Eduardo Barros",
-    "email": "dbajrs@noibe.com",
-    "url": "dbarjs.noibe.com"
-  },
+  "author": "Eduardo Barros <dbajrs@noibe.com> (dbarjs.noibe.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mowekabanas/base/issues"
