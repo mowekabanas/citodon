@@ -24,10 +24,8 @@
     "url": "https://github.com/mowekabanas/base.git"
   },
   "keywords": [
-    "letsmowe",
-    "mowe",
-    "foundation",
-    "base"
+    "citodon",
+    "mowe"
   ],
   "author": "Eduardo Barros <dbajrs@noibe.com> (dbarjs.noibe.com)",
   "license": "MIT",
