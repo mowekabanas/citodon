@@ -1,0 +1,72 @@
+Citodon
+
+	Aside
+
+		Informações de Contato e Convênios
+
+		O Aside-inner deverá funcionar como container do .Aside, então não é necessário definir no momento o max-width do elemento
+
+		Estrutura
+
+			.Aside
+				.Aside-background
+				.Aside-inner
+					.Aside-health-plans
+					.Aside-contact
+
+		Convênios
+
+			.HealthPlans.Aside-health-plans
+				.HealthPlans-inner
+					{Convênios}
+				.Popover.HealthPlans-popover
+					ul.HealthPlans-list
+						li.HealthPlansItem
+							figure.HealthPlansItemFigure
+								img.HealthPlansItemFigure-img
+									[src=dist/healt-plan-*-logo.png]
+								figcaption.HealthPlansItemFigure-caption
+									{titulo do convênio}
+						li.HealthPlansItem
+							figure.HealthPlansItemFigure
+								img.HealthPlansItemFigure-img
+									[src=dist/healt-plan-*-logo.png]
+								figcaption.HealthPlansItemFigure-caption
+									{titulo do convênio}
+
+		Contato
+
+			.Contact.Aside-contact
+			.Contact-inner
+				{telefone}
+			.Popover.Contact-popover
+				{informações sobre contato}
+				{email}
+				{link para contato}
+
+	Footer
+
+		O footer deverá ser composto por três grupos de conteúdo, sendo:
+
+		.Footer-content-group .Footer-content-group--left
+			.Footer-health-plans
+			.Footer-nav
+
+		.Footer-content-group .Footer-content-group--right
+			.Footer-text
+			.Footer-social
+
+		.Footer-content-group
+			.TheEnd.Footer-slogan
+
+		Nos casos de disposição larga (>48em), é necessário que os grupos left e right recebam o max-width de 50% para que fiquem dispostas a esquerda e direita. O conteúdo dos dois grupos também deverão ser justificados a sua devida orientação.
+
+	Componentes
+
+		Popover (em desenvolvimento)
+
+			Até o momento que ele for desenvolvido, é necessário, no momento que o mesmo fique como display:none
+
+		Modal (ocioso)
+
+			Nada até o momento
