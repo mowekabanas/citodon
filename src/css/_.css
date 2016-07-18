@@ -3,3 +3,16 @@
  * Copyright 2013-2016 Mowe Developers
  * Licensed under MIT (https://github.com/mowekabanas/citodon/blob/master/LICENSE)
 */
+
+.container {
+	padding: 0 1em;
+	width: 100%;
+}
+
+@media (min-width: 60em) {
+
+	.container {
+		max-width: 60em;
+	}
+
+}
