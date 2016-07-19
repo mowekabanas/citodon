@@ -15,16 +15,6 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 
-<style>
-
-	/* Popover */
-
-	.Popover {
-		display: none;
-	}
-
-</style>
-
 <body>
 
 <div class="Aside">
@@ -35,30 +25,40 @@
 
 		<div class="HealthPlans Aside-health-plans">
 
-			<div class="HealthPlans-inner">
+			<div class="HealthPlans-inner" onmouseover="Popover.call('healthPlans-popover').show();">
 				Convênios
 			</div>
 
-			<div class="Popover HealthPlans-popover">
+			<div id="healthPlans-popover" class="Popover top-left HealthPlans-popover">
 
 				<ul class="HealthPlans-list">
 
 					<li class="HealthPlansItem">
+
 						<figure class="HealthPlansItemFigure">
+
 							<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
+
 							<figcaption class="HealthPlansItemFigure-caption">
 								Muth
 							</figcaption>
+
 						</figure>
+
 					</li>
 
 					<li class="HealthPlansItem">
+
 						<figure class="HealthPlansItemFigure">
+
 							<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
+
 							<figcaption class="HealthPlansItemFigure-caption">
 								Uniodonto
 							</figcaption>
+
 						</figure>
+
 					</li>
 
 				</ul>
@@ -69,17 +69,23 @@
 
 		<div class="Contact Aside-contact">
 
-			<div class="Contact-inner">
+			<div class="Contact-inner" onmouseover="Popover.call('contact-popover').show();">
 				<p>(18) 3351-2377</p>
 			</div>
 
-			<div class="Popover Contact-popover">
-				<p>CITODON - CENTRO INTEGRADO <br/>DE TRATAMENTO ODONTOLOGICO</p>
-				<p>CNPJ: 11.732.987/0001-55</p>
-				<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
-					<strong>Palmital</strong>, 19970-000, Brasil</p>
-				<a href="mailto:contato@citodon.com">contato@citodon.com</a>
-				<a href="#contato">Fale conosco</a>
+			<div id="contact-popover" class="Popover Contact-popover top-right">
+
+				<div class="Contact-text">
+
+					<p>CITODON - CENTRO INTEGRADO DE TRATAMENTO ODONTOLOGICO</p>
+					<p>CNPJ: 11.732.987/0001-55</p>
+					<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
+						<strong>Palmital</strong>, 19970-000, Brasil</p>
+					<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
+					<a href="#contato" style="background-color: #cecece;">Fale conosco</a>
+
+				</div>
+
 			</div>
 
 		</div>
@@ -90,9 +96,33 @@
 
 <header class="Header">
 
+	<div class="Header-background"></div>
+
+	<div class="Header-inner">
+
+		<div class="Logo Logo--header Header-logo">
+
+			<div class="Logo-select-area">
+
+				<div id="logo" class="Logo-inner">
+					{logo append aqui}
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</header>
+
+<!--
+<!-- LEGACY - DOCUMENTATION ->
+<header class="Header">
+
 	<div class="Header-inner container">
 
-		<!-- MARCA -->
+		<!-- MARCA ->
 		<div class="Brand">
 
 			<h1>Clinica Citodon</h1>
@@ -111,7 +141,7 @@
 
 		<div class="Hero"></div>
 
-		<!-- ATENDIMENTO -->
+		<!-- ATENDIMENTO ->
 		<section id="atendimento" class="Attendance">
 
 			<span class="icon-horarios"></span>
@@ -124,6 +154,7 @@
 	</div>
 
 </header>
+-->
 
 <main class="Main">
 
@@ -485,6 +516,97 @@
 	</div>
 
 </footer>
+
+<script>
+
+	/* Popover */
+
+	var Popover = (function () {
+
+		/**
+		 * Popover constructor
+		 * @constructor
+		 */
+		function Popover(element) {
+
+			var self = this;
+
+			this.element = element;
+
+			this.isShown = true;
+
+			try {
+
+				this.element.addEventListener('mouseout', function () {
+
+					self.hide();
+
+				});
+
+			} catch (e) {}
+
+		}
+
+		Popover.prototype.show = function () {
+
+			this.isShown = true;
+
+			try {
+
+				this.element.classList.add('is-shown');
+
+			} catch (e) {}
+
+		};
+
+		Popover.prototype.hide = function () {
+
+			this.isShown = false;
+
+			try {
+
+				this.element.classList.remove('is-shown');
+
+			} catch (e) {}
+
+		};
+
+		Popover.prototype.toggle = function () {
+
+			if (this.isShown)
+				this.hide();
+			else
+				this.show();
+
+		};
+
+		Popover.call = function (id) {
+
+			var popover = document.getElementById(id);
+
+			try {
+
+				if (popover.classList.contains('Popover')) {
+
+					return new Popover(popover);
+
+				}
+
+			} catch (e) {
+
+				return false;
+
+			}
+
+			return false;
+
+		};
+
+		return Popover;
+
+	})();
+
+</script>
 
 </body>
 

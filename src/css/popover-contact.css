@@ -1,0 +1,28 @@
+
+/* Contact popover */
+
+.Popover.Contact-popover {
+	margin-left: -150px;
+}
+
+.Popover.Contact-popover .Contact-text {
+	-webkit-align-items: flex-end;
+	align-items: flex-end;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	padding: 1.5em;
+	text-align: right;
+}
+
+.Popover.Contact-popover .Contact-text p,
+.Popover.Contact-popover .Contact-text a {
+	font-size: .875em;
+	/*font-weight: 400;*/
+	margin-bottom: .5em;
+	text-align: right;
+}
