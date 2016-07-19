@@ -1,0 +1,82 @@
+
+/* Footer */
+
+.Footer {
+	position: relative;
+}
+
+/* Footer background */
+
+.Footer-background {
+	background-color: #2e2e2e;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Footer inner */
+
+.Footer-inner {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 100%;
+	max-width: 60em;
+	width: 100%;
+	position: relative;
+	padding: 2.75em 0;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+/* Footer content group */
+
+.Footer-content-group {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	width: 100%;
+}
+
+/* Footer text and social */
+
+.Footer-text p,
+.Footer-social {
+	text-align: right;
+	color: #fff;
+	margin-bottom: .5em;
+	font-size: .875em;
+	font-weight: 400;
+	line-height: 1.48;
+}
+
+/* Footer Logo - TEMPORARY USE! */
+
+.Footer-content-group .Footer-slogan-logo.FooterLogo {
+	width: 100px;
+	height: 100px;
+	background-color: #fff;
+}
+
+@media (min-width:48em) {
+
+	/* Footer content group */
+
+	.Footer-content-group--right,
+	.Footer-content-group--left {
+		max-width: 50%
+	}
+
+}

@@ -44,6 +44,17 @@ Citodon
 				{email}
 				{link para contato}
 
+	Header
+
+		.Header-background
+		.Header-inner
+			.Logo.Logo--header.Header-logo
+				.Logo-select-area
+					#logo.Logo-inner (append aqui)
+
+
+
+
 	Footer
 
 		O footer deverá ser composto por três grupos de conteúdo, sendo:
@@ -62,6 +73,10 @@ Citodon
 		Nos casos de disposição larga (>48em), é necessário que os grupos left e right recebam o max-width de 50% para que fiquem dispostas a esquerda e direita. O conteúdo dos dois grupos também deverão ser justificados a sua devida orientação.
 
 	Componentes
+
+		Logo
+
+			Faz um append do conteúdo svg do logo em algum elemento especifico
 
 		Popover (em desenvolvimento)
 

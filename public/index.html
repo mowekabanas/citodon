@@ -17,122 +17,7 @@
 
 <style>
 
-	/* Aside style */
-
-	.Aside {
-		height: 2em;
-		position: relative;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-align-items: center;
-		align-items: center;
-		-webkit-justify-content: space-around;
-		justify-content: space-around;
-	}
-
-	.Aside-background {
-		background-color: #6f1400;
-		height: 100%;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 100%;
-	}
-
-	.Aside-inner {
-		align-content: center;
-		-webkit-align-items: flex-end;
-		align-items: flex-end;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: row;
-		flex-flow: row;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		justify-items: center;
-		margin: 0 auto;
-		max-width: 60em;
-		padding: 0 1em;
-		position: relative;
-		width: 100%;
-	}
-
-	/* Footer style */
-	.Footer {
-		position: relative;
-		/*height: 15em;*/
-	}
-
-	.Footer-background {
-		background-color: #2e2e2e;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-
-	.Footer-inner {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-align-items: center;
-		align-items: center;
-		height: 100%;
-		max-width: 60em;
-		width: 100%;
-		position: relative;
-		padding: 2.75em 0;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		margin: 0 auto;
-		flex-wrap: wrap;
-	}
-
-	.Footer-content-group--right .Footer-text p,
-	.Footer-content-group--right .Footer-social {
-		text-align: right;
-		color: #fff;
-		margin-bottom: .5em;
-		font-size: .875em;
-		font-weight: 400;
-		line-height: 1.48;
-	}
-
-	@media (min-width:48em) {
-		/* Starting from mobile first == 100% */
-		.Footer-content-group--right,
-		.Footer-content-group--left {
-			width: 50%;
-			/*max-width: 50%*/
-		}
-	}
-
-	.FooterFinal.Footer-content-group {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-justify-content: center;
-		justify-content: center;
-		text-align: center;
-		flex-grow: 1;
-	}
-
-	.Footer-content-group .Footer-slogan-logo.FooterLogo {
-		width: 100px;
-		height: 100px;
-		background-color: #fff;
-	}
+	/* Popover */
 
 	.Popover {
 		display: none;
@@ -143,14 +28,21 @@
 <body>
 
 <div class="Aside">
-	<div class="Aside-background"></div>
-	<div class="Aside-inner">
+
+	<div class="Aside-background red"></div>
+
+	<div class="Aside-inner container">
+
 		<div class="HealthPlans Aside-health-plans">
+
 			<div class="HealthPlans-inner">
-				{Convênios}
+				Convênios
 			</div>
+
 			<div class="Popover HealthPlans-popover">
+
 				<ul class="HealthPlans-list">
+
 					<li class="HealthPlansItem">
 						<figure class="HealthPlansItemFigure">
 							<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
@@ -159,6 +51,7 @@
 							</figcaption>
 						</figure>
 					</li>
+
 					<li class="HealthPlansItem">
 						<figure class="HealthPlansItemFigure">
 							<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
@@ -167,14 +60,19 @@
 							</figcaption>
 						</figure>
 					</li>
+
 				</ul>
+
 			</div>
+
 		</div>
 
 		<div class="Contact Aside-contact">
+
 			<div class="Contact-inner">
 				<p>(18) 3351-2377</p>
 			</div>
+
 			<div class="Popover Contact-popover">
 				<p>CITODON - CENTRO INTEGRADO <br/>DE TRATAMENTO ODONTOLOGICO</p>
 				<p>CNPJ: 11.732.987/0001-55</p>
@@ -183,8 +81,11 @@
 				<a href="mailto:contato@citodon.com">contato@citodon.com</a>
 				<a href="#contato">Fale conosco</a>
 			</div>
+
 		</div>
+
 	</div>
+
 </div>
 
 <header class="Header">
@@ -498,77 +399,91 @@
 </main>
 
 <footer class="Footer">
+
 	<div class="Footer-background"></div>
 
-	<div class="Footer-inner">
-		<!--<div class="FooterAbout">-->
-			<div class="Footer-content-group--left">
-				<div class="Footer-health-plans">
-					<span style="width: 3em; background-color: #cecece;">Muth</span>
-					<span style="width: 3em; background-color: #cecece;">Uniodonto</span>
-				</div>
-				<div class="Footer-nav">
-					<ul class="Footer-nav-menu">
-						<li class="Footer-navItem">
-							<a href="#" class="MainNavItem-select-area">Sobre</a>
-						</li>
-						<li class="Footer-navItem">
-							<a href="#" class="MainNavItem-select-area">Tratamentos</a>
-						</li>
-						<li class="Footer-navItem">
-							<a href="#" class="MainNavItem-select-area">Convênios</a>
-						</li>
-						<li class="Footer-navItem">
-							<a href="#" class="MainNavItem-select-area">Profissionais</a>
-						</li>
-						<li class="Footer-navItem">
-							<a href="#" class="MainNavItem-select-area">Atendimento</a>
-						</li>
-					</ul>
-				</div>
+	<div class="Footer-inner container">
+
+		<div class="Footer-content-group Footer-content-group--left">
+
+			<div class="Footer-health-plans">
+				<span style="width: 3em; background-color: #cecece;">Muth</span>
+				<span style="width: 3em; background-color: #cecece;">Uniodonto</span>
 			</div>
 
-			<div class="Footer-content-group--right">
+			<div class="Footer-nav">
 
-				<div class="Footer-text">
-					<p>CITODON - CENTRO INTEGRADO <br/>DE TRATAMENTO ODONTOLOGICO<br/>
-						<em>Todos os direitos reservados</em></p>
-					<p>CNPJ: 11.732.987/0001-55</p>
-					<p>(18) 3351-2377</p>
-					<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
-						<strong>Palmital</strong>, 19970-000, Brasil</p>
-				</div>
+				<ul class="Footer-nav-menu">
 
-				<div class="Footer-social">
-					<span style="width: 3em; background-color: #cecece;">Facebook</span>
-					<span style="width: 3em; background-color: #cecece;">Instagram</span>
-					<span style="width: 3em; background-color: #cecece;">LinkedIn</span>
-				</div>
+					<li class="Footer-navItem">
+						<a href="#" class="MainNavItem-select-area">Sobre</a>
+					</li>
 
-			</div>
-		<!--</div>-->
+					<li class="Footer-navItem">
+						<a href="#" class="MainNavItem-select-area">Tratamentos</a>
+					</li>
 
-		<!--<div class="FooterFinal">-->
-			<div class="FooterFinal Footer-content-group">
+					<li class="Footer-navItem">
+						<a href="#" class="MainNavItem-select-area">Convênios</a>
+					</li>
 
-				<!--<div class="Final FooterSlogan">-->
-					<!--<a href="." class="FooterSlogan-select-area">-->
-						<!--<div id="footer-logo" class="FooterSlogan-logo FooterLogo">Logo bonito e formoso</div>-->
-						<!--<span class="FooterSlogan-text">Frase reflexiva</span>-->
-					<!--</a>-->
-				<!--</div>-->
+					<li class="Footer-navItem">
+						<a href="#" class="MainNavItem-select-area">Profissionais</a>
+					</li>
 
-				<div class="Footer-slogan">
-					<a href="." class="Footer-slogan-select-area">
-						<div id="footer-logo" class="Footer-slogan-logo FooterLogo">Logo bonito e formoso</div>
-						<span class="Footer-slogan-text">Frase reflexiva</span>
-					</a>
-				</div>
+					<li class="Footer-navItem">
+						<a href="#" class="MainNavItem-select-area">Atendimento</a>
+					</li>
+
+				</ul>
 
 			</div>
-		<!--</div>-->
+
+		</div>
+
+		<div class="Footer-content-group Footer-content-group--right">
+
+			<div class="Footer-text">
+
+				<p>CITODON - CENTRO INTEGRADO <br/>DE TRATAMENTO ODONTOLOGICO<br/><em>Todos os direitos reservados</em></p>
+				<p>CNPJ: 11.732.987/0001-55</p>
+				<p>(18) 3351-2377</p>
+				<p>Rua Dr. Geraldo Coelho, 162, Centro<br/> <strong>Palmital</strong>, 19970-000, Brasil</p>
+
+			</div>
+
+			<div class="Footer-social">
+
+				<span style="width: 3em; background-color: #cecece;">Facebook</span>
+				<span style="width: 3em; background-color: #cecece;">Instagram</span>
+				<span style="width: 3em; background-color: #cecece;">LinkedIn</span>
+
+			</div>
+
+		</div>
+
+		<div class="FooterFinal Footer-content-group">
+
+			<div class="FooterSlogan">
+
+				<span class="Logo Footer-logo">
+
+					<span id="footer-logo" class="Footer-slogan-logo FooterLogo">
+
+						<span>Logo bonito e formoso</span>
+
+					</span>
+
+				</span>
+
+				<span class="FooterSlogan-text">Frase reflexiva</span>
+
+			</div>
+
+		</div>
 
 	</div>
+
 </footer>
 
 </body>
