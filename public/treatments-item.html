@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="roboto">
+<meta charset="UTF-8">
+<title>Clinica Citodon - Palmital</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<meta name="theme-color" content="#b71c1c" />
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="dist/css/citodon.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	@keyframes scale-up {
+
+		0% {
+			-webkit-transform: scale(.48);
+			-moz-transform: scale(.48);
+			-ms-transform: scale(.48);
+			-o-transform: scale(.48);
+			transform: scale(.48);
+		}
+
+		50% {
+			-webkit-transform: scale(1.1);
+			-moz-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+
+		100% {
+			-webkit-transform: scale(.88);
+			-moz-transform: scale(.88);
+			-ms-transform: scale(.88);
+			-o-transform: scale(.88);
+			transform: scale(.88);
+		}
+
+	}
+
+	.TreatmentsItemHeader {
+		border-radius: 50%;
+		cursor: default;
+		position: relative;
+		height: 8em;
+		width: 8em;
+		margin-bottom: 2.25em;
+		overflow: hidden;
+	}
+
+	.TreatmentsItemHeader-bubble {
+		border-style: solid;
+		border-width: 2px;
+		visibility: hidden;
+		border-radius: 50%;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		-webkit-transition: transform .1s ease-out, visibility 0s .1s;
+		-moz-transition: transform .1s ease-out, visibility 0s .1s;
+		-ms-transition: transform .1s ease-out, visibility 0s .1s;
+		-o-transition: transform .1s ease-out, visibility 0s .1s;
+		transition: transform .1s ease-out, visibility 0s .1s;
+		-webkit-transform: scale(.1);
+		-moz-transform: scale(.1);
+		-ms-transform: scale(.1);
+		-o-transform: scale(.1);
+		transform: scale(.1);
+		z-index: 1;
+	}
+
+	.TreatmentsItem:hover .TreatmentsItemHeader-bubble {
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		transform: scale(1.1);
+		-webkit-transition: transform .375s ease-out;
+		-moz-transition: transform .375s ease-out;
+		-ms-transition: transform .375s ease-out;
+		-o-transition: transform .375s ease-out;
+		transition: transform .375s ease-out;
+		visibility: visible;
+	}
+
+	.TreatmentsItemHeader-background {
+		background-color: #e3f2fd;
+		border-radius: 50%;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		-webkit-transform: scale(.48);
+		-moz-transform: scale(.48);
+		-ms-transform: scale(.48);
+		-o-transform: scale(.48);
+		transform: scale(.48);
+		-webkit-transition: all .375s ease-in-out;
+		-moz-transition: all .375s ease-in-out;
+		-ms-transition: all .375s ease-in-out;
+		-o-transition: all .375s ease-in-out;
+		transition: all .375s ease-in-out;
+		width: 100%;
+	}
+
+	.TreatmentsItem:hover .TreatmentsItemHeader-background {
+		background-color: #2196f3;
+		-webkit-animation: scale-up .3s ease-out forwards;
+		-o-animation: scale-up .3s ease-out forwards;
+		animation: scale-up .3s ease-out forwards;
+	}
+
+	.TreatmentsItemHeader-inner {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		height: 100%;
+		-webkit-justify-content: center;
+		justify-content: center;
+		position: relative;
+		-webkit-transition: all .225s ease-out;
+		-moz-transition: all .225s ease-out;
+		-ms-transition: all .225s ease-out;
+		-o-transition: all .225s ease-out;
+		transition: all .225s ease-out;
+		width: 100%;
+	}
+
+	.TreatmentsItem:hover .TreatmentsItemHeader-inner {
+		color: #ffffff;
+	}
+
+	.TreatmentsItemHeader-icon span {
+		font-size: 4.5em;
+	}
+
+</style>
+
+<body class="font-grey-800">
+
+<main class="Main">
+
+	<!-- TRATAMENTOS -->
+	<!-- treatments -> treatmentsList -> treatmentItem -->
+	<section id="tratamentos" class="Treatments">
+
+		<div class="Treatments-background grey-50"></div>
+
+		<div class="Treatments-inner container">
+
+			<!-- Tratamento 6 (nome + descrição + img) -->
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-blue-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-blue">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-buco"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Cirurgia e Traumatologia <br/>Buco-Maxilo-Facial</h3>
+
+				<!--<p>O cirurgião bucomaxilofacial é um profissional da Odontologia que trata de doenças e tumores da boca, corrige anomalias faciais como maxilar ou mandíbula muito grande, pequena ou desviada para os lados (assimetrias). Além disso, é ele quem cuida dos enxertos para reposição de osso perdido ou atrofiado na boca (maxilar e mandíbula), podendo também realizar implantes dentários. Está apto a tratar de casos mais complexos de reconstruções, traumas e fraturas faciais. Dores faciais (na ATM) e problemas de apneia do sono também estão dentro da sua área de atuação.</p>-->
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis numquam praesentium rerum.</p>
+
+			</section>
+
+		</div>
+
+	</section>
+
+</main>
+
+</body>
+
+</html>

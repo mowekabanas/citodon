@@ -1,0 +1,24 @@
+
+/* Header */
+
+.Header {
+	position: relative;
+	padding: 3em 0;
+}
+
+/* Header background */
+
+.Header-background {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Header inner */
+
+.Header-inner {
+	position: relative;
+	width: 100%;
+}

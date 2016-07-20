@@ -1,0 +1,59 @@
+
+/* Logo */
+
+.Logo {
+	width: 8em;
+}
+
+.Logo--footer {
+	width: 6em;
+}
+
+/* Logo select area */
+
+.Logo-select-area {
+	height: 100%;
+	width: 100%;
+}
+
+/* Logo inner */
+
+.Logo-inner {
+	position: relative;
+}
+
+/* Logo svg */
+
+.Logo--footer svg * {
+	-webkit-transition: fill .3s;
+	-moz-transition: fill .3s;
+	-ms-transition: fill .3s;
+	-o-transition: fill .3s;
+	transition: fill .3s;
+}
+
+.Logo--footer svg * {
+	fill: #ffffff;
+}
+
+/* Logo Teeth */
+
+#CitodonLogoTeeth {
+	fill: #e3f2fd;
+}
+
+/* Logo Teeth Border */
+
+#CitodonLogoTeethBorder {
+	fill: #2196f3;
+}
+
+/* Logo Arrow */
+
+#CitodonLogoArrow {
+	fill: #f44336;
+}
+
+.Logo--footer .Logo-select-area:hover #CitodonLogoArrow path {
+	fill: #f44336;
+}

@@ -54,6 +54,16 @@
 	width: 100%;
 }
 
+@media (min-width: 48em) {
+
+	/* Treatments header */
+
+	.Treatments-header {
+		margin-bottom: 1.5em;
+	}
+
+}
+
 @media (min-width: 60em) {
 
 	/* Treatments inner */
@@ -65,12 +75,22 @@
 
 }
 
+@media (min-width: 72em) {
+
+	/* Treatments header */
+
+	.Treatments-header {
+		margin-bottom: 2.25em;
+	}
+
+}
+
 @media (min-width: 96em) {
 
 	/* Treatments header */
 
 	.Treatments-header {
-		margin-bottom: 1.5em;
+		margin-bottom: 3em;
 	}
 
 }

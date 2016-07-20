@@ -4,7 +4,7 @@
 <title>Clinica Citodon - Palmital</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-<meta name="theme-color" content="#000000" />
+<meta name="theme-color" content="#b71c1c" />
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
 <link rel="stylesheet" href="dist/css/citodon.css"/>
@@ -99,14 +99,16 @@
 
 	<div class="Header-background"></div>
 
-	<div class="Header-inner">
+	<div class="Header-inner container">
 
 		<div class="Logo Logo--header Header-logo">
 
 			<div class="Logo-select-area">
 
 				<div id="logo" class="Logo-inner">
-					{logo append aqui}
+
+
+
 				</div>
 
 			</div>
@@ -542,15 +544,19 @@
 
 			<div class="FooterSlogan">
 
-				<span class="Logo Footer-logo">
+				<div class="Logo Footer-logo">
 
-					<span id="footer-logo" class="Footer-slogan-logo FooterLogo">
+					<div class="Logo Logo--footer Footer-logo">
 
-						<span>Logo bonito e formoso</span>
+						<a href="#" class="Logo-select-area">
 
-					</span>
+							<span id="footer-logo" class="Logo-inner"></span>
 
-				</span>
+						</a>
+
+					</div>
+
+				</div>
 
 				<span class="FooterSlogan-text">Frase reflexiva</span>
 
@@ -650,6 +656,18 @@
 		return Popover;
 
 	})();
+
+</script>
+
+<script src="dist/js/citodon.js"></script>
+
+<script>
+
+	var logo = new Logo(document.getElementById('logo'), 'dist/svg/CitodonLogo.svg', function () {
+
+		logo.cloneTo(document.getElementById('footer-logo'));
+
+	});
 
 </script>
 

@@ -60,9 +60,15 @@ var Logo = (function () {
 				if (this.readyState === 4)
 					if (this.status == 200)
 						if (this.responseText) {
-							self.viewport.innerHTML = this.responseText;
-							if (self.fallback)
-								self.fallback();
+
+							try {
+
+								self.viewport.innerHTML = this.responseText;
+								if (self.fallback)
+									self.fallback();
+
+							} catch (e) { }
+
 						}
 
 			};
