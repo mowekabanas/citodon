@@ -22,17 +22,6 @@
 	width: 100%;
 }
 
-/*.TreatmentsItem:after {*/
-	/*content: '';*/
-	/*width: 2.25em;*/
-	/*margin: 1.5em auto 0;*/
-	/*border-bottom: dashed 1px #616161;*/
-/*}*/
-
-/*.TreatmentsItem:last-of-type:after {*/
-	/*display: none;*/
-/*}*/
-
 /* Treatments p */
 
 .TreatmentsItem p {
@@ -53,46 +42,6 @@
 	font-size: 1.5em;
 	margin-bottom: .5em;
 	width: 100%;
-}
-
-/* Treatments Item header */
-
-.TreatmentsItem-header {
-	-webkit-align-items: center;
-	align-items: center;
-	border-radius: 50%;
-	background-color: #2196f3;
-	color: #ffffff;
-	cursor: default;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
-	height: 8em;
-	margin-bottom: 1em;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	width: 8em;
-}
-
-/* Treatments Item icon */
-
-.TreatmentsItem-icon {
-	font-size: 3.75em;
-}
-
-.TreatmentsItem-icon.icon-odontopediatria {
-	font-size: 6em;
-}
-
-.TreatmentsItem-icon.icon-endodontia,
-.TreatmentsItem-icon.icon-protese {
-	font-size: 4.5em;
 }
 
 @media (min-width: 48em) {
