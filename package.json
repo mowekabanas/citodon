@@ -36,5 +36,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mowekabanas/base/issues"
+  },
+  "dependencies": {
+    "cleave.js": "^0.4.9"
   }
 }
