@@ -122,7 +122,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('js-watch', ['js'], function () {
-	watch(source.css.location + source.css.content, batch(function (events, done) {
+	watch(source.js.location + source.js.content, batch(function (events, done) {
 		gulp.start('js', done);
 		browserSync.reload();
 	}));
