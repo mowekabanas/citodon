@@ -22,8 +22,8 @@
 	padding: 1.5em;
 }
 
-.HealthPlans-list .HealthPlansItem .HealthPlansItemFigure .HealthPlansItemFigure-img img {
-	display: block;
+.HealthPlans-list .HealthPlansItem .HealthPlansItemFigure .HealthPlansItemFigure-img {
+	display: inline-block;
 	height: 3em;
 }
 

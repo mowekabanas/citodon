@@ -8,7 +8,7 @@
 /* Footer background */
 
 .Footer-background {
-	background-color: #2e2e2e;
+	background-color: #424242;
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -19,22 +19,22 @@
 /* Footer inner */
 
 .Footer-inner {
+	-webkit-align-items: center;
+	align-items: center;
+	color: #f0f0f0;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: center;
-	align-items: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
 	height: 100%;
-	max-width: 60em;
-	width: 100%;
+	padding: 2.25em 1em;
 	position: relative;
-	padding: 2.75em 0;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
-	margin: 0 auto;
-	flex-wrap: wrap;
+	width: 100%;
 }
 
 /* Footer content group */
@@ -50,25 +50,84 @@
 	width: 100%;
 }
 
+.Footer-content-group > div {
+	margin-bottom: 1.25em;
+}
+
+/* Footer content group blocks */
+
+.Footer-content-group.Footer-content-group--center {
+	text-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.Footer-content-group.Footer-content-group--left {
+	text-align: left;
+}
+
+.Footer-content-group.Footer-content-group--center .FooterSlogan {
+	margin-bottom: 0;
+}
+
+/* Footer health plans */
+
+.Footer-health-plans .HealthPlansItemFigure {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+/* Footer health plans figures */
+
+.Footer-health-plans .HealthPlansItemFigure {
+	width: 50%;
+	margin: 0 1em;
+}
+
+/* Footer nav list */
+
+.Footer-nav ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+	text-indent: -1.2em;
+}
+
+.Footer-nav ul li {
+	line-height: 1.8;
+}
+
+.Footer-nav ul li:before {
+	content: "»";
+	display: block;
+	float: left;
+	width: 1em;
+}
+
+.Footer-nav ul li a {
+	font-weight: 300;
+}
+
 /* Footer text and social */
 
 .Footer-text p,
 .Footer-social {
-	text-align: right;
-	color: #fff;
 	margin-bottom: .5em;
-	font-size: .875em;
+	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.48;
 }
 
-/* Footer Logo - TEMPORARY USE! */
 
-.Footer-content-group .Footer-slogan-logo.FooterLogo {
-	width: 100px;
-	height: 100px;
-	background-color: #fff;
-}
 
 @media (min-width:48em) {
 
