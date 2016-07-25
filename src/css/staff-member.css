@@ -1,7 +1,7 @@
 
-/* Treatments Item */
+/* Staff Member */
 
-.TreatmentsItem {
+.StaffMember {
 	-webkit-align-items: center;
 	align-items: center;
 	-webkit-align-content: center;
@@ -22,9 +22,9 @@
 	width: 100%;
 }
 
-/* Treatments Item p */
+/* StaffMember p */
 
-.TreatmentsItem p {
+.StaffMember p {
 	color: #9e9e9e;
 	font-size: 1.125em;
 	font-weight: 400;
@@ -35,7 +35,7 @@
 
 /* Treatments Item h3 */
 
-.TreatmentsItem h3 {
+.StaffMember h3 {
 	color: #2196f3;
 	font-weight: 400;
 	line-height: 1.3;
@@ -46,9 +46,9 @@
 
 @media (min-width: 48em) {
 
-	/* Treatments Item */
+	/* Staff Member */
 
-	.TreatmentsItem {
+	.StaffMember {
 		max-width: 50%;
 	}
 
@@ -56,20 +56,20 @@
 
 @media (min-width: 60em) {
 
-	/* Treatments Item */
+	/* Staff Member */
 
-	.TreatmentsItem {
-		max-width: 33.3333333333%;
+	.StaffMember {
+		max-width: 50%;
 	}
 
 }
 
 @media (min-width: 72em) {
 
-	/* Treatments Item */
+	/* Staff Member */
 
-	.TreatmentsItem {
-		margin-bottom: 1.5em;
+	.StaffMember {
+		max-width: 50%;
 	}
 
 }

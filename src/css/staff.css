@@ -1,0 +1,71 @@
+
+/* Staff */
+
+.Staff {
+	padding: 1em 0;
+	position: relative;
+	text-align: center;
+}
+
+/* Staff background */
+
+.Staff-background {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Staff header */
+
+.Staff-header {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+/* Staff inner */
+
+.Staff-inner {
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	position: relative;
+	width: 100%;
+}
+
+@media (min-width: 48em) {
+
+}
+
+@media (min-width: 60em) {
+
+}
+
+@media (min-width: 72em) {
+
+}
+
+@media (min-width: 96em) {
+
+}

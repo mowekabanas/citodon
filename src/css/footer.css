@@ -8,7 +8,7 @@
 /* Footer background */
 
 .Footer-background {
-	background-color: #424242;
+	background-color: #585858;
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -27,8 +27,8 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
+	-webkit-flex-flow: column;
+	flex-flow: column;
 	-webkit-justify-content: center;
 	justify-content: center;
 	height: 100%;
@@ -63,6 +63,8 @@
 }
 
 .Footer-content-group.Footer-content-group--left {
+	-webkit-justify-content: center;
+	justify-content: center;
 	text-align: left;
 }
 
@@ -72,25 +74,40 @@
 
 /* Footer health plans */
 
-.Footer-health-plans .HealthPlansItemFigure {
+.HealthPlans-list--footer .HealthPlansItemFigure {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: column;
-	flex-direction: column;
+	-webkit-flex-flow: column;
+	flex-flow: column;
 	-webkit-align-items: center;
 	align-items: center;
 	-webkit-justify-content: center;
 	justify-content: center;
+	padding: 1em;
+	max-width: 15em;
 }
 
-/* Footer health plans figures */
+.HealthPlans-list--footer .HealthPlansItemFigure-img {
+	-webkit-filter: drop-shadow(0px 0px 1px rgba(255,255,255,0.3));
+	filter: drop-shadow(0px 0px 1px rgba(255,255,255,0.3));
+}
 
-.Footer-health-plans .HealthPlansItemFigure {
-	width: 50%;
-	margin: 0 1em;
+/* Footer health plans */
+
+.Footer-health-plans {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
 }
 
 /* Footer nav list */
@@ -117,25 +134,77 @@
 	font-weight: 300;
 }
 
-/* Footer text and social */
+/* Footer text */
 
-.Footer-text p,
-.Footer-social {
+.Footer-text p {
 	margin-bottom: .5em;
 	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.48;
 }
 
-
-
-@media (min-width:48em) {
-
+@media (min-width: 48em) {
+	
 	/* Footer content group */
 
 	.Footer-content-group--right,
 	.Footer-content-group--left {
-		max-width: 50%
+		max-width: 50%;
+	}
+	
+	.Footer-inner {
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+		padding: 2em 1.5em;
+	}
+
+	.Footer-content-group.Footer-content-group--left {
+		-webkit-flex-flow: column-reverse;
+		flex-flow: column-reverse;
+		align-content: center;
+	}
+	
+	.Footer-content-group.Footer-content-group--center {
+		flex-grow: 1;
+	}
+
+	.Footer-content-group.Footer-content-group--right {
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
+		text-align: right;
+	}
+
+	/*
+	.HealthPlans-list--footer.HealthPlans-list {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row;
+		flex-flow: row;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+
+	.HealthPlans-list--footer .HealthPlansItemFigure-img {
+		max-width: 8em;
+	}
+	*/
+
+    .Footer-health-plans {
+	    display: none;
+    }
+
+	.Footer-nav ul li {
+		font-size: 1em;
+	}
+
+	.Footer-nav ul li a {
+		font-weight: 400;
+		max-width: 30rem;
 	}
 
 }
