@@ -16,19 +16,177 @@
 
 <style>
 
+	html {
+		padding: 1em;
+	}
 
+	.a {
+		height: 100vh;
+		padding: 0 1em;
+		position: relative;
+	}
+
+	.b {
+		height: 3em;
+		width: 6em;
+	}
+
+	.popover {
+		display: none;
+	}
+
+	.popover-backdrop {
+		background-color: rgba(0,0,0,.1);
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		opacity: .6;
+	}
+
+	.popover.is-active {
+		display: block;
+	}
+
+	.popover-body {
+		position: absolute;
+		height: 10em;
+		margin-top: 3em;
+		width: 20em;
+		z-index: 2;
+	}
 
 </style>
 
-<div class="a">
+<div id="popover" class="popover">
 
-	<div class="b"></div>
+	<!--<div id="popover-backdrop" class="popover-backdrop"></div>-->
+	<div id="popover-body" class="popover-body blue-grey"></div>
+
+</div>
+
+<div class="a grey-300 flex align-center justify-center">
+
+	<div class="b blue"></div>
+
+</div>
+
+<div class="a grey-200 flex align-center justify-center">
+
+	<div id="b" class="b blue"></div>
 
 </div>
 
 <body>
 
-<script></script>
+<script>
+
+	// get the location
+	function getOffset( el ) {
+		var _x = 0;
+		var _y = 0;
+		while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+			_x += el.offsetLeft - el.scrollLeft;
+			_y += el.offsetTop - el.scrollTop;
+			el = el.offsetParent;
+		}
+		return { top: _y, left: _x };
+	}
+
+	// tempo
+	var delay = false;
+
+	// hide the popover
+	document.getElementById('popover').hide = function () {
+
+		if (document.getElementById('popover').isActive) {
+
+			document.getElementById('popover').classList.remove('is-active');
+			document.getElementById('popover').isActive = false;
+
+		}
+
+	};
+
+	// show the popover
+	document.getElementById('popover').show = function (reference) {
+
+		document.getElementById('popover').elementReference = reference || this.elementReference || false;
+		var elementReference = document.getElementById('popover').elementReference;
+
+		if (delay)
+			clearTimeout(delay);
+
+		if (!document.getElementById('b').isActive) {
+
+			document.getElementById('popover').classList.add('is-active');
+
+			var offset = getOffset(elementReference);
+
+			document.getElementById('popover-body').style.top = offset.top + 'px';
+			document.getElementById('popover-body').style.left = offset.left + 'px';
+
+			setTimeout(function () {
+
+				document.getElementById('popover').isActive = true;
+
+			}, 10);
+
+		}
+
+	};
+
+	// mouse over the button (trigger)
+	document.getElementById('b').addEventListener('mouseover', function () {
+
+		document.getElementById('popover').show(this);
+
+	});
+
+	// mouse over the popover
+	document.getElementById('popover-body').addEventListener('mouseover', function () {
+
+		document.getElementById('popover').show(false);
+
+	});
+
+	// mouse out the popover
+	document.getElementById('popover-body').addEventListener('mouseout', function () {
+
+		if (delay)
+			clearTimeout(delay);
+
+		delay = setTimeout(function () {
+
+			document.getElementById('popover').hide();
+
+		}, 500);
+
+	});
+
+	// mouse out the button (trigger)
+	document.getElementById('b').addEventListener('mouseout', function () {
+
+		if (delay)
+			clearTimeout(delay);
+
+		delay = setTimeout(function () {
+
+			document.getElementById('popover').hide();
+
+		}, 500);
+
+	});
+
+	window.addEventListener('blur', function () {
+
+		document.getElementById('popover').hide();
+
+	});
+
+</script>
 
 </body>
 

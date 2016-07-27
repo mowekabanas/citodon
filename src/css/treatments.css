@@ -2,7 +2,7 @@
 /* Treatments */
 
 .Treatments {
-	padding: 1em 0;
+	padding: 3em 0;
 	position: relative;
 	text-align: center;
 }
@@ -32,7 +32,7 @@
 	-webkit-justify-content: center;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 
 /* Treatments inner */
@@ -56,10 +56,16 @@
 
 @media (min-width: 48em) {
 
+	/* Treatments */
+
+	.Treatments {
+		padding: 4em 0;
+	}
+
 	/* Treatments header */
 
 	.Treatments-header {
-		margin-bottom: 1.5em;
+		margin-bottom: 2.25em;
 	}
 
 }
