@@ -2,16 +2,18 @@
 /* Header */
 
 .Header {
+	/*height: 100%; get to fit into one view*/
 	position: relative;
-	padding: 3em 0;
+	width: 100%;
 }
 
 /* Header background */
 
 .Header-background {
+	/*background-color: #d81b60;*/
 	height: 100%;
-	left: 0;
 	position: absolute;
+	right: 0;
 	top: 0;
 	width: 100%;
 }
@@ -19,6 +21,69 @@
 /* Header inner */
 
 .Header-inner {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	justify-content: center;
 	position: relative;
 	width: 100%;
+	padding: 2em 0 1em 0;
 }
+
+.Header-brand {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 1.75em;
+}
+
+.Header-brand .BrandTitle .BrandTitle-subtitle {
+	display: none;
+}
+
+.Header-brand .BrandTitle-title,
+.Header-brand .BrandTitle-subtitle {
+	color: #ffffff;
+}
+
+.Header-brand .BrandTitle-title {
+	/*font-size: 2.625em;*/
+	font-size: 1.925em;
+	font-weight: 900;
+	margin-bottom: 0;
+}
+
+.Header-brand .BrandTitle-subtitle {
+	/*font-size: 1.3125em;*/
+	font-size: 1em;
+	font-weight: 500;
+	margin: .75em 0;
+	text-transform: uppercase;
+}
+
+/*.Paragraph h2 {*/
+	/*font-size: 2.625em;*/
+/*}*/
+/**/
+/*.Paragraph p {*/
+	/*font-size: 1.3125em;*/
+	/*font-weight: 300;*/
+	/*margin-bottom: 1.5em;*/
+/*}*/

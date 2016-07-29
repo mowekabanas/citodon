@@ -2,7 +2,7 @@
 /* Logo */
 
 .Logo {
-	width: 8em;
+	width: 5em;
 }
 
 .Logo--footer {
@@ -39,19 +39,19 @@
 /* Logo Teeth */
 
 #CitodonLogoTeeth {
-	fill: #e3f2fd;
+	fill: transparent; /*colored: #e3f2fd*/
 }
 
 /* Logo Teeth Border */
 
 #CitodonLogoTeethBorder {
-	fill: #2196f3;
+	fill: #ffffff; /*colored: #2196f3*/
 }
 
 /* Logo Arrow */
 
 #CitodonLogoArrow {
-	fill: #f44336;
+	fill: #ffffff; /*colored: #f44336*/
 }
 
 .Logo--footer .Logo-select-area:hover #CitodonLogoArrow path {

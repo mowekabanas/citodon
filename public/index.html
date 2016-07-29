@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="roboto">
 <meta charset="UTF-8">
-<title>Clinica Citodon - Palmital</title>
+<title>Clínica Citodon - Palmital</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <meta name="theme-color" content="#b71c1c" />
@@ -18,13 +18,13 @@
 
 <body class="font-grey-800">
 
-<div class="Aside">
+<div class="AsideBar">
 
-	<div class="Aside-background red"></div>
+	<div class="AsideBar-background red"></div>
 
-	<div class="Aside-inner container">
+	<div class="AsideBar-inner container">
 
-		<div class="HealthPlans Aside-health-plans">
+		<div class="HealthPlans AsideBar-health-plans">
 
 			<div class="HealthPlans-inner" onmouseover="Popover.call('healthPlans-popover').show();">
 				Convênios
@@ -68,7 +68,7 @@
 
 		</div>
 
-		<div class="Contact Aside-contact">
+		<div class="Contact AsideBar-contact">
 
 			<div class="Contact-inner" onmouseover="Popover.call('contact-popover').show();">
 				<p>(18) 3351-2377</p>
@@ -114,46 +114,6 @@
 	</div>
 
 </header>
-
-<!--
-<!-- LEGACY - DOCUMENTATION ->
-<header class="Header">
-
-	<div class="Header-inner container">
-
-		<!-- MARCA ->
-		<div class="Brand">
-
-			<h1>Clinica Citodon</h1>
-
-			<div class="Logo Logo--header">
-
-				<a href="#" class="Logo-select-area">
-
-					<div id="header-logo" class="Logo-inner"></div>
-
-				</a>
-
-			</div>
-
-		</div>
-
-		<div class="Hero"></div>
-
-		<!-- ATENDIMENTO ->
-		<section id="atendimento" class="Attendance">
-
-			<span class="icon-horarios"></span>
-			<h2>Atendimento </h2>
-
-			<p></p>
-
-		</section>
-
-	</div>
-
-</header>
--->
 
 <main class="Main">
 
@@ -334,7 +294,7 @@
 
 				</header>
 
-				<h3>Dentistica</h3>
+				<h3>Dentística</h3>
 
 				<!--<p>Basicamente consiste em toda a parte estética, estrutural e funcional dentária que pode ser afetada por diversos fatores que vão desde cáries a traumas. Além da beleza estética, a dentística também foca na estrutura e funcionalidade dos dentes, devolvendo ao paciente a confiança para mastigação e para um sorriso.</p>-->
 
@@ -761,6 +721,7 @@
 	var logo = new Logo(document.getElementById('logo'), 'dist/svg/CitodonLogo.svg', function () {
 
 		logo.cloneTo(document.getElementById('footer-logo'));
+//		logo.cloneTo(document.getElementById(''));
 
 	});
 
