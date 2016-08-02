@@ -4,7 +4,6 @@
 .HealthPlans {
 	padding: 3em 0;
 	position: relative;
-	text-align: center;
 }
 
 /* Health Plans background */
@@ -15,6 +14,25 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
+}
+
+/* Health Plans inner */
+
+.HealthPlans-inner {
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	text-align: center;
 }
 
 /* HealthPlans header */
@@ -33,25 +51,6 @@
 	justify-content: center;
 	width: 100%;
 	margin-bottom: 1.5em;
-}
-
-/* Health Plans inner */
-
-.HealthPlans-inner {
-	-webkit-align-items: flex-start;
-	align-items: flex-start;
-	align-content: flex-start;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: center;
-	justify-content: center;
-	position: relative;
-	width: 100%;
 }
 
 /* Healthe Plans list */
