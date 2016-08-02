@@ -1,0 +1,24 @@
+
+/* Health Plans Item Figure */
+
+.HealthPlansItemFigure {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	padding: 1em;
+	max-width: 15em;
+}
+
+/* Health Planst Item figure img */
+
+.HealthPlansItemFigure-img {
+	padding-bottom: .5em;
+}
