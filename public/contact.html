@@ -51,7 +51,7 @@ section#contato.Contact
 
 		</div>
 
-		<form action="" class="ContactForm">
+		<div id="contact-form" class="ContactForm">
 
 			<div class="ContactFormField">
 
@@ -82,10 +82,10 @@ section#contato.Contact
 			</div>
 
 			<div class="ContactFormButton">
-				<input type="submit" value="Enviar" class="ContactFormField-button ContactFormField--send"/>
+				<button id="send" class="ContactFormField-button ContactFormField--send">Enviar</button>
 			</div>
 
-		</form>
+		</div>
 
 	</div>
 
@@ -97,9 +97,12 @@ section#contato.Contact
 <script>
 
 	var requiredFields = document.querySelectorAll('.ContactFormField');
-
 	for (var i = requiredFields.length; i--; )
 		requiredFields[i].requiredField = new RequiredField(requiredFields[i], '.ContactFormField-input');
+
+//	document.getElementById('send').addEventListener('click', function (ev) {
+//		var newMail = new EmailDeliver('contact-form');
+//	});
 
 </script>
 
