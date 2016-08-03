@@ -18,6 +18,17 @@
 
 <body class="font-grey-800">
 
+<!--
+AsideBar
+Header
+Treatments
+Staff
+About
+Healthplans
+Contact
+Footer
+-->
+
 <div class="AsideBar">
 
 	<div class="AsideBar-background red"></div>
@@ -512,6 +523,60 @@
 
 	</section>
 
+	<section id="contato" class="Contact">
+
+		<div class="Contact-background"></div>
+
+		<div class="Contact-inner container">
+
+			<div class="Contact-header">
+
+				<h2 class="font-blue">Contato</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam distinctio obcaecati quaerat rem voluptate.</p>
+
+			</div>
+
+			<div id="contact-form" class="ContactForm">
+
+				<div class="ContactFormField">
+
+					<label for="name">NOME</label>
+					<input id="name" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="email">EMAIL</label>
+					<input id="email" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="subject">ASSUNTO</label>
+					<input id="subject" type="text" autocomplete="off" class="ContactFormField-input" placeholder="ASSUNTO"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="message">MENSAGEM</label>
+					<textarea id="message" class="ContactFormField-input ContactFormField--message" placeholder="MENSAGEM"></textarea>
+
+				</div>
+
+				<div class="ContactFormButton">
+					<button id="send" class="ContactFormField-button ContactFormField--send">Enviar</button>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
 	<!--
 	<!-- CONVENIOS ->
 	<section id="convenios" class="HealthPlans">
@@ -739,9 +804,13 @@
 	var logo = new Logo(document.getElementById('logo'), 'dist/svg/CitodonLogo.svg', function () {
 
 		logo.cloneTo(document.getElementById('footer-logo'));
-//		logo.cloneTo(document.getElementById(''));
 
 	});
+
+	var requiredFields = document.querySelectorAll('.ContactFormField');
+
+	for (var i = requiredFields.length; i--; )
+		requiredFields[i].requiredField = new RequiredField(requiredFields[i], '.ContactFormField-input');
 
 </script>
 
