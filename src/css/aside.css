@@ -4,76 +4,55 @@
 .Aside {
 	position: relative;
 	width: 100%;
+	min-height: 50em;
 }
 
 /* Aside background */
 
 .Aside-background {
 	height: 100%;
+	overflow: hidden;
 	position: absolute;
-	right: 0;
-	top: 0;
 	width: 100%;
+}
+
+.Aside-background-rect {
+	padding: 30em;
+	position: relative;
+	overflow: hidden;
+	background-color: #d81b60;
+	height: 30em;
+}
+
+.Aside-background-rect:after {
+	bottom: -50%;
+	content: '';
+	background-color: #f5f5f5;
+	height: 100%;
+	margin-left: -4000px;
+	left: 50%;
+	position: absolute;
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-ms-transform: rotate(-6deg);
+	-o-transform: rotate(-6deg);
+	transform: rotate(-6deg);
+	width: 8000px;
 }
 
 /* Aside inner */
 
 .Aside-inner {
+	padding-top: 6em;
 	position: relative;
 	z-index: 2;
 	width: 100%;
 	/*height: 50em;*/
 }
 
-/* TEMPORARY PLACED */
-
-/* Aside transversal */
-
-.Aside-transversal {
-	position: absolute;
-	top:0;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-}
-
-.Aside-transversal .Transversal-fill {
-	width: 100%;
-	height: 11em;
-	background-color: #d81b60;
-}
-
-.Aside-transversal .Transversal-separator svg {
-	/*background-image: url("../svg/bg-triangle-pink.svg");*/
-	/*background-size: 100vw 35px;*/
-	width: 100%;
-	height: 25px;
-}
-
-.Aside-transversal #Separator-Bottom {
-	fill: #d81b60;
-}
-
-/* Hero */
-
 .Hero img {
 	border-radius: 5px;
 	-moz-box-shadow: 2px 2px 8px #2c2c2c;
 	-webkit-box-shadow: 2px 2px 8px #2c2c2c;
 	box-shadow: 2px 2px 8px #2c2c2c;
-}
-
-@media (min-width: 48em) {
-
-	/* Transversal fill */
-
-	.Aside-transversal .Transversal-fill {
-		height: 15em;
-	}
-
-	/* Hero */
-
-	.Hero {
-		max-width: 75%;
-	}
 }
