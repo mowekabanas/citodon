@@ -2,7 +2,7 @@
 /* Logo */
 
 .Logo {
-	width: 5em;
+	width: 8em;
 }
 
 .Logo--footer {
@@ -56,4 +56,12 @@
 
 .Logo--footer .Logo-select-area:hover #CitodonLogoArrow path {
 	fill: #f44336;
+}
+
+@media (min-width: 48em) {
+
+	.Logo {
+		width: 6em;
+	}
+
 }

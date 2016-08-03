@@ -1,0 +1,1931 @@
+/*!
+ * Mowe Citodon Project v0.0.1 (http://letsmowe.org/)
+ * Copyright 2013-2016 Mowe Developers
+ * Licensed under MIT (https://github.com/mowekabanas/citodon/blob/master/LICENSE)
+*/
+
+h2 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-left: -2pt;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.container {
+  padding: 0 1em;
+  width: 100%;
+}
+
+@media (min-width: 21em) {
+  p {
+    font-size: 1.3125em;
+  }
+}
+
+@media (min-width: 48em) {
+  h2 {
+    font-size: 4.5em;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  p {
+    line-height: 1.36;
+    max-width: 30rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .container {
+    max-width: 60em;
+  }
+}
+
+@media (min-width: 72em) {
+  .container {
+    max-width: 72em;
+  }
+}
+/* Aside Bar */
+
+.AsideBar {
+  height: 2em;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/* Aside Bar background */
+
+.AsideBar-background {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* Aside Bar inner */
+
+.AsideBar-inner {
+  align-content: center;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  justify-items: center;
+  position: relative;
+  width: 100%;
+}
+/* Aside */
+
+.Aside {
+  position: relative;
+  width: 100%;
+  min-height: 50em;
+}
+
+/* Aside background */
+
+.Aside-background {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.Aside-background-rect {
+  padding: 30em;
+  position: relative;
+  overflow: hidden;
+  background-color: #d81b60;
+  height: 30em;
+}
+
+.Aside-background-rect:after {
+  bottom: -50%;
+  content: '';
+  background-color: #f5f5f5;
+  height: 100%;
+  margin-left: -4000px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  width: 8000px;
+}
+
+/* Aside inner */
+
+.Aside-inner {
+  padding-top: 6em;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  /*height: 50em;*/
+}
+
+.Hero img {
+  border-radius: 5px;
+  -moz-box-shadow: 2px 2px 8px #2c2c2c;
+  -webkit-box-shadow: 2px 2px 8px #2c2c2c;
+  box-shadow: 2px 2px 8px #2c2c2c;
+}
+/* Brand Title */
+
+.BrandTitle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.BrandTitle .BrandTitle-subtitle {
+  display: none;
+}
+
+.BrandTitle-title {
+  font-size: 2.25em;
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-left: -1pt;
+  line-height: 1.06;
+  text-align: left;
+}
+
+.BrandTitle-subtitle {
+  font-size: 1.125em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+.BrandTitle .BrandTitle-subtitle {
+  white-space: nowrap;
+  display: none;
+}
+
+.Brand > .BrandTitle-subtitle {
+  margin-top: 1em;
+  display: block;
+}
+
+@media (min-width: 48em) {
+  .BrandTitle-title,
+  .BrandTitle-subtitle {
+    text-align: left;
+  }
+
+  .BrandTitle-title {
+    font-size: 1.5em;
+  }
+
+  .BrandTitle-subtitle {
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  .BrandTitle .BrandTitle-subtitle {
+    display: block;
+  }
+
+  .Brand > .BrandTitle-subtitle {
+    display: none;
+  }
+}
+/* Brand */
+
+.Brand {
+  -webkit-align-items: center;
+  align-items: center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+@media (min-width: 48em) {
+  .Brand {
+    margin-bottom: 0;
+  }
+
+  .Brand-title {
+    padding-left: .5em;
+  }
+}
+@font-face {
+  font-family: 'citodon';
+  src: url("../font/citodon.eot?9880618");
+  src: url("../font/citodon.eot?9880618#iefix") format('embedded-opentype'),
+       url("../font/citodon.woff2?9880618") format('woff2'),
+       url("../font/citodon.woff?9880618") format('woff'),
+       url("../font/citodon.ttf?9880618") format('truetype'),
+       url("../font/citodon.svg?9880618#citodon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'citodon';
+    src: url('../font/citodon.svg?9880618#citodon') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "citodon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-buco:before {
+  content: '\e800';
+}
+
+/* '' */
+
+.icon-convenios:before {
+  content: '\e801';
+}
+
+/* '' */
+
+.icon-dentistica:before {
+  content: '\e802';
+}
+
+/* '' */
+
+.icon-endodontia:before {
+  content: '\e803';
+}
+
+/* '' */
+
+.icon-horarios:before {
+  content: '\e804';
+}
+
+/* '' */
+
+.icon-implantodontia:before {
+  content: '\e805';
+}
+
+/* '' */
+
+.icon-odontopediatria:before {
+  content: '\e806';
+}
+
+/* '' */
+
+.icon-periodontia:before {
+  content: '\e807';
+}
+
+/* '' */
+
+.icon-profissionais:before {
+  content: '\e808';
+}
+
+/* '' */
+
+.icon-protese:before {
+  content: '\e809';
+}
+
+/* '' */
+
+.icon-facebook:before {
+  content: '\e80a';
+}
+
+/* '' */
+
+.icon-instagram:before {
+  content: '\e80b';
+}
+
+/* '' */
+
+.icon-menu-1:before {
+  content: '\e80c';
+}
+
+/* '' */
+
+.icon-close:before {
+  content: '\e80d';
+}
+
+/* '' */
+
+.icon-account_balance_wallet:before {
+  content: '\e80e';
+}
+
+/* '' */
+
+.icon-arrow_upward:before {
+  content: '\e80f';
+}
+
+/* '' */
+
+.icon-arrow_drop_down:before {
+  content: '\e810';
+}
+
+/* '' */
+
+.icon-local_phone:before {
+  content: '\e811';
+}
+
+/* '' */
+
+.icon-link:before {
+  content: '\e81e';
+}
+
+/* '' */
+
+.icon-down-dir:before {
+  content: '\e84e';
+}
+
+/* '' */
+
+.icon-facebook-official:before {
+  content: '\e969';
+}
+
+/* '' */
+
+.icon-twitter:before {
+  content: '\e978';
+}
+
+/* '' */
+/* Final */
+
+.FooterFinal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+/* Footer Slogan */
+
+
+/* Footer */
+
+.Footer {
+  position: relative;
+}
+
+/* Footer background */
+
+.Footer-background {
+  background-color: #585858;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Footer inner */
+
+.Footer-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  color: #f0f0f0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2.25em 1em;
+  position: relative;
+  width: 100%;
+}
+
+/* Footer content group */
+
+.Footer-content-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+}
+
+.Footer-content-group > div {
+  margin-bottom: 1.25em;
+}
+
+/* Footer content group blocks */
+
+.Footer-content-group.Footer-content-group--center {
+  text-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.Footer-content-group.Footer-content-group--left {
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.Footer-content-group.Footer-content-group--center .FooterSlogan {
+  margin-bottom: 0;
+}
+
+/* Footer health plans */
+
+.HealthPlans-list--footer .HealthPlansItemFigure {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1em;
+  max-width: 15em;
+}
+
+.HealthPlans-list--footer .HealthPlansItemFigure-img {
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(255,255,255,0.3));
+  filter: drop-shadow(0px 0px 1px rgba(255,255,255,0.3));
+}
+
+/* Footer health plans */
+
+.Footer-health-plans {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Footer nav list */
+
+.Footer-nav ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+.Footer-nav ul li {
+  line-height: 1.8;
+}
+
+.Footer-nav ul li:before {
+  content: "»";
+  display: block;
+  float: left;
+  width: 1em;
+}
+
+.Footer-nav ul li a {
+  font-weight: 300;
+}
+
+/* Footer text */
+
+.Footer-text p {
+  margin-bottom: .5em;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.48;
+}
+
+@media (min-width: 48em) {
+  /* Footer content group */
+
+  .Footer-content-group--right,
+  .Footer-content-group--left {
+    max-width: 50%;
+  }
+
+  .Footer-inner {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    padding: 2em 1.5em;
+  }
+
+  .Footer-content-group.Footer-content-group--left {
+    -webkit-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    align-content: center;
+  }
+
+  .Footer-content-group.Footer-content-group--center {
+    flex-grow: 1;
+  }
+
+  .Footer-content-group.Footer-content-group--right {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  /*
+	.HealthPlans-list--footer.HealthPlans-list {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row;
+		flex-flow: row;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+
+	.HealthPlans-list--footer .HealthPlansItemFigure-img {
+		max-width: 8em;
+	}
+	*/
+
+  .Footer-health-plans {
+    display: none;
+  }
+
+  .Footer-nav ul li {
+    font-size: 1em;
+  }
+
+  .Footer-nav ul li a {
+    font-weight: 400;
+    max-width: 30rem;
+  }
+}
+/* Header */
+
+.Header {
+  /*height: 100%; get to fit into one view*/
+  position: relative;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+/* Header background */
+
+.Header-background {
+  /*background-color: #d81b60;*/
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* Header inner */
+
+.Header-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.Header-inner.container {
+  max-width: none;
+}
+
+.Header-brand {
+  flex: 1;
+}
+
+.Header-nav {
+  flex: 1;
+}
+
+@media (min-width: 48em) {
+  .Header-inner {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .Header-inner.container {
+    padding: 0 1em;
+  }
+}
+
+@media (min-width: 60em) {
+  .Header-inner.container {
+    padding: 0 6em;
+  }
+}
+/* Health Plans Item Figure */
+
+.HealthPlansItemFigure {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1em;
+  max-width: 15em;
+}
+
+/* Health Planst Item figure img */
+
+.HealthPlansItemFigure-img {
+  padding-bottom: .5em;
+}
+/* HealthPlans Item */
+
+.HealthPlansItem {
+  position: relative;
+  width: 100%;
+}
+
+/* HealthPlans Item figcaption */
+
+.HealthPlansItem figcaption {
+  color: #9e9e9e;
+  font-size: .725em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48em) {
+  /* HealthPlans Item figcaption */
+
+  .HealthPlansItem figcaption {
+    font-size: .985em;
+  }
+}
+/* Health Plans */
+
+.HealthPlans {
+  padding: 3em 0;
+  position: relative;
+  text-align: center;
+}
+
+/* Health Plans background */
+
+.HealthPlans-background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* HealthPlans header */
+
+.HealthPlans-header {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* Health Plans inner */
+
+.HealthPlans-inner {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Healthe Plans list */
+
+.HealthPlans-list {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+@media (min-width: 48em) {
+  /* Healthe Plans list */
+
+  .HealthPlans-list {
+    -webkit-flex-flow: row;
+    flex-flow: row;
+  }
+}
+/* Logo */
+
+.Logo {
+  width: 8em;
+}
+
+.Logo--footer {
+  width: 6em;
+}
+
+/* Logo select area */
+
+.Logo-select-area {
+  height: 100%;
+  width: 100%;
+}
+
+/* Logo inner */
+
+.Logo-inner {
+  position: relative;
+}
+
+/* Logo svg */
+
+.Logo--footer svg * {
+  -webkit-transition: fill .3s;
+  -moz-transition: fill .3s;
+  -ms-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s;
+}
+
+.Logo--footer svg * {
+  fill: #ffffff;
+}
+
+/* Logo Teeth */
+
+#CitodonLogoTeeth {
+  fill: transparent;
+  /*colored: #e3f2fd*/
+}
+
+/* Logo Teeth Border */
+
+#CitodonLogoTeethBorder {
+  fill: #ffffff;
+  /*colored: #2196f3*/
+}
+
+/* Logo Arrow */
+
+#CitodonLogoArrow {
+  fill: #ffffff;
+  /*colored: #f44336*/
+}
+
+.Logo--footer .Logo-select-area:hover #CitodonLogoArrow path {
+  fill: #f44336;
+}
+
+@media (min-width: 48em) {
+  .Logo {
+    width: 6em;
+  }
+}
+/* Contact popover */
+
+.Popover.Contact-popover {
+  margin-left: -180px;
+}
+
+.Popover.Contact-popover .Contact-text {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5em;
+  text-align: right;
+}
+
+.Popover.Contact-popover .Contact-text p,
+.Popover.Contact-popover .Contact-text a {
+  font-size: .875em;
+  /*font-weight: 400;*/
+  margin-bottom: .5em;
+  text-align: right;
+}
+/* HealthPlans popover */
+
+.Popover.HealthPlans-popover .HealthPlans-list--header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.HealthPlans-list--header .HealthPlansItemFigure {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding: 1.5em;
+}
+
+.HealthPlans-list--header .HealthPlansItemFigure-img {
+  display: inline-block;
+  height: 3em;
+}
+
+.HealthPlans-list--header .HealthPlansItemFigure-caption {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 1em;
+}
+/* Popover */
+
+.Popover {
+  background-color: #fff;
+  border: 1px solid #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-top: 10px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  -ms-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+  width: 300px;
+}
+
+.Popover::after {
+  border-color: #000 transparent;
+  border-style: solid;
+  border-width: 10px 10px 0;
+  bottom: -10px;
+  content: "";
+  display: block;
+  left: 50px;
+  position: absolute;
+  width: 0;
+}
+
+.Popover.top-right::after,
+.Popover.top-left::after {
+  border-width: 0 10px 10px;
+  bottom: auto;
+  right: 50px;
+  top: -10px;
+}
+
+.Popover.top-right::after {
+  left: auto;
+}
+
+.Popover.is-shown {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+@font-face {
+  font-family: 'social';
+  src: url("../font/social.eot?91716032");
+  src: url("../font/social.eot?91716032#iefix") format('embedded-opentype'),
+       url("../font/social.woff2?91716032") format('woff2'),
+       url("../font/social.woff?91716032") format('woff'),
+       url("../font/social.ttf?91716032") format('truetype'),
+       url("../font/social.svg?91716032#social") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'social';
+    src: url('../font/social.svg?91716032#social') format('svg');
+  }
+}
+*/
+
+[class^="icon-social-"]:before,
+[class*="icon-social-"]:before {
+  font-family: "social";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-social-github:before {
+  content: '\f300';
+}
+
+/* '' */
+
+.icon-social-github-circled:before {
+  content: '\f301';
+}
+
+/* '' */
+
+.icon-social-flickr:before {
+  content: '\f303';
+}
+
+/* '' */
+
+.icon-social-flickr-circled:before {
+  content: '\f304';
+}
+
+/* '' */
+
+.icon-social-vimeo:before {
+  content: '\f306';
+}
+
+/* '' */
+
+.icon-social-vimeo-circled:before {
+  content: '\f307';
+}
+
+/* '' */
+
+.icon-social-twitter:before {
+  content: '\f309';
+}
+
+/* '' */
+
+.icon-social-twitter-circled:before {
+  content: '\f30a';
+}
+
+/* '' */
+
+.icon-social-facebook:before {
+  content: '\f30c';
+}
+
+/* '' */
+
+.icon-social-facebook-circled:before {
+  content: '\f30d';
+}
+
+/* '' */
+
+.icon-social-facebook-squared:before {
+  content: '\f30e';
+}
+
+/* '' */
+
+.icon-social-gplus:before {
+  content: '\f30f';
+}
+
+/* '' */
+
+.icon-social-gplus-circled:before {
+  content: '\f310';
+}
+
+/* '' */
+
+.icon-social-pinterest:before {
+  content: '\f312';
+}
+
+/* '' */
+
+.icon-social-pinterest-circled:before {
+  content: '\f313';
+}
+
+/* '' */
+
+.icon-social-tumblr:before {
+  content: '\f315';
+}
+
+/* '' */
+
+.icon-social-tumblr-circled:before {
+  content: '\f316';
+}
+
+/* '' */
+
+.icon-social-linkedin:before {
+  content: '\f318';
+}
+
+/* '' */
+
+.icon-social-linkedin-circled:before {
+  content: '\f319';
+}
+
+/* '' */
+
+.icon-social-dribbble:before {
+  content: '\f31b';
+}
+
+/* '' */
+
+.icon-social-dribbble-circled:before {
+  content: '\f31c';
+}
+
+/* '' */
+
+.icon-social-instagram:before {
+  content: '\f32d';
+}
+
+/* '' */
+
+.icon-social-dropbox:before {
+  content: '\f330';
+}
+
+/* '' */
+
+.icon-social-evernote:before {
+  content: '\f333';
+}
+
+/* '' */
+
+.icon-social-skype:before {
+  content: '\f339';
+}
+
+/* '' */
+
+.icon-social-skype-circled:before {
+  content: '\f33a';
+}
+
+/* '' */
+
+.icon-social-paypal:before {
+  content: '\f342';
+}
+
+/* '' */
+
+.icon-social-picasa:before {
+  content: '\f345';
+}
+
+/* '' */
+
+.icon-social-soundcloud:before {
+  content: '\f348';
+}
+
+/* '' */
+/* Staff Member Profile */
+
+.StaffMemberProfile {
+  position: relative;
+  top: -4em;
+  margin-bottom: -4em;
+}
+
+/* Staff Member Profile image */
+
+.StaffMemberProfile img {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0 1px 2px 0 rgba(50, 50, 50, 0.5);
+  box-shadow: 0 1px 2px 0 rgba(50, 50, 50, 0.5);
+}
+
+/* Staff Member Profile caption */
+
+/* Treatments Item h3 */
+
+.StaffMemberProfile-caption {
+  color: #2196f3;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  width: 100%;
+}
+/* Staff Member */
+
+.StaffMember {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 4em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #e8eaf6;
+  /*indigo-50*/
+  top: 4em;
+  border-radius: .275em;
+}
+
+/* StaffMember p */
+
+.StaffMember p {
+  color: #9e9e9e;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 18em;
+  margin-bottom: .275em;
+}
+
+.StaffMember ul li {
+  color: #757575;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 18em;
+}
+
+@media (min-width: 48em) {
+  /* Staff Member */
+
+  .StaffMember {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 60em) {
+  /* Staff Member */
+
+  /*three columns*/
+
+  /*.StaffMember {*/
+
+  /*width: auto;*/
+
+  /*margin: 0 1% 1em 1%;*/
+
+  /*}*/
+}
+
+@media (min-width: 72em) {
+  /* Staff Member */
+
+  /*.StaffMember {*/
+
+  /*max-width: %;*/
+
+  /*}*/
+}
+/* Staff */
+
+.Staff {
+  padding: 1em 0;
+  position: relative;
+  text-align: center;
+}
+
+/* Staff background */
+
+.Staff-background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Staff inner */
+
+.Staff-inner {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+/* Staff header */
+
+.Staff-header {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+/* Staff list */
+
+.Staff-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+
+@media (min-width: 48em) {
+
+}
+
+@media (min-width: 60em) {
+  /* Staff list */
+
+  /*three columns*/
+
+  /*.Staff-list {*/
+
+  /*-webkit-justify-content: space-between;*/
+
+  /*justify-content: space-between;*/
+
+  /*}*/
+}
+
+@media (min-width: 72em) {
+
+}
+
+@media (min-width: 96em) {
+
+}
+/* Treatments Item Header */
+
+.TreatmentsItemHeader {
+  border-radius: 50%;
+  cursor: default;
+  position: relative;
+  height: 8em;
+  width: 8em;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+
+/* Treatments Item Header bubble */
+
+.TreatmentsItemHeader-bubble {
+  border-style: solid;
+  border-width: 2px;
+  visibility: hidden;
+  border-radius: 50%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-transition: transform .1s ease-out, visibility 0s .1s;
+  -moz-transition: transform .1s ease-out, visibility 0s .1s;
+  -ms-transition: transform .1s ease-out, visibility 0s .1s;
+  -o-transition: transform .1s ease-out, visibility 0s .1s;
+  transition: transform .1s ease-out, visibility 0s .1s;
+  -webkit-transform: scale(.1);
+  -moz-transform: scale(.1);
+  -ms-transform: scale(.1);
+  -o-transform: scale(.1);
+  transform: scale(.1);
+  z-index: 1;
+}
+
+.TreatmentsItem:hover .TreatmentsItemHeader-bubble {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: transform .45s ease-in-out, visibility .45s;
+  -moz-transition: transform .45s ease-in-out, visibility .45s;
+  -ms-transition: transform .45s ease-in-out, visibility .45s;
+  -o-transition: transform .45s ease-in-out, visibility .45s;
+  transition: transform .45s ease-in-out, visibility .45s;
+  visibility: visible;
+}
+
+/* Treatments Item Header background */
+
+.TreatmentsItemHeader-background {
+  background-color: #e3f2fd;
+  -webkit-animation: scale-down .3s ease-in forwards;
+  -o-animation: scale-down .3s ease-in forwards;
+  animation: scale-down .3s ease-in forwards;
+  border-radius: 50%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: scale(.48);
+  -moz-transform: scale(.48);
+  -ms-transform: scale(.48);
+  -o-transform: scale(.48);
+  transform: scale(.48);
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  -ms-transition: background .3s ease-in-out;
+  -o-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+  width: 100%;
+}
+
+.TreatmentsItem:hover .TreatmentsItemHeader-background {
+  background-color: #2196f3;
+  -webkit-animation: scale-up .45s ease-out forwards;
+  -o-animation: scale-up .45s ease-out forwards;
+  animation: scale-up .45s ease-out forwards;
+  -webkit-transition: background .45s ease-in-out;
+  -moz-transition: background .45s ease-in-out;
+  -ms-transition: background .45s ease-in-out;
+  -o-transition: background .45s ease-in-out;
+  transition: background .45s ease-in-out;
+}
+
+/* Treatments Item Header inner */
+
+.TreatmentsItemHeader-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  -webkit-transition: all .225s ease-out;
+  -moz-transition: all .225s ease-out;
+  -ms-transition: all .225s ease-out;
+  -o-transition: all .225s ease-out;
+  transition: all .225s ease-out;
+  width: 100%;
+}
+
+.TreatmentsItem:hover .TreatmentsItemHeader-inner {
+  color: #ffffff;
+}
+
+/* Treatments Item Header icon */
+
+.TreatmentsItemHeader-icon span {
+  font-size: 4.5em;
+}
+
+.TreatmentsItemHeader-icon .icon-odontopediatria {
+  font-size: 6em;
+}
+
+.TreatmentsItemHeader-icon .icon-endodontia,
+.TreatmentsItemHeader-icon .icon-protese {
+  font-size: 6em;
+}
+
+/* scale up animation */
+
+@-webkit-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+}
+
+@-moz-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+}
+
+@-o-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+}
+
+/* scale down animation */
+
+@-webkit-keyframes scale-down {
+  0% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+
+  100% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+}
+
+@-moz-keyframes scale-down {
+  0% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+
+  100% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+}
+
+@-o-keyframes scale-down {
+  0% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+
+  100% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+}
+
+@keyframes scale-down {
+  0% {
+    -webkit-transform: scale(.88);
+    -moz-transform: scale(.88);
+    -ms-transform: scale(.88);
+    -o-transform: scale(.88);
+    transform: scale(.88);
+  }
+
+  100% {
+    -webkit-transform: scale(.48);
+    -moz-transform: scale(.48);
+    -ms-transform: scale(.48);
+    -o-transform: scale(.48);
+    transform: scale(.48);
+  }
+}
+/* Treatments Item */
+
+.TreatmentsItem {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 1em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/* Treatments Item p */
+
+.TreatmentsItem p {
+  color: #9e9e9e;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 18em;
+  width: 100%;
+}
+
+/* Treatments Item h3 */
+
+.TreatmentsItem h3 {
+  color: #2196f3;
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  /* Treatments Item */
+
+  .TreatmentsItem {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 60em) {
+  /* Treatments Item */
+
+  .TreatmentsItem {
+    max-width: 33.3333333333%;
+  }
+}
+
+@media (min-width: 72em) {
+  /* Treatments Item */
+
+  .TreatmentsItem {
+    margin-bottom: 1.5em;
+  }
+}
+/* Treatments */
+
+.Treatments {
+  padding: 3em 0;
+  position: relative;
+  text-align: center;
+}
+
+/* Treatments background */
+
+.Treatments-background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Treatments header */
+
+.Treatments-header {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* Treatments inner */
+
+.Treatments-inner {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  /* Treatments */
+
+  .Treatments {
+    padding: 4em 0;
+  }
+
+  /* Treatments header */
+
+  .Treatments-header {
+    margin-bottom: 2.25em;
+  }
+}
+
+@media (min-width: 60em) {
+  /* Treatments inner */
+
+  .Treatments-inner {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 72em) {
+  /* Treatments header */
+
+  .Treatments-header {
+    margin-bottom: 2.25em;
+  }
+}
+
+@media (min-width: 96em) {
+  /* Treatments header */
+
+  .Treatments-header {
+    margin-bottom: 3em;
+  }
+}
