@@ -4,6 +4,14 @@
  * Licensed under MIT (https://github.com/mowekabanas/citodon/blob/master/LICENSE)
 */
 
+html {
+	scroll-behavior: smooth;
+}
+
+section:focus {
+	outline: none;
+}
+
 h2 {
 	font-size: 3em;
 	font-weight: 300;
