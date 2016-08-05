@@ -14,11 +14,12 @@
 	-webkit-justify-content: center;
 	justify-content: center;
 	padding: 1em;
-	max-width: 15em;
+	max-width: 16em;
 }
 
-/* Health Planst Item figure img */
+/* Health Plans Item Figure img */
 
-.HealthPlansItemFigure-img {
-	padding-bottom: .5em;
+.HealthPlans--popover .HealthPlansItemFigure-img {
+	height: 3em;
+	margin-bottom: .5em;
 }

@@ -28,62 +28,7 @@
 
 <style>
 
-	/* Nav */
 
-	.Nav {
-		position: relative;
-		width: 100%;
-	}
-
-	.Nav-inner {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-justify-content: flex-end;
-		justify-content: flex-end;
-		width: 100%;
-	}
-
-	.NavItem {
-		position: relative;
-		margin-right: 1em;
-	}
-
-	.NavItem:last-of-type {
-		margin: 0;
-	}
-
-	.NavItem-select-area {
-		color: #ffffff;
-		border-style: solid;
-		border-width: 4px;
-		border-color: #ffffff;
-		border-radius: 8px;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		padding: .875em 1.125em;
-		-webkit-transition: all .3s;
-		-moz-transition: all .3s;
-		-ms-transition: all .3s;
-		-o-transition: all .3s;
-		transition: all .3s;
-	}
-
-	.NavItem--main .NavItem-select-area,
-	.NavItem-select-area:hover {
-		background-color: #ffffff;
-		color: #c2185b
-	}
-
-	.NavItem-select-area span {
-		font-size: 1.5em;
-		font-weight: 700;
-	}
 
 </style>
 
@@ -137,29 +82,97 @@
 
 				</div>
 
-				<nav class="Nav Header-brand">
+				<nav class="Nav Header-nav">
 
 					<div class="Nav-background"></div>
 
 					<div class="Nav-inner">
 
-						<div class="NavItem">
+						<div class="NavItem Popover-toggle">
 
 							<a href="#" class="NavItem-select-area">
 
 								<span>Convênios</span>
 
+								<div class="NavItem-icon">
+
+									<span class="icon-arrow_drop_down"></span>
+
+								</div>
+
 							</a>
+
+							<div class="Popover">
+
+								<ul class="HealthPlans-list HealthPlans-list--header">
+
+									<li class="HealthPlansItem">
+
+										<figure class="HealthPlansItemFigure">
+
+											<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
+
+											<figcaption class="HealthPlansItemFigure-caption">
+												Muth
+											</figcaption>
+
+										</figure>
+
+									</li>
+
+									<li class="HealthPlansItem">
+
+										<figure class="HealthPlansItemFigure">
+
+											<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
+
+											<figcaption class="HealthPlansItemFigure-caption">
+												Uniodonto
+											</figcaption>
+
+										</figure>
+
+									</li>
+
+								</ul>
+
+								<button class="Button">
+
+									<span>Maravilha!</span>
+
+								</button>
+
+							</div>
 
 						</div>
 
-						<div class="NavItem NavItem--main">
+						<div class="NavItem NavItem--main NavItem--phone Popover-toggle">
 
 							<a href="#" class="NavItem-select-area">
 
 								<span>18 3351 2377</span>
 
+								<div class="NavItem-icon">
+
+									<span class="icon-local_phone"></span>
+
+								</div>
+
 							</a>
+
+							<div class="Popover">
+
+								<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
+									<strong>Palmital</strong>, 19970-000, Brasil</p>
+								<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
+
+								<button class="Button">
+
+									<span>Envie uma mensagem!</span>
+
+								</button>
+
+							</div>
 
 						</div>
 
@@ -171,8 +184,20 @@
 
 		</header>
 
-		<div class="Hero container">
-			<img src="./dist/img/fachada.jpg" alt="Fachada"/>
+		<div class="Hero">
+
+			<div class="Hero-background"></div>
+
+			<div class="Hero-inner container">
+
+				<figure class="Hero-figure">
+
+					<img src="./dist/img/fachada.jpg" alt="Fachada"/>
+
+				</figure>
+
+			</div>
+
 		</div>
 
 	</div>

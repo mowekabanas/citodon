@@ -1,0 +1,26 @@
+
+/* Article */
+
+.Article {
+	padding: 0 1em;
+}
+
+@media (min-width: 48em) {
+
+	/* Article */
+
+	.Article {
+		padding: 0 3em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	/* Article */
+
+	.Article {
+		padding: 0 6em;
+	}
+
+}

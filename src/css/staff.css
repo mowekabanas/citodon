@@ -2,9 +2,23 @@
 /* Staff */
 
 .Staff {
-	padding: 1em 0;
+	padding: 3em 0;
 	position: relative;
 	text-align: center;
+}
+
+/* Staff img */
+
+.Staff img {
+	display: block;
+	border-radius: 6px;
+	-moz-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+	-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+	box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+}
+
+.Staff-figure {
+	width: 100%;
 }
 
 /* Staff background */
@@ -57,17 +71,18 @@
 /* Staff list */
 
 .Staff-list {
+	-webkit-align-items: center;
+	align-items: center;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-align-items: baseline;
-	align-items: baseline;
-	-webkit-justify-content: center;
-	justify-content: center;
 	-webkit-flex-flow: column;
 	flex-flow: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 100%;
 }
 
 @media (min-width: 48em) {
@@ -87,8 +102,21 @@
 
 @media (min-width: 72em) {
 
+	/* Staff */
+
+	.Staff {
+		padding: 6em 0;
+	}
+
 }
 
 @media (min-width: 96em) {
+
+	/* Staff */
+
+	.Staff {
+		padding: 6em 0;
+	}
+
 
 }

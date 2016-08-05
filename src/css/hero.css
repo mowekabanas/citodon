@@ -1,0 +1,16 @@
+
+/* Hero */
+
+.Hero {
+	position: relative;
+}
+
+/* Hero img */
+
+.Hero img {
+	display: block;
+	border-radius: 6px;
+	-moz-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+	-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+	box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+}

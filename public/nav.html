@@ -92,6 +92,7 @@
 	.NavItem {
 		position: relative;
 		margin-right: 1em;
+		height: 4.5em;
 	}
 
 	.NavItem:last-of-type {
@@ -99,16 +100,19 @@
 	}
 
 	.NavItem-select-area {
-		color: #ffffff;
-		border-style: solid;
-		border-width: 4px;
+		-webkit-align-items: center;
+		align-items: center;
 		border-color: #ffffff;
-		border-radius: 8px;
+		border-radius: 6px;
+		border-style: solid;
+		border-width: 3px;
+		color: #ffffff;
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
 		display: -webkit-flex;
 		display: flex;
+		height: 100%;
 		padding: .875em 1.125em;
 		-webkit-transition: all .3s;
 		-moz-transition: all .3s;
@@ -120,7 +124,7 @@
 	.NavItem--main .NavItem-select-area,
 	.NavItem-select-area:hover {
 		background-color: #ffffff;
-		color: #c2185b
+		color: #c2185b;
 	}
 
 	.NavItem-select-area:hover {
@@ -129,10 +133,107 @@
 		box-shadow: 0 0 0 3px #ffffff;
 	}
 
-	.NavItem-select-area span {
-		font-size: 1.5em;
-		font-weight: 700;
+	.NavItem-select-area > span {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		font-size: 1.3125em;
+		font-weight: 600;
 	}
+
+	.NavItem-icon {
+		-webkit-align-items: center;
+		align-items: center;
+		background-color: #ffffff;
+		border-radius: 50%;
+		color: #c2185b;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		height: 2.25em;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		-ms-transition: all .3s;
+		-o-transition: all .3s;
+		transition: all .3s;
+		width: 2.25em;
+	}
+
+	.NavItem-select-area span + .NavItem-icon {
+		margin-left: 1em;
+	}
+
+	.NavItem--main .NavItem-icon {
+		background-color: #c2185b;
+		color: #ffffff;
+	}
+
+	.NavItem-select-area:hover .NavItem-icon {
+		background-color: #c2185b;
+		-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+		-moz-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+		box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+		color: #ffffff;
+	}
+
+	.NavItem--main .NavItem-select-area:hover .NavItem-icon {
+		background-color: #c2185b;
+	}
+
+	.NavItem-icon span {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		justify-content: center;
+		font-size: 1.5em;
+	}
+
+	.NavItem--phone .NavItem-icon span {
+		font-size: 1.3125em;
+	}
+
+	/* Awesome Button */
+
+	.AwesomeButton {
+		background-color: #4caf50;
+		border: solid 2px #4caf50;
+		border-radius: 6px;
+		color: #ffffff;
+		cursor: pointer;
+		padding: 1em;
+		-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+		-ms-transition: all .3s ease-in-out;
+		-o-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+	}
+
+	.AwesomeButton:hover {
+		background-color: #66bb6a;
+	}
+
+	.AwesomeButton span {
+		font-weight: 700;
+		line-height: 1.36;
+		font-size: 1.125em;
+	}
+
+</style>
+
+<style>
 
 </style>
 
@@ -158,29 +259,55 @@
 
 					<div class="Nav-inner">
 
-						<div class="NavItem">
+						<div class="NavItem Popover-toggle">
 
 							<a href="#" class="NavItem-select-area">
 
 								<span>Convênios</span>
 
-							</a>
-
-						</div>
-
-						<div class="NavItem NavItem--main">
-
-							<a href="#" class="NavItem-select-area">
-
-								<span>18 3351 2377</span>
-
-								<div class="NavItem-popover-toggle PopoverToggle red">
+								<div class="NavItem-icon">
 
 									<span class="icon-arrow_drop_down"></span>
 
 								</div>
 
 							</a>
+
+							<div class="Popover">
+
+								<button class="AwesomeButton">
+
+									<span>Maravilha!</span>
+
+								</button>
+
+							</div>
+
+						</div>
+
+						<div class="NavItem NavItem--main NavItem--phone Popover-toggle">
+
+							<a href="#" class="NavItem-select-area">
+
+								<span>18 3351 2377</span>
+
+								<div class="NavItem-icon">
+
+									<span class="icon-local_phone"></span>
+
+								</div>
+
+							</a>
+
+							<div class="Popover">
+
+								<button class="AwesomeButton">
+
+									<span>Envie uma mensagem!</span>
+
+								</button>
+
+							</div>
 
 						</div>
 

@@ -1,4 +1,17 @@
 
 /* Footer Slogan */
 
-.FooterSlogan {  }
+.FooterSlogan {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	text-transform: uppercase;
+}

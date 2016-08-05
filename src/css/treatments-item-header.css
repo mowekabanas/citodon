@@ -53,7 +53,7 @@
 /* Treatments Item Header background */
 
 .TreatmentsItemHeader-background {
-	background-color: #e3f2fd;
+	background-color: #fce4ec;
 	-webkit-animation: scale-down .3s ease-in forwards;
 	-o-animation: scale-down .3s ease-in forwards;
 	animation: scale-down .3s ease-in forwards;
@@ -76,7 +76,7 @@
 }
 
 .TreatmentsItem:hover .TreatmentsItemHeader-background {
-	background-color: #2196f3;
+	background-color: #e91e63;
 	-webkit-animation: scale-up .45s ease-out forwards;
 	-o-animation: scale-up .45s ease-out forwards;
 	animation: scale-up .45s ease-out forwards;

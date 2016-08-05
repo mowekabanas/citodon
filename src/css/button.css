@@ -1,0 +1,28 @@
+
+/* Button */
+
+.Button {
+	background-color: #03a9f4;
+	border: solid 2px #03a9f4;
+	border-radius: 6px;
+	color: #ffffff;
+	cursor: pointer;
+	max-width: 16em;
+	padding: 1em;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	width: 100%;
+}
+
+.Button:hover {
+	background-color: #29b6f6;
+}
+
+.Button span {
+	font-weight: 700;
+	line-height: 1.36;
+	font-size: 1.125em;
+}

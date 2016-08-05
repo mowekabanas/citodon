@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<body>
+
+
+<script>
+
+	var data = JSON.stringify({
+		"personalizations": [
+			{
+				"to": [
+					{
+						"email": "joseeduardobarros@gmail.com"
+					}
+				],
+				"subject": "Hello, World!"
+			}
+		],
+		"from": {
+			"email": "mailman@elbit.com.br"
+		},
+		"content": [
+			{
+				"type": "text",
+				"value": "Olá, mundo"
+			}
+		],
+		"subject": 'teste'
+	});
+
+	var xhr = new XMLHttpRequest();
+	xhr.withCredentials = true;
+
+	xhr.addEventListener("readystatechange", function () {
+		if (this.readyState === 4) {
+			console.log(this);
+			console.log(this.responseText);
+		}
+	});
+
+	xhr.open("POST", "https://api.sendgrid.com/v3/mail/send");
+	xhr.setRequestHeader("authorization", "Bearer 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");
+	xhr.setRequestHeader("content-type", "application/json");
+	xhr.setRequestHeader("cache-control", "no-cache");
+	xhr.setRequestHeader("postman-token", "3acd8f0c-b544-b8b1-5507-79737757243e");
+
+	xhr.send(data);
+
+</script>
+
+</body>
+
+</html>

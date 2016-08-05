@@ -29,8 +29,8 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
+	-webkit-flex-flow: column;
+	flex-flow: column;
 	-webkit-justify-content: center;
 	justify-content: center;
 	position: relative;
@@ -41,10 +41,7 @@
 	max-width: none;
 }
 
-.Header-brand {
-	flex: 1;
-}
-
+.Header-brand,
 .Header-nav {
 	flex: 1;
 }
@@ -66,6 +63,15 @@
 
 	.Header-inner.container {
 		padding: 0 6em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.Header-inner {
+		-webkit-flex-flow: row;
+		flex-flow: row;
 	}
 
 }

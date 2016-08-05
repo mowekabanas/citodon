@@ -6,6 +6,10 @@
 	position: relative;
 }
 
+.HealthPlans--popover {
+	padding: 0;
+}
+
 /* Health Plans background */
 
 .HealthPlans-background {
