@@ -27,12 +27,12 @@
 /* Contact Form send button (submit) */
 /* TEMPORARY STYLED */
 
-.ContactFormField--send {
-	background-color: #9e9e9e !important;
-	border-radius: .25em;
-	margin-top: .5em;
-	padding: .5em;
-}
+/*.ContactFormField--submit {*/
+	/*background-color: #9e9e9e !important;*/
+	/*border-radius: .25em;*/
+	/*margin-top: .5em;*/
+	/*padding: .5em;*/
+/*}*/
 
 /* Contact Form Field input textarea */
 

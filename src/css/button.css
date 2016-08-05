@@ -26,3 +26,16 @@
 	line-height: 1.36;
 	font-size: 1.125em;
 }
+
+/* Button pink */
+
+.Button--pink {
+	background-color: #c2185b !important;
+	border: solid 2px #c2185b;
+	padding: .75em;
+	border-radius: 4px;
+}
+
+.Button--pink:hover {
+	background-color: #e91e63 !important;
+}
