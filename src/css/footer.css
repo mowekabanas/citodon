@@ -8,7 +8,7 @@
 /* Footer background */
 
 .Footer-background {
-	background-color: #585858;
+	background-color: #880e4f;
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -157,7 +157,7 @@
 		flex-flow: row wrap;
 		-webkit-align-items: flex-start;
 		align-items: flex-start;
-		padding: 2em 1.5em;
+		padding: 6em 1.5em 3em;
 	}
 
 	.Footer-content-group.Footer-content-group--left {

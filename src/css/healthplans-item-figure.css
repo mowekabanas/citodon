@@ -15,11 +15,16 @@
 	justify-content: center;
 	padding: 1em;
 	max-width: 16em;
+	width: 100%;
 }
 
 /* Health Plans Item Figure img */
 
+.HealthPlansItemFigure-img {
+	margin-bottom: 1em;
+}
+
 .HealthPlans--popover .HealthPlansItemFigure-img {
-	height: 3em;
+	width: 100%;
 	margin-bottom: .5em;
 }

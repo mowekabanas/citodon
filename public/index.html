@@ -88,8 +88,6 @@
 
 				<div class="Contact-text">
 
-					<p>CITODON - CENTRO INTEGRADO DE TRATAMENTO ODONTOLOGICO</p>
-					<p>CNPJ: 11.732.987/0001-55</p>
 					<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
 						<strong>Palmital</strong>, 19970-000, Brasil</p>
 					<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
@@ -239,7 +237,7 @@
 
 									<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
 										<strong>Palmital</strong>, 19970-000, Brasil</p>
-									<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
+									<a href="mailto:contato@citodon.com" class="grey-400">contato@citodon.com</a>
 
 									<div class="Popover-footer">
 
@@ -508,8 +506,6 @@
 
 					<figure class="StaffMemberProfile">
 
-						<img src="dist/img/profile.png" alt="Dr. João Gilberto de Azevedo Filho" class="StaffMemberProfile-img"/>
-
 						<figcaption class="StaffMemberProfile-caption">
 							Dr. João Gilberto de Azevedo Filho
 						</figcaption>
@@ -527,8 +523,6 @@
 				<section class="StaffMember">
 
 					<figure class="StaffMemberProfile">
-
-						<img src="dist/img/profile.png" alt="Dra. Patricia Thomé de Azevedo De La Costa" class="StaffMemberProfile-img"/>
 
 						<figcaption class="StaffMemberProfile-caption">
 							Dra. Patricia Thomé de Azevedo De La Costa
@@ -548,8 +542,6 @@
 
 					<figure class="StaffMemberProfile">
 
-						<img src="dist/img/profile.png" alt="Dr. Eduardo Thomé de Azevedo" class="StaffMemberProfile-img"/>
-
 						<figcaption class="StaffMemberProfile-caption">
 							Dr. Eduardo Thomé de Azevedo
 						</figcaption>
@@ -560,12 +552,6 @@
 
 					<ul class="StaffMember-formation">
 						<li>Graduado em Odontologia pela UNOPAR – Londrina/PR</li>
-						<!--
-						<li>Mestrando em Implantodontia pelo ILAPEO – Curitiba/PR</li>
-						<li>Membro do Colégio Brasileiro de Cirurgia e Traumatologia BucoMaxiloFacial</li>
-						<li>Especialista em Implantodontia pela UNOPAR – Londrina/PR</li>
-						<li>Especialista em Cirurgia e Traumatologia Buco-maxilo-facial pelo ILAPEO e Hospital Angelina Caron – Curitiba/PR</li>
-						-->
 					</ul>
 
 				</section>
@@ -577,7 +563,7 @@
 	</section>
 
 	<!-- SOBRE -->
-	<section id="sobre" class="About pink-50">
+	<section id="sobre" class="About pink-600 font-white">
 
 		<div class="Article">
 
@@ -624,41 +610,74 @@
 
 			</div>
 
-			<div id="contact-form" class="ContactForm">
+			<form id="cForm" class="ContactForm">
 
 				<div class="ContactFormField">
 
-					<label for="name">NOME</label>
-					<input id="name" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
+					<label for="cName">NOME</label>
+					<input id="cName" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
 
 				</div>
 
 				<div class="ContactFormField">
 
-					<label for="email">EMAIL</label>
-					<input id="email" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+					<label for="cCity">CIDADE</label>
+					<input id="cCity" type="text" autocomplete="off" class="ContactFormField-input" placeholder="CIDADE"/>
 
 				</div>
 
 				<div class="ContactFormField">
 
-					<label for="subject">ASSUNTO</label>
-					<input id="subject" type="text" autocomplete="off" class="ContactFormField-input" placeholder="ASSUNTO"/>
+					<label for="cPhone">TELEFONE</label>
+					<input id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
 
 				</div>
 
 				<div class="ContactFormField">
 
-					<label for="message">MENSAGEM</label>
-					<textarea id="message" class="ContactFormField-input ContactFormField--message" placeholder="MENSAGEM"></textarea>
+					<label for="cEmail">EMAIL</label>
+					<input id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="cMessage">MENSAGEM</label>
+					<textarea id="cMessage" class="ContactFormField-input ContactFormField--message" placeholder="MENSAGEM"></textarea>
+
+				</div>
+
+				<div class="ContactFormStatus">
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--sending font-light-blue-a700">
+					Enviando...
+				</span>
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--success font-light-green-a700">
+					Enviado com sucesso!
+				</span>
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--error font-red-a700">
+					Não foi possível enviar, verifique os campos e tente novamente.
+				</span>
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--fail font-red-a700">
+					Houve algum problema, tentando novamente...
+				</span>
 
 				</div>
 
 				<div class="ContactFormButton">
-					<button id="send" class="ContactFormField-button ContactFormField--send">Enviar</button>
+
+					<button id="cSubmit" type="submit" value="Enviar" class="Button Button--pink ContactFormField-button">
+
+						<span>Enviar</span>
+
+					</button>
+					
 				</div>
 
-			</div>
+			</form>
 
 		</div>
 
@@ -768,8 +787,6 @@
 			<div class="Footer-social">
 
 				<span style="background-color: #1a237e; border-radius: 2px; padding: 2px;" class="icon-social-facebook"></span>
-				<span style="background-color: #e95950; border-radius: 2px; padding: 2px;" class="icon-social-instagram"></span>
-				<span style="background-color: #007bb5; border-radius: 2px; padding: 2px;" class="icon-social-linkedin"></span>
 
 			</div>
 
@@ -779,7 +796,7 @@
 
 			<div class="FooterSlogan">
 
-				<div class="Logo Logo--footer Footer-logo">
+				<div class="Logo Logo--footer FooterSlogan-logo Footer-logo">
 
 					<a href="." class="Logo-select-area">
 
@@ -789,7 +806,7 @@
 
 				</div>
 
-				<span class="FooterSlogan-text">Especialistas em sorrisos</span>
+				<span class="FooterSlogan-text tk-proxima-nova-condensed">Especialistas em sorrisos</span>
 
 			</div>
 

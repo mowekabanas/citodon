@@ -13,5 +13,13 @@
 	flex-flow: column;
 	-webkit-justify-content: center;
 	justify-content: center;
+}
+
+.FooterSlogan-logo {
+	margin-bottom: .75em;
+}
+
+.FooterSlogan-text {
+	font-size: .875em;
 	text-transform: uppercase;
 }
