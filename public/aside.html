@@ -6,14 +6,14 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <meta name="theme-color" content="#b71c1c" />
 <script>
-	(function(d) {
+	/*(function(d) {
 		var config = {
 					kitId: 'dvx8ndj',
 					scriptTimeout: 6000,
 					async: true
 				},
 				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	})(document);
+	})(document);*/
 </script>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
@@ -88,9 +88,9 @@
 
 					<div class="Nav-inner">
 
-						<div class="NavItem Popover-toggle">
+						<div id="nav-item-health-plans" class="NavItem Popover-toggle">
 
-							<a href="#" class="NavItem-select-area">
+							<a class="NavItem-select-area">
 
 								<span>Convênios</span>
 
@@ -102,53 +102,59 @@
 
 							</a>
 
-							<div class="Popover">
+							<div id="popover-health-plans" class="Popover Popover--health-plans">
 
-								<ul class="HealthPlans-list HealthPlans-list--header">
+								<div class="Popover-backdrop"></div>
 
-									<li class="HealthPlansItem">
+								<div class="Popover-inner HealthPlans HealthPlans--popover">
 
-										<figure class="HealthPlansItemFigure">
+									<ul class="HealthPlans-list">
 
-											<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
+										<li class="HealthPlansItem">
 
-											<figcaption class="HealthPlansItemFigure-caption">
-												Muth
-											</figcaption>
+											<figure class="HealthPlansItemFigure">
 
-										</figure>
+												<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
 
-									</li>
+												<figcaption class="HealthPlansItemFigure-caption">
+													Muth
+												</figcaption>
 
-									<li class="HealthPlansItem">
+											</figure>
 
-										<figure class="HealthPlansItemFigure">
+										</li>
 
-											<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
+										<li class="HealthPlansItem">
 
-											<figcaption class="HealthPlansItemFigure-caption">
-												Uniodonto
-											</figcaption>
+											<figure class="HealthPlansItemFigure">
 
-										</figure>
+												<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
 
-									</li>
+												<figcaption class="HealthPlansItemFigure-caption">
+													Uniodonto
+												</figcaption>
 
-								</ul>
+											</figure>
 
-								<button class="Button">
+										</li>
 
-									<span>Maravilha!</span>
+									</ul>
 
-								</button>
+									<div class="Popover-footer">
+
+									</div>
+
+								</div>
 
 							</div>
 
 						</div>
 
-						<div class="NavItem NavItem--main NavItem--phone Popover-toggle">
+						<div id="nav-item-phone" class="NavItem NavItem--main NavItem--phone Popover-toggle">
 
-							<a href="#" class="NavItem-select-area">
+							<div class="Popover-backdrop"></div>
+
+							<a class="NavItem-select-area">
 
 								<span>18 3351 2377</span>
 
@@ -160,17 +166,27 @@
 
 							</a>
 
-							<div class="Popover">
+							<div id="popover-phone" class="Popover Popover--phone">
 
-								<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
-									<strong>Palmital</strong>, 19970-000, Brasil</p>
-								<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
+								<div class="Popover-inner">
 
-								<button class="Button">
+									<p class="Popover-title">Agende uma Visita</p>
 
-									<span>Envie uma mensagem!</span>
+									<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
+										Palmital</p>
+									<a href="mailto:contato@citodon.com" class="Popover-center Popover-email">contato@citodon.com</a>
 
-								</button>
+									<div class="Popover-footer">
+
+										<button class="Button">
+
+											<span>Envie uma mensagem!</span>
+
+										</button>
+
+									</div>
+
+								</div>
 
 							</div>
 
@@ -183,22 +199,6 @@
 			</div>
 
 		</header>
-
-		<div class="Hero">
-
-			<div class="Hero-background"></div>
-
-			<div class="Hero-inner container">
-
-				<figure class="Hero-figure">
-
-					<img src="./dist/img/fachada.jpg" alt="Fachada"/>
-
-				</figure>
-
-			</div>
-
-		</div>
 
 	</div>
 
@@ -213,6 +213,20 @@
 		logo.cloneTo(document.getElementById('footer-logo'));
 
 	});
+
+	/* Toggle Popover Buttons */
+
+	var togglePopoverPhone = new Toggle(
+			document.getElementById('nav-item-phone'),
+			[document.getElementById('nav-item-phone')],
+			'is-hover'
+	);
+
+	var togglePopoverHealthPlans = new Toggle(
+			document.getElementById('nav-item-health-plans'),
+			[document.getElementById('nav-item-health-plans')],
+			'is-hover'
+	);
 
 </script>
 

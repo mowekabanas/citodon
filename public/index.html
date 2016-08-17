@@ -157,9 +157,9 @@
 
 					<div class="Nav-inner">
 
-						<div class="NavItem Popover-toggle">
+						<div id="nav-item-health-plans" class="NavItem Popover-toggle">
 
-							<a href="#" class="NavItem-select-area">
+							<a class="NavItem-select-area">
 
 								<span>Convênios</span>
 
@@ -171,7 +171,9 @@
 
 							</a>
 
-							<div class="Popover">
+							<div id="popover-health-plans" class="Popover Popover--health-plans">
+
+								<div class="Popover-backdrop"></div>
 
 								<div class="Popover-inner HealthPlans HealthPlans--popover">
 
@@ -217,9 +219,11 @@
 
 						</div>
 
-						<div class="NavItem NavItem--main NavItem--phone Popover-toggle">
+						<div id="nav-item-phone" class="NavItem NavItem--main NavItem--phone Popover-toggle">
 
-							<a href="#" class="NavItem-select-area">
+							<div class="Popover-backdrop"></div>
+
+							<a class="NavItem-select-area">
 
 								<span>18 3351 2377</span>
 
@@ -231,13 +235,15 @@
 
 							</a>
 
-							<div class="Popover">
+							<div id="popover-phone" class="Popover Popover--phone">
 
 								<div class="Popover-inner">
 
+									<p class="Popover-title">Agende uma Visita</p>
+
 									<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
-										<strong>Palmital</strong>, 19970-000, Brasil</p>
-									<a href="mailto:contato@citodon.com" class="grey-400">contato@citodon.com</a>
+										Palmital</p>
+									<a href="mailto:contato@citodon.com" class="Popover-center Popover-email">contato@citodon.com</a>
 
 									<div class="Popover-footer">
 
@@ -418,7 +424,7 @@
 
 				</header>
 
-				<h3>Cirurgia e Traumatologia <br/>Buco-Maxilo-Facial</h3>
+				<h3>Cirurgia e Traumatologia <wbr/>Buco-Maxilo-Facial</h3>
 
 				<p>Qualificação aliado à experiência fazem de nós uma referência</p>
 
@@ -830,6 +836,20 @@
 
 	for (var i = requiredFields.length; i--; )
 		requiredFields[i].requiredField = new RequiredField(requiredFields[i], '.ContactFormField-input');
+
+	/* Toggle Popover Buttons */
+
+	var togglePopoverPhone = new Toggle(
+			document.getElementById('nav-item-phone'),
+			[document.getElementById('nav-item-phone')],
+			'is-hover'
+	);
+
+	var togglePopoverHealthPlans = new Toggle(
+			document.getElementById('nav-item-health-plans'),
+			[document.getElementById('nav-item-health-plans')],
+			'is-hover'
+	);
 
 </script>
 

@@ -27,6 +27,10 @@
 	-ms-transition: all .3s;
 	-o-transition: all .3s;
 	transition: all .3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .NavItem--main .NavItem-select-area,

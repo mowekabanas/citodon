@@ -1,7 +1,7 @@
 
 /* HealthPlans popover */
 
-.Popover.HealthPlans-popover .HealthPlans-list--header {
+.HealthPlans--popover .HealthPlans-list {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -11,23 +11,23 @@
 	flex-direction: column;
 }
 
-.HealthPlans-list--header .HealthPlansItemFigure {
+.HealthPlans--popover .HealthPlansItemFigure {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 	padding: 1.5em;
 }
 
-.HealthPlans-list--header .HealthPlansItemFigure-img {
-	display: inline-block;
+.HealthPlans--popover .HealthPlansItemFigure-img {
+	display: block;
 	height: 3em;
 }
 
-.HealthPlans-list--header .HealthPlansItemFigure-caption {
+.HealthPlans--popover .HealthPlansItemFigure-caption {
 	-webkit-align-items: center;
 	align-items: center;
 	display: -webkit-box;

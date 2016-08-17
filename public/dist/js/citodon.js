@@ -4,143 +4,159 @@
  * Licensed under MIT (https://github.com/mowekabanas/citodon/blob/master/LICENSE)
 */
 
-/* Contact email manipulation */
+/* Contact */
 
-var formSentCount = 0;
-var formSentCountLimit = 2;
+var Contact = (function () {
 
-var requestURL = 'http://mailman.letsmowe.com/citodon/';
-var formLocked = false;
+	/**
+	 * Contact constructor
+	 * @constructor
+	 */
+	function Contact() {
 
-var form = {
-	viewport: document.getElementById('cForm')
-};
+		/* Contact email manipulation */
 
-form.fields = {};
-form.sendButton = {};
+		var formSentCount = 0;
+		var formSentCountLimit = 2;
 
-form.fields.cName = document.getElementById('cName');
-form.fields.cCity = document.getElementById('cCity');
-form.fields.cPhone = document.getElementById('cPhone');
-form.fields.cEmail = document.getElementById('cEmail');
-form.fields.cMessage = document.getElementById('cMessage');
-form.sendButton.viewport = document.getElementById('cSubmit');
-// form.fields.cAddress = document.getElementById('cAddress');
+		var requestURL = 'http://mailman.letsmowe.com/citodon/';
+		var formLocked = false;
 
-form.states = [
-	'is-error',
-	'is-fail',
-	'is-sending',
-	'is-success'
-];
+		var form = {
+			viewport: document.getElementById('cForm')
+		};
 
-form.changeState = function (state) {
-	
-	if (form.viewport) {
-		
-		for (var i = form.states.length; i--; )
-			form.viewport.classList.remove(form.states[i])
-		
-		form.viewport.classList.add(state);
-		
-	}
-	
-};
+		form.fields = {};
+		form.sendButton = {};
 
-// send the ajax request
-form.sendRequest = function(requestData) {
-	
-	if (requestData) {
-		
-		// ajax request
-		$.ajax({
-			cache: false,
-			crossDomain: true,
-			data: requestData,
-			method: 'get',
-			beforeSend: function() {
-				formLocked = true;
-				form.changeState('is-sending');
-			},
-			error: function (data) {
-				console.log(data);
-				form.changeState('is-fail');
-				form.send(requestData, 5000);
-			},
-			success: function (data) {
-				console.log(data);
-				if (data.sent)
-					form.changeState('is-success');
-				else
-					form.changeState('is-error');
-				formLocked = false;
-			},
-			timeout: 12000,
-			url: requestURL
-		});
-		
-	}
-	
-};
+		form.fields.cName = document.getElementById('cName');
+		form.fields.cCity = document.getElementById('cCity');
+		form.fields.cPhone = document.getElementById('cPhone');
+		form.fields.cEmail = document.getElementById('cEmail');
+		form.fields.cMessage = document.getElementById('cMessage');
+		form.sendButton.viewport = document.getElementById('cSubmit');
+		// form.fields.cAddress = document.getElementById('cAddress');
 
-// control the time delay to init the ajax request
-form.send = function(requestData, delay) {
-	
-	if (requestData) {
-		
-		if (delay) {
-			setTimeout(function() {
-				form.sendRequest(requestData);
-			}, delay)
-		} else {
-			form.sendRequest(requestData);
-		}
-		
-	}
-	
-};
+		form.states = [
+			'is-error',
+			'is-fail',
+			'is-sending',
+			'is-success'
+		];
 
-// form submit button listener
-form.sendButton.viewport.addEventListener('click', function (ev) {
-	
-	ev.preventDefault();
-	
-	if (!formLocked) {
-		
-		if (formSentCount < formSentCountLimit) {
-			
-			var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
-			
-			if (allow) {
-				
-				// lock the form
-				formLocked = true;
-				
-				// count the request
-				formSentCount++;
-				
-				// get object data
-				var requestData = {
-					cName: form.fields.cName.value,
-					cPhone: form.fields.cPhone.value,
-					cEmail: form.fields.cEmail.value,
-					cAddress: "",
-					cCity: form.fields.cCity.value,
-					cMessage: form.fields.cMessage.value
-				};
-				
-				// send
-				form.send(requestData, false);
-				
-			} else {
-				form.changeState('is-error');
+		form.changeState = function (state) {
+
+			if (form.viewport) {
+
+				for (var i = form.states.length; i--; )
+					form.viewport.classList.remove(form.states[i])
+
+				form.viewport.classList.add(state);
+
 			}
-			
-		}
-		
+
+		};
+
+		// send the ajax request
+		form.sendRequest = function(requestData) {
+
+			if (requestData) {
+
+				// ajax request
+				$.ajax({
+					cache: false,
+					crossDomain: true,
+					data: requestData,
+					method: 'get',
+					beforeSend: function() {
+						formLocked = true;
+						form.changeState('is-sending');
+					},
+					error: function (data) {
+						console.log(data);
+						form.changeState('is-fail');
+						form.send(requestData, 5000);
+					},
+					success: function (data) {
+						console.log(data);
+						if (data.sent)
+							form.changeState('is-success');
+						else
+							form.changeState('is-error');
+						formLocked = false;
+					},
+					timeout: 12000,
+					url: requestURL
+				});
+
+			}
+
+		};
+
+		// control the time delay to init the ajax request
+		form.send = function(requestData, delay) {
+
+			if (requestData) {
+
+				if (delay) {
+					setTimeout(function() {
+						form.sendRequest(requestData);
+					}, delay)
+				} else {
+					form.sendRequest(requestData);
+				}
+
+			}
+
+		};
+
+		// form submit button listener
+		form.sendButton.viewport.addEventListener('click', function (ev) {
+
+			ev.preventDefault();
+
+			if (!formLocked) {
+
+				if (formSentCount < formSentCountLimit) {
+
+					var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
+
+					if (allow) {
+
+						// lock the form
+						formLocked = true;
+
+						// count the request
+						formSentCount++;
+
+						// get object data
+						var requestData = {
+							cName: form.fields.cName.value,
+							cPhone: form.fields.cPhone.value,
+							cEmail: form.fields.cEmail.value,
+							cAddress: "",
+							cCity: form.fields.cCity.value,
+							cMessage: form.fields.cMessage.value
+						};
+
+						// send
+						form.send(requestData, false);
+
+					} else {
+						form.changeState('is-error');
+					}
+
+				}
+
+			}
+
+		});
+
 	}
-	
-});
+
+	return Contact;
+
+})();
 
 /* Email deliver */
 
@@ -429,7 +445,6 @@ var Logo = (function () {
 
 })();
 
-
 /* Popover */
 
 var Popover = (function () {
@@ -635,5 +650,130 @@ var RequiredField = (function () {
 	};
 
 	return RequiredField;
+
+})();
+
+/* Toggle */
+
+var Toggle = (function () {
+
+	/**
+	 * Toggle constructor
+	 * @constructor
+	 */
+	function Toggle(element, target, toggleStateClass) {
+
+		var self = this;
+
+		this.element = element;
+		this.target = target;
+		this.toggleStateClass= toggleStateClass;
+
+		this.isActive = false;
+
+		this.onMouseOver = function (event) {
+
+			self.active();
+
+		};
+
+		this.onMouseOut = function (event) {
+
+			console.log(event);
+
+			self.inactive();
+
+		};
+
+		this.onClick = function (event) {
+
+			self.toggle();
+
+		};
+
+		this.onTouchStart = function (event) {
+
+			self.toggle();
+
+			console.log(event);
+
+		};
+
+		if (this.element)
+			this.init();
+
+	}
+
+	Toggle.prototype.active = function () {
+
+		this.isActive = true;
+
+		for (var i = this.target.length; i--; )
+			this.target[i].classList.add(this.toggleStateClass);
+
+	};
+
+	Toggle.prototype.inactive = function () {
+
+		this.isActive = false;
+
+		for (var i = this.target.length; i--; )
+			this.target[i].classList.remove(this.toggleStateClass);
+
+	};
+
+	Toggle.prototype.toggle = function () {
+
+		if (this.isActive)
+			this.inactive();
+		else
+			this.active();
+
+	};
+
+
+	Toggle.prototype.getCurrentState = function () {
+
+		try {
+
+			if (this.target.length)
+				for (var i = this.target.length; i--; )
+					if (this.target[i].classList.contains(this.toggleStateClass))
+						return true;
+					else if (this.target.classList.contains(this.toggleStateClass))
+						return true;
+
+		} catch (e) { }
+
+		return false;
+
+	};
+
+	Toggle.prototype.addListeners = function () {
+
+		if (this.element) {
+
+			try {
+
+				this.element.addEventListener('mouseover', this.onMouseOver, false);
+				this.element.addEventListener('mouseout', this.onMouseOut, false);
+				//this.element.addEventListener('click', this.onClick, false);
+				this.element.addEventListener('touchstart', this.onTouchStart, false);
+
+			} catch (e) { }
+
+		}
+
+	};
+
+	Toggle.prototype.init = function () {
+
+		this.addListeners();
+
+		this.inactive();
+
+	};
+
+	return Toggle;
 
 })();
