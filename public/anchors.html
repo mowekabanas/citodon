@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<meta charset="UTF-8">
+<title>Clínica Citodon - Palmital</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<meta name="theme-color" content="#b71c1c" />
+<script>
+	(function(d) {
+		var config = {
+					kitId: 'dvx8ndj',
+					scriptTimeout: 6000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="dist/css/citodon.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<body class="tk-proxima-nova font-grey-800 grey-100">
+
+<div class="AsideBar" style="display: none;">
+
+	<div class="AsideBar-background red"></div>
+
+	<div class="AsideBar-inner container">
+
+		<div class="HealthPlans AsideBar-health-plans">
+
+			<div class="HealthPlans-inner" onmouseover="Popover.call('healthPlans-popover').show();">
+				Convênios
+			</div>
+
+			<div id="healthPlans-popover" class="Popover top-left HealthPlans-popover">
+
+				<ul class="HealthPlans-list HealthPlans-list--header">
+
+					<li class="HealthPlansItem">
+
+						<figure class="HealthPlansItemFigure">
+
+							<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
+
+							<figcaption class="HealthPlansItemFigure-caption">
+								Muth
+							</figcaption>
+
+						</figure>
+
+					</li>
+
+					<li class="HealthPlansItem">
+
+						<figure class="HealthPlansItemFigure">
+
+							<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
+
+							<figcaption class="HealthPlansItemFigure-caption">
+								Uniodonto
+							</figcaption>
+
+						</figure>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="Contact AsideBar-contact">
+
+			<div class="Contact-inner" onmouseover="Popover.call('contact-popover').show();">
+				<p>(18) 3351-2377</p>
+			</div>
+
+			<div id="contact-popover" class="Popover Contact-popover top-right">
+
+				<div class="Contact-text">
+
+					<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
+						<strong>Palmital</strong>, 19970-000, Brasil</p>
+					<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
+					<a href="#contato" style="background-color: #cecece;">Fale conosco</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<aside id="topo" class="Aside">
+
+	<div class="Aside-background">
+
+		<div class="Aside-background-rect"></div>
+
+	</div>
+
+	<div class="Aside-inner">
+
+		<header class="Header Aside-header">
+
+			<div class="Header-background"></div>
+
+			<div class="Header-inner container">
+
+				<div class="Brand Header-brand">
+
+					<div class="Logo Logo--header Brand-logo Header-logo">
+
+						<div class="Logo-select-area">
+
+							<div id="logo" class="Logo-inner"></div>
+
+						</div>
+
+					</div>
+
+					<div class="BrandTitle Brand-title">
+
+						<!-- Proxima nova (fw900) -->
+						<h2 class="BrandTitle-title tk-proxima-nova">
+							<span>CITODON</span>
+						</h2>
+
+						<!-- Proxima nova condensed (fw300) -->
+						<p class="BrandTitle-subtitle tk-proxima-nova-condensed">
+							<span>Centro Integrado de Tratamento Odontológico</span>
+						</p>
+
+					</div>
+
+					<p class="BrandTitle-subtitle  tk-proxima-nova-condensed">
+						Centro Integrado de<br/> Tratamento Odontológico
+					</p>
+
+				</div>
+
+				<nav class="Nav Header-nav">
+
+					<div class="Nav-background"></div>
+
+					<div class="Nav-inner">
+
+						<div id="nav-item-health-plans" class="NavItem Popover-toggle">
+
+							<a class="NavItem-select-area">
+
+								<span>Convênios</span>
+
+								<div class="NavItem-icon">
+
+									<span class="icon-arrow_drop_down"></span>
+
+								</div>
+
+							</a>
+
+							<div id="popover-health-plans" class="Popover Popover--health-plans">
+
+								<div class="Popover-backdrop"></div>
+
+								<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+									<ul class="HealthPlans-list">
+
+										<li class="HealthPlansItem">
+
+											<figure class="HealthPlansItemFigure">
+
+												<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
+
+												<figcaption class="HealthPlansItemFigure-caption">
+													Muth
+												</figcaption>
+
+											</figure>
+
+										</li>
+
+										<li class="HealthPlansItem">
+
+											<figure class="HealthPlansItemFigure">
+
+												<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
+
+												<figcaption class="HealthPlansItemFigure-caption">
+													Uniodonto
+												</figcaption>
+
+											</figure>
+
+										</li>
+
+									</ul>
+
+									<div class="Popover-footer">
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div id="nav-item-phone" class="NavItem NavItem--main NavItem--phone Popover-toggle">
+
+							<div class="Popover-backdrop"></div>
+
+							<a class="NavItem-select-area">
+
+								<span>18 3351 2377</span>
+
+								<div class="NavItem-icon">
+
+									<span class="icon-local_phone"></span>
+
+								</div>
+
+							</a>
+
+							<div id="popover-phone" class="Popover Popover--phone">
+
+								<div class="Popover-inner">
+
+									<p class="Popover-title">Agende uma Visita</p>
+
+									<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
+										Palmital</p>
+									<a href="mailto:contato@citodon.com" class="Popover-center Popover-email">contato@citodon.com</a>
+
+									<div class="Popover-footer">
+
+										<button class="Button">
+
+											<span>Envie uma mensagem!</span>
+
+										</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</nav>
+
+			</div>
+
+		</header>
+
+		<div class="Hero">
+
+			<div class="Hero-background"></div>
+
+			<div class="Hero-inner container">
+
+				<figure class="Hero-figure">
+
+					<img src="./dist/img/fachada.jpg" alt="Fachada"/>
+
+				</figure>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</aside>
+
+<main class="Main">
+
+	<section id="convenios" class="HealthPlans">
+
+		<div class="HealthPlans-background"></div>
+
+		<div class="HealthPlans-inner container">
+
+			<header class="HealthPlans-header">
+
+				<h2 class="font-pink">Convênios</h2>
+
+				<p class="header-paragraph">A Citodon oferece os melhores convênios para melhor te atender</p>
+
+			</header>
+
+			<ul class="HealthPlans-list">
+
+				<li class="HealthPlansItem">
+
+					<figure class="HealthPlansItemFigure">
+
+						<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img" />
+
+						<figcaption class="HealthPlansItemFigure-caption">
+							Muth
+						</figcaption>
+
+					</figure>
+
+				</li>
+
+				<li class="HealthPlansItem">
+
+					<figure class="HealthPlansItemFigure">
+
+						<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img" />
+
+						<figcaption class="HealthPlansItemFigure-caption">
+							Uniodonto
+						</figcaption>
+
+					</figure>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
+
+	<section id="tratamentos" class="Treatments">
+
+		<div class="Treatments-background grey-50"></div>
+
+		<div class="Treatments-inner container">
+
+			<header class="Treatments-header">
+
+				<h2 class="font-pink">Tratamentos</h2>
+
+				<p class="header-paragraph">Conheça um pouco mais sobre os tratamentos oferecidos pela Citodon</p>
+
+			</header>
+
+			<section class="TreatmentsItem TreatmentsItem--odontopediatria">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-odontopediatria"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Odontopediatria</h3>
+
+				<p>Com o tratamento adequado seu pequeno nunca terá medo de dentista</p>
+
+			</section>
+
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-periodontia"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Periodontia</h3>
+
+				<p>Escovação regular com o creme dental correto e o uso de fio dental é a melhor maneira de previnir</p>
+
+			</section>
+
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-endodontia"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Endodontia</h3>
+
+				<p>Dor intensa, febre e inchaço? Sinais que você deve consultar seu dentista</p>
+
+			</section>
+
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-protese"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Prótese</h3>
+
+				<p>Um processo todo moldado para um resultado perfeito</p>
+
+			</section>
+
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-buco"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Cirurgia e Traumatologia <wbr/>Buco-Maxilo-Facial</h3>
+
+				<p>Qualificação aliado à experiência fazem de nós uma referência</p>
+
+			</section>
+
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-dentistica"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+				<h3>Dentística</h3>
+
+				<p>Sorrir sem preocupações para uma melhor qualidade de vida</p>
+
+			</section>
+
+			<!-- Tratamento 7 (nome + descrição + img) -->
+			<section class="TreatmentsItem">
+
+				<header class="TreatmentsItemHeader">
+
+					<div class="TreatmentsItemHeader-background white"></div>
+					<div class="TreatmentsItemHeader-bubble border-pink-400"></div>
+
+					<div class="TreatmentsItemHeader-inner font-pink">
+
+						<span class="TreatmentsItemHeader-icon">
+
+							<span class="icon-implantodontia"></span>
+
+						</span>
+
+					</div>
+
+				</header>
+
+
+				<h3>Implantodontia</h3>
+
+				<p>Dando aos pacientes uma nova vida em todos os aspectos</p>
+
+			</section>
+
+		</div>
+
+	</section>
+
+	<section id="profissionais" class="Staff">
+
+		<div class="Staff-background"></div>
+
+		<div class="Staff-inner container">
+
+			<header class="Staff-header">
+
+				<h2 class="font-pink">Profissionais</h2>
+
+				<p class="header-paragraph">Uma equipe capacitada é garantia de um sorriso perfeito</p>
+
+				<figure class="Staff-figure">
+
+					<img src="./dist/img/equipe.JPG" alt="Fachada"/>
+
+				</figure>
+
+			</header>
+
+			<div class="Staff-list">
+
+				<section class="StaffMember">
+
+					<figure class="StaffMemberProfile">
+
+						<figcaption class="StaffMemberProfile-caption">
+							Dr. João Gilberto de Azevedo Filho
+						</figcaption>
+
+					</figure>
+
+					<p class="StaffMember-license">CRO/SP: 27210</p>
+
+					<ul class="StaffMember-formation">
+						<li>Graduado em Odontologia pela UNIMAR – Marília/SP</li>
+					</ul>
+
+				</section>
+
+				<section class="StaffMember">
+
+					<figure class="StaffMemberProfile">
+
+						<figcaption class="StaffMemberProfile-caption">
+							Dra. Patricia Thomé de Azevedo De La Costa
+						</figcaption>
+
+					</figure>
+
+					<p class="StaffMember-license">CRO/SP: 97141</p>
+
+					<ul class="StaffMember-formation">
+						<li>Graduada em Odontologia pela UEL – Londrina/PR</li>
+					</ul>
+
+				</section>
+
+				<section class="StaffMember">
+
+					<figure class="StaffMemberProfile">
+
+						<figcaption class="StaffMemberProfile-caption">
+							Dr. Eduardo Thomé de Azevedo
+						</figcaption>
+
+					</figure>
+
+					<p class="StaffMember-license">CRO/SP: 99506 – CRO/PR: 22071</p>
+
+					<ul class="StaffMember-formation">
+						<li>Graduado em Odontologia pela UNOPAR – Londrina/PR</li>
+					</ul>
+
+				</section>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- SOBRE -->
+	<section id="sobre" class="About pink-600 font-white">
+
+		<div class="Article">
+
+			<div class="Paragraph">
+
+				<h2>Sobre</h2>
+
+				<p></p>
+
+				<h3>Missão</h3>
+
+				<p>Oferecer ao paciente os melhores tratamentos, com o maior comprometimento, para garantir a saúde, bem estar e beleza ao sorrir.</p>
+
+				<h3>Visão</h3>
+
+				<p>Ser referência em uma Odontologia especializada e excelente qualidade para todas as pessoas, praticando com qualidade todos os conhecimentos adquiridos ao longos dos anos de estudos.</p>
+
+				<h3>Valores</h3>
+
+				<p>Paixão total pela odontologia;</p>
+				<p>Ética, honestidade e transparência;</p>
+				<p>Inovação e tecnologia;</p>
+				<p>Trabalho integrado em equipe;</p>
+				<p>Dedicação e atenção total aos pacientes;</p>
+				<p>Qualidade total em todos os processos;</p>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="contato" class="Contact">
+
+		<div class="Contact-background"></div>
+
+		<div class="Contact-inner container">
+
+			<div class="Contact-header">
+
+				<h2 class="font-pink">Contato</h2>
+
+				<p class="header-paragraph">Tem alguma duvida? Entre em contato conosco!</p>
+
+			</div>
+
+			<form id="cForm" class="ContactForm">
+
+				<div class="ContactFormField">
+
+					<label for="cName">NOME</label>
+					<input id="cName" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="cCity">CIDADE</label>
+					<input id="cCity" type="text" autocomplete="off" class="ContactFormField-input" placeholder="CIDADE"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="cPhone">TELEFONE</label>
+					<input id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="cEmail">EMAIL</label>
+					<input id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+
+				</div>
+
+				<div class="ContactFormField">
+
+					<label for="cMessage">MENSAGEM</label>
+					<textarea id="cMessage" class="ContactFormField-input ContactFormField--message" placeholder="MENSAGEM"></textarea>
+
+				</div>
+
+				<div class="ContactFormStatus">
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--sending font-light-blue-a700">
+					Enviando...
+				</span>
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--success font-light-green-a700">
+					Enviado com sucesso!
+				</span>
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--error font-red-a700">
+					Não foi possível enviar, verifique os campos e tente novamente.
+				</span>
+
+				<span class="ContactFormStatus-text ContactFormStatus-text--fail font-red-a700">
+					Houve algum problema, tentando novamente...
+				</span>
+
+				</div>
+
+				<div class="ContactFormButton">
+
+					<button id="cSubmit" type="submit" value="Enviar" class="Button Button--pink ContactFormField-button">
+
+						<span>Enviar</span>
+
+					</button>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</section>
+
+</main>
+
+<footer class="Footer">
+
+	<div class="Footer-background pink-600"></div>
+
+	<div class="Footer-inner container">
+
+		<div class="Footer-content-group Footer-content-group--left">
+
+			<div class="Footer-nav">
+
+				<ul class="Footer-nav-menu">
+
+					<li class="Footer-navItem">
+						<a href="#topo" class="MainNavItem-select-area">Início</a>
+					</li>
+
+					<li class="Footer-navItem">
+						<a href="#convenios" class="MainNavItem-select-area">Convênios</a>
+					</li>
+
+					<li class="Footer-navItem">
+						<a href="#tratamentos" class="MainNavItem-select-area">Tratamentos</a>
+					</li>
+
+					<li class="Footer-navItem">
+						<a href="#profissionais" class="MainNavItem-select-area">Profissionais</a>
+					</li>
+
+					<li class="Footer-navItem">
+						<a href="#sobre" class="MainNavItem-select-area">Sobre</a>
+					</li>
+
+					<li class="Footer-navItem">
+						<a href="#contato" class="MainNavItem-select-area">Contato</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="Footer-content-group Footer-content-group--right">
+
+			<div class="Footer-text">
+
+				<p>CITODON - Centro Integrado <br/>de Tratamento Odontológico<br/></p>
+				<p>CNPJ: 11.732.987/0001-55</p>
+				<p>(18) 3351-2377</p>
+				<p>Rua Dr. Geraldo Coelho, 162, Centro<br/> <strong>Palmital</strong>, 19970-000, Brasil</p>
+
+			</div>
+
+			<div class="Footer-social"><!--></div>
+
+		</div>
+
+		<div class="Footer-content-group Footer-content-group--center">
+
+			<div class="FooterSlogan">
+
+				<div class="Logo Logo--footer FooterSlogan-logo Footer-logo">
+
+					<a href="." class="Logo-select-area">
+
+						<span id="footer-logo" class="Logo-inner"></span>
+
+					</a>
+
+				</div>
+
+				<span class="FooterSlogan-text tk-proxima-nova-condensed">Especialistas em sorrisos</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</footer>
+
+<script src="dist/js/citodon.js"></script>
+
+<script>
+
+	var logo = new Logo(document.getElementById('logo'), 'dist/svg/CitodonLogo.svg', function () {
+
+		logo.cloneTo(document.getElementById('footer-logo'));
+
+	});
+
+	var requiredFields = document.querySelectorAll('.ContactFormField');
+
+	for (var i = requiredFields.length; i--; )
+		requiredFields[i].requiredField = new RequiredField(requiredFields[i], '.ContactFormField-input');
+
+	/* Toggle Popover Buttons */
+
+	var togglePopoverPhone = new Toggle(
+			document.getElementById('nav-item-phone'),
+			[document.getElementById('nav-item-phone')],
+			'is-hover'
+	);
+
+	var togglePopoverHealthPlans = new Toggle(
+			document.getElementById('nav-item-health-plans'),
+			[document.getElementById('nav-item-health-plans')],
+			'is-hover'
+	);
+
+</script>
+
+</body>
+
+</html>

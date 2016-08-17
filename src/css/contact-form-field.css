@@ -95,10 +95,9 @@
 /* Contact Form Field empty style */
 
 .ContactFormField.is-empty {
-	background-color: #ffcdd2;
+	background-color: #ffebee; /*red-50*/
 	border-color: #d50000;
 }
-
 
 @media (min-width: 48em) {
 
