@@ -56,7 +56,7 @@ function jump(target, options) {
 
 function initSmoothScrolling() {
 
-	var duration = 400;
+	var duration = 800;
 
 	var pageUrl = location.hash
 			? stripHash(location.href)

@@ -8,7 +8,8 @@ html {
 	scroll-behavior: smooth;
 }
 
-section:focus {
+section:focus,
+aside:focus {
 	outline: none;
 }
 
@@ -54,6 +55,7 @@ p {
     .header-paragraph {
 	    max-width: 30rem;
 		margin-bottom: 1em;
+	    line-height: 1.48;
     }
 
 }
