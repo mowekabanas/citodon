@@ -44,6 +44,12 @@
 	width: 100%;
 }
 
+/* Treatments Item link */
+
+.TreatmentsItem-link {
+	color: #03a9f4;
+}
+
 @media (min-width: 48em) {
 
 	/* Treatments Item */

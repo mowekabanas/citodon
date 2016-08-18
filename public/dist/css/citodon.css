@@ -1734,16 +1734,64 @@ p {
   margin-left: 1em;
 }
 .Popover {
-  background-color: #ffffff;
   display: none;
-  /*position: fixed;*/
-  /*top: 0;*/
-  /*left: 0;*/
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 10;
 }
 
+.Popover .Popover-body p {
+  color: #616161;
+}
+
+.Popover:hover,
+.Popover.is-hover,
+.Popover-toggle.is-hover .Popover {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.Popover-backdrop {
+  background-color: rgba(0,0,0,.36);
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.Popover-inner {
+  -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+  -moz-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+  box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+  border-radius: 2px;
+  background-color: #ffffff;
+  padding: 1em 1em 1em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  overflow-y: auto;
+  width: 16em;
+  max-height: 21em;
+}
+
 .Popover-toggle {
-  cursor: default;
+  cursor: pointer;
 }
 
 @media (min-width: 48em) {
@@ -1751,7 +1799,6 @@ p {
 
   .Popover {
     position: absolute;
-    min-width: 16em;
     -webkit-transition: all .2s .1s;
     -moz-transition: all .2s .1s;
     -ms-transition: all .2s .1s;
@@ -1763,19 +1810,17 @@ p {
     -o-transform: translateY(30px) translateX(0) scale(.8);
     transform: translateY(30px) translateX(0) scale(.8);
     opacity: 0;
-    padding: 1em 1em 1em;
     pointer-events: none;
     top: auto;
     left: auto;
     right: 0;
+    width: 18em;
+    display: block;
   }
 
   .Popover:hover,
+  .Popover.is-hover,
   .Popover-toggle.is-hover .Popover {
-    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-    -moz-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-    box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-    border-radius: 6px;
     pointer-events: auto;
     -webkit-transform: translateY(-10px) translateX(-5px) scale(1);
     -moz-transform: translateY(-10px) translateX(-5px) scale(1);
@@ -1806,16 +1851,17 @@ p {
     display: flex;
   }
 
+  .Popover-backdrop {
+    display: none;
+  }
+
   /* Popover inner */
 
   .Popover-inner {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column;
-    flex-flow: column;
+    border-radius: 6px;
+    overflow: hidden;
+    width: auto;
+    max-height: none;
   }
 
   /* Popover title */
@@ -2414,6 +2460,12 @@ p {
   font-size: 1.5em;
   margin-bottom: .5em;
   width: 100%;
+}
+
+/* Treatments Item link */
+
+.TreatmentsItem-link {
+  color: #03a9f4;
 }
 
 @media (min-width: 48em) {

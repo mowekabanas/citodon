@@ -42,7 +42,7 @@ var Logo = (function () {
 	 */
 	Logo.prototype.cloneTo = function (toElement) {
 
-		toElement.appendChild(this.viewport.cloneNode(this.viewport));
+		toElement.innerHTML = this.content;
 
 	};
 
@@ -63,7 +63,8 @@ var Logo = (function () {
 
 							try {
 
-								self.viewport.innerHTML = this.responseText;
+								self.content = this.responseText;
+								self.viewport.innerHTML = self.content;
 								if (self.fallback)
 									self.fallback();
 
