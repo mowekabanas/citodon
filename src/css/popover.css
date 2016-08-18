@@ -1,63 +1,15 @@
 
 .Popover {
-	display: block;
-	background-color: red;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	left: 0;
+	background-color: #ffffff;
+	display: none;
+	/*position: fixed;*/
+	/*top: 0;*/
+	/*left: 0;*/
 	z-index: 10;
-	-webkit-transition: all .2s .1s;
-	-moz-transition: all .2s .1s;
-	-ms-transition: all .2s .1s;
-	-o-transition: all .2s .1s;
-	transition: all .2s .1s;
-	-webkit-transform: translateY(30px) translateX(0) scale(.8);
-	-moz-transform: translateY(30px) translateX(0) scale(.8);
-	-ms-transform: translateY(30px) translateX(0) scale(.8);
-	-o-transform: translateY(30px) translateX(0) scale(.8);
-	transform: translateY(30px) translateX(0) scale(.8);
-	opacity: 0;
-	pointer-events: none;
-	/*padding: 1em 1em 1em;*/
-	padding: 1px;
-	width: 100%;
-	height: 100%;
-}
-
-.Popover:hover,
-.Popover-toggle.is-hover .Popover {
-	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-	-moz-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-	box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-	border-radius: 6px;
-	pointer-events: auto;
-	-webkit-transform: translateY(-10px) translateX(-5px) scale(1);
-	-moz-transform: translateY(-10px) translateX(-5px) scale(1);
-	-ms-transform: translateY(-10px) translateX(-5px) scale(1);
-	-o-transform: translateY(-10px) translateX(-5px) scale(1);
-	transform: translateY(-10px) translateX(-5px) scale(1);
-	-webkit-transition: all .4s;
-	-moz-transition: all .4s;
-	-ms-transition: all .4s;
-	-o-transition: all .4s;
-	transition: all .4s;
-	opacity: 1;
 }
 
 .Popover-toggle {
 	cursor: default;
-}
-
-.Popover-inner {
-	background-color: #ffffff;
-	min-width: 16em;
 }
 
 @media (min-width: 48em) {
@@ -66,7 +18,43 @@
 
 	.Popover {
 		position: absolute;
+		min-width: 16em;
+		-webkit-transition: all .2s .1s;
+		-moz-transition: all .2s .1s;
+		-ms-transition: all .2s .1s;
+		-o-transition: all .2s .1s;
+		transition: all .2s .1s;
+		-webkit-transform: translateY(30px) translateX(0) scale(.8);
+		-moz-transform: translateY(30px) translateX(0) scale(.8);
+		-ms-transform: translateY(30px) translateX(0) scale(.8);
+		-o-transform: translateY(30px) translateX(0) scale(.8);
+		transform: translateY(30px) translateX(0) scale(.8);
+		opacity: 0;
+		padding: 1em 1em 1em;
+		pointer-events: none;
+		top: auto;
+		left: auto;
 		right: 0;
+	}
+
+	.Popover:hover,
+	.Popover-toggle.is-hover .Popover {
+		-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+		-moz-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+		box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+		border-radius: 6px;
+		pointer-events: auto;
+		-webkit-transform: translateY(-10px) translateX(-5px) scale(1);
+		-moz-transform: translateY(-10px) translateX(-5px) scale(1);
+		-ms-transform: translateY(-10px) translateX(-5px) scale(1);
+		-o-transform: translateY(-10px) translateX(-5px) scale(1);
+		transform: translateY(-10px) translateX(-5px) scale(1);
+		-webkit-transition: all .4s;
+		-moz-transition: all .4s;
+		-ms-transition: all .4s;
+		-o-transition: all .4s;
+		transition: all .4s;
+		opacity: 1;
 	}
 
 	/* Popover p */

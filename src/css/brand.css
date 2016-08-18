@@ -21,13 +21,22 @@
 @media (min-width: 48em) {
 
 	.Brand {
-		margin-bottom: 0;
+		margin-bottom: 1.5em;
 		-webkit-justify-content: flex-start;
 		justify-content: flex-start;
 	}
 
 	.Brand-title {
 		padding-left: .5em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.Brand {
+		padding-left: 0;
+		margin-bottom: 0;
 	}
 
 }

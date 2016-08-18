@@ -28,81 +28,6 @@
 
 <body class="tk-proxima-nova font-grey-800 grey-100">
 
-<div class="AsideBar" style="display: none;">
-
-	<div class="AsideBar-background red"></div>
-
-	<div class="AsideBar-inner container">
-
-		<div class="HealthPlans AsideBar-health-plans">
-
-			<div class="HealthPlans-inner" onmouseover="Popover.call('healthPlans-popover').show();">
-				Convênios
-			</div>
-
-			<div id="healthPlans-popover" class="Popover top-left HealthPlans-popover">
-
-				<ul class="HealthPlans-list HealthPlans-list--header">
-
-					<li class="HealthPlansItem">
-
-						<figure class="HealthPlansItemFigure">
-
-							<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
-
-							<figcaption class="HealthPlansItemFigure-caption">
-								Muth
-							</figcaption>
-
-						</figure>
-
-					</li>
-
-					<li class="HealthPlansItem">
-
-						<figure class="HealthPlansItemFigure">
-
-							<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
-
-							<figcaption class="HealthPlansItemFigure-caption">
-								Uniodonto
-							</figcaption>
-
-						</figure>
-
-					</li>
-
-				</ul>
-
-			</div>
-
-		</div>
-
-		<div class="Contact AsideBar-contact">
-
-			<div class="Contact-inner" onmouseover="Popover.call('contact-popover').show();">
-				<p>(18) 3351-2377</p>
-			</div>
-
-			<div id="contact-popover" class="Popover Contact-popover top-right">
-
-				<div class="Contact-text">
-
-					<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
-						<strong>Palmital</strong>, 19970-000, Brasil</p>
-					<a href="mailto:contato@citodon.com" style="background-color: #cecece;">contato@citodon.com</a>
-					<a href="#contato" style="background-color: #cecece;">Fale conosco</a>
-
-				</div>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
 <aside class="Aside">
 
 	<div class="Aside-background">
@@ -159,15 +84,9 @@
 
 						<div id="nav-item-health-plans" class="NavItem Popover-toggle">
 
-							<a class="NavItem-select-area">
+							<a href="#convenios" class="NavItem-select-area">
 
 								<span>Convênios</span>
-
-								<div class="NavItem-icon">
-
-									<span class="icon-arrow_drop_down"></span>
-
-								</div>
 
 							</a>
 
@@ -223,13 +142,13 @@
 
 							<div class="Popover-backdrop"></div>
 
-							<a class="NavItem-select-area">
+							<a href="#contato" class="NavItem-select-area">
 
 								<span>18 3351 2377</span>
 
 								<div class="NavItem-icon">
 
-									<span class="icon-local_phone"></span>
+									<span class="icon-phone"></span>
 
 								</div>
 
@@ -281,6 +200,22 @@
 
 				</figure>
 
+				<div id="nav-item-how-to" class="NavItem NavItem--contrast">
+
+					<a href="https://www.google.com/maps?daddr=Rua+Doutor+Geraldo+Coelho,+162,+Palmital+-+SP,+19970-000" target="_blank" class="NavItem-select-area">
+
+						<span>Como chegar</span>
+
+						<div class="NavItem-icon">
+
+							<span class="icon-location_on"></span>
+
+						</div>
+
+					</a>
+
+				</div>
+
 			</div>
 
 		</div>
@@ -290,6 +225,56 @@
 </aside>
 
 <main class="Main">
+
+	<section id="convenios" class="HealthPlans">
+
+		<div class="HealthPlans-background"></div>
+
+		<div class="HealthPlans-inner container">
+
+			<header class="HealthPlans-header">
+
+				<h2 class="font-pink">Convênios</h2>
+
+				<p class="header-paragraph">A Citodon oferece os melhores convênios para melhor te atender</p>
+
+			</header>
+
+			<ul class="HealthPlans-list">
+
+				<li class="HealthPlansItem">
+
+					<figure class="HealthPlansItemFigure">
+
+						<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img" />
+
+						<figcaption class="HealthPlansItemFigure-caption">
+							Muth
+						</figcaption>
+
+					</figure>
+
+				</li>
+
+				<li class="HealthPlansItem">
+
+					<figure class="HealthPlansItemFigure">
+
+						<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img" />
+
+						<figcaption class="HealthPlansItemFigure-caption">
+							Uniodonto
+						</figcaption>
+
+					</figure>
+
+				</li>
+
+			</ul>
+
+		</div>
+
+	</section>
 
 	<section id="tratamentos" class="Treatments">
 
@@ -500,7 +485,7 @@
 
 				<figure class="Staff-figure">
 
-					<img src="./dist/img/equipe.JPG" alt="Fachada"/>
+					<img src="./dist/img/equipe.JPG" alt="Equipe"/>
 
 				</figure>
 
@@ -585,7 +570,7 @@
 
 				<h3>Visão</h3>
 
-				<p>Ser referência em uma Odontologia especializada e excelente qualidade para todas as pessoas, praticando com qualidade todos os conhecimentos adquiridos ao longos dos anos de estudos.</p>
+				<p>Ser referência em uma Odontologia especializada e excelente qualidade para todas as pessoas, praticando com qualidade todos os conhecimentos adquiridos ao longo dos anos de estudos.</p>
 
 				<h3>Valores</h3>
 
@@ -594,7 +579,7 @@
 				<p>Inovação e tecnologia;</p>
 				<p>Trabalho integrado em equipe;</p>
 				<p>Dedicação e atenção total aos pacientes;</p>
-				<p>Qualidade total em todos os processos;</p>
+				<p>Qualidade total em todos os processos.</p>
 
 			</div>
 
@@ -612,7 +597,7 @@
 
 				<h2 class="font-pink">Contato</h2>
 
-				<p class="header-paragraph">Tem alguma duvida? Entre em contato conosco!</p>
+				<p class="header-paragraph">Possui alguma dúvida, comentário ou sugestão? Entre em contato conosco!</p>
 
 			</div>
 
@@ -632,17 +617,21 @@
 
 				</div>
 
-				<div class="ContactFormField">
+				<div class="ContactFormField--double">
 
-					<label for="cPhone">TELEFONE</label>
-					<input id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
+					<div class="ContactFormField ContactFormField--split">
 
-				</div>
+						<label for="cPhone">TELEFONE</label>
+						<input id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
 
-				<div class="ContactFormField">
+					</div>
 
-					<label for="cEmail">EMAIL</label>
-					<input id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+					<div class="ContactFormField ContactFormField--split">
+
+						<label for="cEmail">EMAIL</label>
+						<input id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+
+					</div>
 
 				</div>
 
@@ -680,60 +669,10 @@
 						<span>Enviar</span>
 
 					</button>
-					
+
 				</div>
 
 			</form>
-
-		</div>
-
-	</section>
-
-	<section id="convenios" class="HealthPlans grey-100">
-
-		<div class="HealthPlans-background"></div>
-
-		<div class="HealthPlans-inner container">
-
-			<header class="HealthPlans-header">
-
-				<h2 class="font-pink">Convênios</h2>
-
-				<p class="header-paragraph">A Citodon oferece os melhores convênios para melhor te atender</p>
-
-			</header>
-
-			<ul class="HealthPlans-list">
-
-				<li class="HealthPlansItem">
-
-					<figure class="HealthPlansItemFigure">
-
-						<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img" />
-
-						<figcaption class="HealthPlansItemFigure-caption">
-							Muth
-						</figcaption>
-
-					</figure>
-
-				</li>
-
-				<li class="HealthPlansItem">
-
-					<figure class="HealthPlansItemFigure">
-
-						<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img" />
-
-						<figcaption class="HealthPlansItemFigure-caption">
-							Uniodonto
-						</figcaption>
-
-					</figure>
-
-				</li>
-
-			</ul>
 
 		</div>
 
@@ -743,7 +682,7 @@
 
 <footer class="Footer">
 
-	<div class="Footer-background"></div>
+	<div class="Footer-background pink-700"></div>
 
 	<div class="Footer-inner container">
 
@@ -754,23 +693,27 @@
 				<ul class="Footer-nav-menu">
 
 					<li class="Footer-navItem">
-						<a href="#" class="MainNavItem-select-area">Sobre</a>
+						<a href="#topo" class="MainNavItem-select-area">Início</a>
 					</li>
 
 					<li class="Footer-navItem">
-						<a href="#" class="MainNavItem-select-area">Tratamentos</a>
+						<a href="#convenios" class="MainNavItem-select-area">Convênios</a>
 					</li>
 
 					<li class="Footer-navItem">
-						<a href="#" class="MainNavItem-select-area">Convênios</a>
+						<a href="#tratamentos" class="MainNavItem-select-area">Tratamentos</a>
 					</li>
 
 					<li class="Footer-navItem">
-						<a href="#" class="MainNavItem-select-area">Profissionais</a>
+						<a href="#profissionais" class="MainNavItem-select-area">Profissionais</a>
 					</li>
 
 					<li class="Footer-navItem">
-						<a href="#" class="MainNavItem-select-area">Atendimento</a>
+						<a href="#sobre" class="MainNavItem-select-area">Sobre</a>
+					</li>
+
+					<li class="Footer-navItem">
+						<a href="#contato" class="MainNavItem-select-area">Contato</a>
 					</li>
 
 				</ul>
@@ -790,11 +733,7 @@
 
 			</div>
 
-			<div class="Footer-social">
-
-				<span style="background-color: #1a237e; border-radius: 2px; padding: 2px;" class="icon-social-facebook"></span>
-
-			</div>
+			<div class="Footer-social"><!--></div>
 
 		</div>
 
@@ -806,7 +745,7 @@
 
 					<a href="." class="Logo-select-area">
 
-						<span id="footer-logo" class="Logo-inner"></span>
+						<div id="footer-logo" class="Logo-inner"></div>
 
 					</a>
 

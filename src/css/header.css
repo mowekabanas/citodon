@@ -2,7 +2,6 @@
 /* Header */
 
 .Header {
-	/*height: 100%; get to fit into one view*/
 	position: relative;
 	width: 100%;
 	margin-bottom: 3em;
@@ -11,7 +10,6 @@
 /* Header background */
 
 .Header-background {
-	/*background-color: #d81b60;*/
 	height: 100%;
 	position: absolute;
 	right: 0;
@@ -61,17 +59,29 @@
 
 @media (min-width: 60em) {
 
-	.Header-inner.container {
-		padding: 0 6em;
+	/* Header */
+
+	.Header {
+		margin-bottom: 2.25em;
+	}
+
+	.Header-inner {
+		-webkit-flex-flow: row;
+		flex-flow: row;
 	}
 
 }
 
 @media (min-width: 72em) {
 
-	.Header-inner {
-		-webkit-flex-flow: row;
-		flex-flow: row;
+	/* Header */
+
+	.Header {
+		margin-bottom: 3em;
+	}
+
+	.Header-inner.container {
+		padding: 0 6em;
 	}
 
 }

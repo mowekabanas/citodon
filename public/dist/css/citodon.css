@@ -8,7 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
-section:focus {
+section:focus,
+aside:focus {
   outline: none;
 }
 
@@ -51,6 +52,7 @@ p {
   .header-paragraph {
     max-width: 30rem;
     margin-bottom: 1em;
+    line-height: 1.48;
   }
 }
 
@@ -157,7 +159,7 @@ p {
   position: relative;
   overflow: hidden;
   background-color: #d81b60;
-  height: 30em;
+  height: 100%;
 }
 
 .Aside-background-rect:after {
@@ -179,11 +181,18 @@ p {
 /* Aside inner */
 
 .Aside-inner {
-  padding-top: 6em;
+  padding-top: 3em;
   position: relative;
   z-index: 2;
   width: 100%;
-  /*height: 50em;*/
+}
+
+@media (min-width: 72em) {
+  /* Aside inner */
+
+  .Aside-inner {
+    padding-top: 6em;
+  }
 }
 /* Brand Title */
 
@@ -274,13 +283,20 @@ p {
 
 @media (min-width: 48em) {
   .Brand {
-    margin-bottom: 0;
+    margin-bottom: 1.5em;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
   }
 
   .Brand-title {
     padding-left: .5em;
+  }
+}
+
+@media (min-width: 72em) {
+  .Brand {
+    padding-left: 0;
+    margin-bottom: 0;
   }
 }
 /* Button */
@@ -325,12 +341,12 @@ p {
 }
 @font-face {
   font-family: 'citodon';
-  src: url("../font/citodon.eot?9880618");
-  src: url("../font/citodon.eot?9880618#iefix") format('embedded-opentype'),
-       url("../font/citodon.woff2?9880618") format('woff2'),
-       url("../font/citodon.woff?9880618") format('woff'),
-       url("../font/citodon.ttf?9880618") format('truetype'),
-       url("../font/citodon.svg?9880618#citodon") format('svg');
+  src: url("../font/citodon.eot?19765412");
+  src: url("../font/citodon.eot?19765412#iefix") format('embedded-opentype'),
+       url("../font/citodon.woff2?19765412") format('woff2'),
+       url("../font/citodon.woff?19765412") format('woff'),
+       url("../font/citodon.ttf?19765412") format('truetype'),
+       url("../font/citodon.svg?19765412#citodon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -343,7 +359,7 @@ p {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'citodon';
-    src: url('../font/citodon.svg?9880618#citodon') format('svg');
+    src: url('../font/citodon.svg?19765412#citodon') format('svg');
   }
 }
 */
@@ -449,7 +465,7 @@ p {
 
 /* '' */
 
-.icon-menu-1:before {
+.icon-menu:before {
   content: '\e80c';
 }
 
@@ -461,7 +477,7 @@ p {
 
 /* '' */
 
-.icon-account_balance_wallet:before {
+.icon-wallet:before {
   content: '\e80e';
 }
 
@@ -479,23 +495,23 @@ p {
 
 /* '' */
 
-.icon-local_phone:before {
+.icon-phone:before {
   content: '\e811';
 }
 
 /* '' */
 
-.icon-link:before {
-  content: '\e81e';
+.icon-insert_link:before {
+  content: '\e812';
 }
 
-/* '' */
+/* '' */
 
-.icon-down-dir:before {
-  content: '\e84e';
+.icon-location_on:before {
+  content: '\e813';
 }
 
-/* '' */
+/* '' */
 
 .icon-facebook-official:before {
   content: '\e969';
@@ -524,6 +540,12 @@ p {
   -ms-transition: border .3s, background .3s, padding .3s;
   -o-transition: border .3s, background .3s, padding .3s;
   transition: border .3s, background .3s, padding .3s;
+  width: 100%;
+}
+
+.ContactFormField--double {
+  max-width: 24em;
+  position: relative;
   width: 100%;
 }
 
@@ -610,7 +632,8 @@ p {
 /* Contact Form Field empty style */
 
 .ContactFormField.is-empty {
-  background-color: #ffcdd2;
+  background-color: #ffebee;
+  /*red-50*/
   border-color: #d50000;
 }
 
@@ -619,6 +642,27 @@ p {
 
   .ContactFormField {
     max-width: 33em;
+  }
+
+  /* Contact Form Field double */
+
+  .ContactFormField--double {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row-reverse;
+    flex-flow: row-reverse;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    max-width: 33em;
+  }
+
+  /* Contact Form Field split */
+
+  .ContactFormField--split {
+    max-width: 16em;
   }
 }
 /* Contact Form Status */
@@ -851,7 +895,6 @@ p {
 /* Footer background */
 
 .Footer-background {
-  background-color: #880e4f;
   height: 100%;
   left: 0;
   position: absolute;
@@ -1052,7 +1095,6 @@ p {
 /* Header */
 
 .Header {
-  /*height: 100%; get to fit into one view*/
   position: relative;
   width: 100%;
   margin-bottom: 3em;
@@ -1061,7 +1103,6 @@ p {
 /* Header background */
 
 .Header-background {
-  /*background-color: #d81b60;*/
   height: 100%;
   position: absolute;
   right: 0;
@@ -1108,15 +1149,27 @@ p {
 }
 
 @media (min-width: 60em) {
-  .Header-inner.container {
-    padding: 0 6em;
+  /* Header */
+
+  .Header {
+    margin-bottom: 2.25em;
+  }
+
+  .Header-inner {
+    -webkit-flex-flow: row;
+    flex-flow: row;
   }
 }
 
 @media (min-width: 72em) {
-  .Header-inner {
-    -webkit-flex-flow: row;
-    flex-flow: row;
+  /* Header */
+
+  .Header {
+    margin-bottom: 3em;
+  }
+
+  .Header-inner.container {
+    padding: 0 6em;
   }
 }
 /* Health Plans Item Figure */
@@ -1268,14 +1321,42 @@ p {
   -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
   box-shadow: 2px 2px 8px rgba(0,0,0,.3);
 }
+
+.Hero-figure {
+  display: block;
+  margin-bottom: 2.25em;
+  width: 100%;
+}
+
+/* Hero inner */
+
+.Hero-inner {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
 /* Logo */
 
 .Logo {
-  width: 8em;
+  height: 7em;
 }
 
 .Logo--footer {
   width: 6em;
+}
+
+/* Logo svg */
+
+.Logo svg {
+  height: 100%;
+  width: 6em;
+  display: block;
 }
 
 /* Logo select area */
@@ -1289,6 +1370,10 @@ p {
 
 .Logo-inner {
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 /* Logo svg */
@@ -1341,10 +1426,16 @@ p {
   position: relative;
   margin: 0 0 1em;
   /* margin bottom */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   height: 4.5em;
 }
 
 .NavItem-select-area {
+  cursor: pointer;
   -webkit-align-items: center;
   align-items: center;
   border-color: #ffffff;
@@ -1370,6 +1461,15 @@ p {
   user-select: none;
 }
 
+.NavItem--contrast .NavItem-select-area {
+  border-color: #c2185b;
+  color: #c2185b;
+}
+
+.NavItem--link .NavItem-select-area {
+  border-color: transparent;
+}
+
 .NavItem--main .NavItem-select-area,
 .NavItem:hover .NavItem-select-area,
 .NavItem-select-area:hover {
@@ -1382,6 +1482,14 @@ p {
   -webkit-box-shadow: 0 0 0 3px #ffffff;
   -moz-box-shadow: 0 0 0 3px #ffffff;
   box-shadow: 0 0 0 3px #ffffff;
+}
+
+.NavItem--contrast .NavItem-select-area:hover {
+  -webkit-box-shadow: 0 0 0 3px #c2185b;
+  -moz-box-shadow: 0 0 0 3px #c2185b;
+  box-shadow: 0 0 0 3px #c2185b;
+  background-color: #c2185b;
+  color: #ffffff;
 }
 
 .NavItem-select-area > span {
@@ -1416,6 +1524,11 @@ p {
   -o-transition: all .3s;
   transition: all .3s;
   width: 2.25em;
+}
+
+.NavItem--contrast .NavItem-icon {
+  background-color: #c2185b;
+  color: #ffffff;
 }
 
 .NavItem-select-area span + .NavItem-icon {
@@ -1458,7 +1571,7 @@ p {
   font-size: 1.3125em;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 48em) {
   /* Nav Item */
 
   .NavItem {
@@ -1621,64 +1734,16 @@ p {
   margin-left: 1em;
 }
 .Popover {
-  display: block;
-  background-color: red;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: #ffffff;
+  display: none;
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
   z-index: 10;
-  -webkit-transition: all .2s .1s;
-  -moz-transition: all .2s .1s;
-  -ms-transition: all .2s .1s;
-  -o-transition: all .2s .1s;
-  transition: all .2s .1s;
-  -webkit-transform: translateY(30px) translateX(0) scale(.8);
-  -moz-transform: translateY(30px) translateX(0) scale(.8);
-  -ms-transform: translateY(30px) translateX(0) scale(.8);
-  -o-transform: translateY(30px) translateX(0) scale(.8);
-  transform: translateY(30px) translateX(0) scale(.8);
-  opacity: 0;
-  pointer-events: none;
-  /*padding: 1em 1em 1em;*/
-  padding: 1px;
-  width: 100%;
-  height: 100%;
-}
-
-.Popover:hover,
-.Popover-toggle.is-hover .Popover {
-  -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-  -moz-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-  box-shadow: 2px 2px 6px rgba(0,0,0,.24);
-  border-radius: 6px;
-  pointer-events: auto;
-  -webkit-transform: translateY(-10px) translateX(-5px) scale(1);
-  -moz-transform: translateY(-10px) translateX(-5px) scale(1);
-  -ms-transform: translateY(-10px) translateX(-5px) scale(1);
-  -o-transform: translateY(-10px) translateX(-5px) scale(1);
-  transform: translateY(-10px) translateX(-5px) scale(1);
-  -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -ms-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
-  opacity: 1;
 }
 
 .Popover-toggle {
   cursor: default;
-}
-
-.Popover-inner {
-  background-color: #ffffff;
-  min-width: 16em;
 }
 
 @media (min-width: 48em) {
@@ -1686,7 +1751,43 @@ p {
 
   .Popover {
     position: absolute;
+    min-width: 16em;
+    -webkit-transition: all .2s .1s;
+    -moz-transition: all .2s .1s;
+    -ms-transition: all .2s .1s;
+    -o-transition: all .2s .1s;
+    transition: all .2s .1s;
+    -webkit-transform: translateY(30px) translateX(0) scale(.8);
+    -moz-transform: translateY(30px) translateX(0) scale(.8);
+    -ms-transform: translateY(30px) translateX(0) scale(.8);
+    -o-transform: translateY(30px) translateX(0) scale(.8);
+    transform: translateY(30px) translateX(0) scale(.8);
+    opacity: 0;
+    padding: 1em 1em 1em;
+    pointer-events: none;
+    top: auto;
+    left: auto;
     right: 0;
+  }
+
+  .Popover:hover,
+  .Popover-toggle.is-hover .Popover {
+    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+    -moz-box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+    box-shadow: 2px 2px 6px rgba(0,0,0,.24);
+    border-radius: 6px;
+    pointer-events: auto;
+    -webkit-transform: translateY(-10px) translateX(-5px) scale(1);
+    -moz-transform: translateY(-10px) translateX(-5px) scale(1);
+    -ms-transform: translateY(-10px) translateX(-5px) scale(1);
+    -o-transform: translateY(-10px) translateX(-5px) scale(1);
+    transform: translateY(-10px) translateX(-5px) scale(1);
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    opacity: 1;
   }
 
   /* Popover p */
@@ -1758,8 +1859,6 @@ p {
 
 /* Staff Member Profile caption */
 
-/* Treatments Item h3 */
-
 .StaffMemberProfile-caption {
   color: #2196f3;
   font-weight: 400;
@@ -1784,8 +1883,8 @@ p {
   flex-flow: column;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 1em;
-  margin-bottom: 4em;
+  padding: 2em 1em 1em;
+  margin-bottom: 4.5em;
   position: relative;
   text-align: center;
   width: 100%;

@@ -4,10 +4,16 @@
 .NavItem {
 	position: relative;
 	margin: 0 0 1em; /* margin bottom */
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 	height: 4.5em;
 }
 
 .NavItem-select-area {
+	cursor: pointer;
 	-webkit-align-items: center;
 	align-items: center;
 	border-color: #ffffff;
@@ -33,6 +39,15 @@
 	user-select: none;
 }
 
+.NavItem--contrast .NavItem-select-area {
+	border-color: #c2185b;
+	color: #c2185b;
+}
+
+.NavItem--link .NavItem-select-area {
+	border-color: transparent;
+}
+
 .NavItem--main .NavItem-select-area,
 .NavItem:hover .NavItem-select-area,
 .NavItem-select-area:hover {
@@ -45,6 +60,14 @@
 	-webkit-box-shadow: 0 0 0 3px #ffffff;
 	-moz-box-shadow: 0 0 0 3px #ffffff;
 	box-shadow: 0 0 0 3px #ffffff;
+}
+
+.NavItem--contrast .NavItem-select-area:hover {
+	-webkit-box-shadow: 0 0 0 3px #c2185b;
+	-moz-box-shadow: 0 0 0 3px #c2185b;
+	box-shadow: 0 0 0 3px #c2185b;
+	background-color: #c2185b;
+	color: #ffffff;
 }
 
 .NavItem-select-area > span {
@@ -79,6 +102,11 @@
 	-o-transition: all .3s;
 	transition: all .3s;
 	width: 2.25em;
+}
+
+.NavItem--contrast .NavItem-icon {
+	background-color: #c2185b;
+	color: #ffffff;
 }
 
 .NavItem-select-area span + .NavItem-icon {
@@ -121,7 +149,7 @@
 	font-size: 1.3125em;
 }
 
-@media (min-width: 72em) {
+@media (min-width: 48em) {
 
 	/* Nav Item */
 

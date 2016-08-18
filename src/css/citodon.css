@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'citodon';
-  src: url('../font/citodon.eot?9880618');
-  src: url('../font/citodon.eot?9880618#iefix') format('embedded-opentype'),
-       url('../font/citodon.woff2?9880618') format('woff2'),
-       url('../font/citodon.woff?9880618') format('woff'),
-       url('../font/citodon.ttf?9880618') format('truetype'),
-       url('../font/citodon.svg?9880618#citodon') format('svg');
+  src: url('../font/citodon.eot?19765412');
+  src: url('../font/citodon.eot?19765412#iefix') format('embedded-opentype'),
+       url('../font/citodon.woff2?19765412') format('woff2'),
+       url('../font/citodon.woff?19765412') format('woff'),
+       url('../font/citodon.ttf?19765412') format('truetype'),
+       url('../font/citodon.svg?19765412#citodon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'citodon';
-    src: url('../font/citodon.svg?9880618#citodon') format('svg');
+    src: url('../font/citodon.svg?19765412#citodon') format('svg');
   }
 }
 */
@@ -67,13 +67,13 @@
 .icon-protese:before { content: '\e809'; } /* '' */
 .icon-facebook:before { content: '\e80a'; } /* '' */
 .icon-instagram:before { content: '\e80b'; } /* '' */
-.icon-menu-1:before { content: '\e80c'; } /* '' */
+.icon-menu:before { content: '\e80c'; } /* '' */
 .icon-close:before { content: '\e80d'; } /* '' */
-.icon-account_balance_wallet:before { content: '\e80e'; } /* '' */
+.icon-wallet:before { content: '\e80e'; } /* '' */
 .icon-arrow_upward:before { content: '\e80f'; } /* '' */
 .icon-arrow_drop_down:before { content: '\e810'; } /* '' */
-.icon-local_phone:before { content: '\e811'; } /* '' */
-.icon-link:before { content: '\e81e'; } /* '' */
-.icon-down-dir:before { content: '\e84e'; } /* '' */
+.icon-phone:before { content: '\e811'; } /* '' */
+.icon-insert_link:before { content: '\e812'; } /* '' */
+.icon-location_on:before { content: '\e813'; } /* '' */
 .icon-facebook-official:before { content: '\e969'; } /* '' */
 .icon-twitter:before { content: '\e978'; } /* '' */

@@ -14,3 +14,23 @@
 	-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.3);
 	box-shadow: 2px 2px 8px rgba(0,0,0,.3);
 }
+
+.Hero-figure {
+	display: block;
+	margin-bottom: 2.25em;
+	width: 100%;
+}
+
+/* Hero inner */
+
+.Hero-inner {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+}
