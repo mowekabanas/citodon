@@ -84,6 +84,11 @@ dist.js = {
 	location: dist.location + 'js/'
 };
 
+dist.images = {
+	content: '*.*',
+	location: dist.location + 'img/'
+};
+
 // CSS
 
 gulp.task('css', function() {
@@ -136,7 +141,16 @@ gulp.task('resizePhotos', function () {
 			height : 960,
 			upscale : false
 		}))
-		.pipe(gulp.dest(dist.location + source.images.largePhotos.location));
+		.pipe(gulp.dest(dist.location + source.images.location));
+});
+
+gulp.task('resizeLargePhotos', function () {
+	gulp.src("src/img/largePhotos/*.*")
+		.pipe(imageResize({
+			height : 960,
+			upscale : false
+		}))
+		.pipe(gulp.dest(dist.images.location));
 });
 
 gulp.task('tinyPhotosSource', function () {
