@@ -454,78 +454,61 @@ var Popover = (function () {
 	 * Popover constructor
 	 * @constructor
 	 */
-	function Popover(element) {
+	function Popover(element, toggleList) {
 
 		var self = this;
 
 		this.element = element;
+		this.toggleList = toggleList;
 
-		this.isShown = true;
+		this.onToggleClick = function (event) {
 
-		try {
+			self.element.classList.add('is-hover');
 
-			this.element.addEventListener('mouseleave', function () {
+		};
 
-				self.hide();
+		this.onCloseClick = function (event) {
 
-			});
+			self.element.classList.remove('is-hover');
 
-		} catch (e) {}
+		};
+
+		this.onBackdropTouch = function (event) {
+
+			self.element.classList.remove('is-hover');
+
+		};
+
+		if (element)
+			this.init();
 
 	}
 
-	Popover.prototype.show = function () {
+	Popover.prototype.addListeners = function () {
 
-		this.isShown = true;
+		for (var i = this.toggleList.length; i--; )
+			this.toggleList[i].addEventListener('click', this.onToggleClick, false);
 
-		try {
+		if (this.close)
+			this.close.addEventListener('click', this.onCloseClick, false);
 
-			this.element.classList.add('is-shown');
-
-		} catch (e) {}
-
-	};
-
-	Popover.prototype.hide = function () {
-
-		this.isShown = false;
-
-		try {
-
-			this.element.classList.remove('is-shown');
-
-		} catch (e) {}
+		if (this.backdrop)
+			this.backdrop.addEventListener('touchstart', this.onBackdropTouch, false);
 
 	};
 
-	Popover.prototype.toggle = function () {
+	Popover.prototype.getElements = function () {
 
-		if (this.isShown)
-			this.hide();
-		else
-			this.show();
+		this.close = this.element.querySelector('.Popover-close');
+		this.backdrop = this.element.querySelector('.Popover-backdrop');
 
 	};
 
-	Popover.call = function (id) {
+	Popover.prototype.init = function () {
 
-		var popover = document.getElementById(id);
+		this.getElements();
 
-		try {
-
-			if (popover.classList.contains('Popover')) {
-
-				return new Popover(popover);
-
-			}
-
-		} catch (e) {
-
-			return false;
-
-		}
-
-		return false;
+		this.addListeners();
 
 	};
 
@@ -680,8 +663,6 @@ var Toggle = (function () {
 
 		this.onMouseOut = function (event) {
 
-			console.log(event);
-
 			self.inactive();
 
 		};
@@ -694,9 +675,10 @@ var Toggle = (function () {
 
 		this.onTouchStart = function (event) {
 
+			console.log('asdfapsdfoi');
+
 			self.toggle();
 
-			console.log(event);
 
 		};
 

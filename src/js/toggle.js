@@ -25,8 +25,6 @@ var Toggle = (function () {
 
 		this.onMouseOut = function (event) {
 
-			console.log(event);
-
 			self.inactive();
 
 		};
@@ -39,9 +37,10 @@ var Toggle = (function () {
 
 		this.onTouchStart = function (event) {
 
+			console.log('asdfapsdfoi');
+
 			self.toggle();
 
-			console.log(event);
 
 		};
 

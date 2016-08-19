@@ -2,23 +2,31 @@
 /* Button */
 
 .Button {
-	background-color: #03a9f4;
-	border: solid 2px #03a9f4;
-	border-radius: 6px;
-	color: #ffffff;
+	background-color: transparent;
+	border: none;
+	border-radius: 2px;
+	color: #2196f3;
 	cursor: pointer;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 	max-width: 16em;
-	padding: 1em;
+	height: 2.25em;
+	padding: 0 1em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 500;
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-	width: 100%;
 }
 
 .Button:hover {
-	background-color: #29b6f6;
+	background-color: #eeeeee;
 }
 
 .Button span {
@@ -30,12 +38,12 @@
 /* Button pink */
 
 .Button--pink {
-	background-color: #c2185b !important;
+	background-color: #c2185b;
 	border: solid 2px #c2185b;
 	padding: .75em;
 	border-radius: 4px;
 }
 
 .Button--pink:hover {
-	background-color: #e91e63 !important;
+	background-color: #e91e63;
 }

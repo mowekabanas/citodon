@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="">
 <meta charset="UTF-8">
-<title>Popover</title>
+<title>Clínica Citodon - Palmital</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<meta name="theme-color" content="#b71c1c" />
+<script>
+	(function(d) {
+		var config = {
+					kitId: 'dvx8ndj',
+					scriptTimeout: 6000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="dist/css/citodon.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -14,126 +26,256 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 
-<style>
+<body class="tk-proxima-nova font-grey-800 grey-100">
 
-	.Popover {
-		width: 300px;
-		height: 300px;
-		opacity: 0;
-		position: absolute;
-		-webkit-transition: opacity .3s;
-		-moz-transition: opacity .3s;
-		-ms-transition: opacity .3s;
-		-o-transition: opacity .3s;
-		transition: opacity .3s;
-	}
+<main class="Main">
 
-	.Popover.is-shown {
-		opacity: 1;
-	}
+	<section id="tratamentos" class="Treatments">
 
-</style>
+		<div class="Treatments-background grey-50"></div>
 
-<body>
+		<div class="Treatments-inner container">
 
-<button onmouseover="Popover.call('popover').show();">AQUI!</button>
+			<section class="TreatmentsItem TreatmentsItem--odontopediatria">
 
-<div id="popover" class="Popover red">
+				<a id="popover-odontopediatria-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
 
-</div>
+				<div id="popover-odontopediatria" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>Engana-se também quem acha que as visitas devem acontecer somente após o nascimento dos primeiros dentinhos. A primeira visita deve ocorrer ainda na gestação, onde os dentes já começam a se formar, para orientações sobre a higiene bucais até o nascimento dos "dentinhos de leite", que ocorrem geralmente entre o sexto e oitavo mês de idade.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="TreatmentsItem TreatmentsItem--periodontia">
+
+				<a id="popover-periodontia-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
+
+				<div id="popover-periodontia" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>A doença periodontal é causada por bactérias que atacam os tecidos que envolvem os dentes. Má higienização é um dos fatores que favorecem o acumulo de resíduos e bactérias, fazendo com que haja uma inflamação da gengiva que podem resultar em perda dental, do osso alveolar e consequentemente a dificuldade em possíveis futuros implantes. O uso de creme dental, escova adequada e o fio dental, é a maneira mais fácil de prevenir. O tratamento consiste na raspagem dos dentes para remoção do cálculo e placa bacteriana.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="TreatmentsItem TreatmentsItem--endodontia">
+
+				<a id="popover-endodontia-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
+
+				<div id="popover-endodontia" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>Popularmente conhecido como "tratamento de canal", trata as lesões do "nervo" do dente. O tratamento, que pode ser feito em uma ou mais sessões dependendo do caso, consiste na remoção da polpa que se encontra na parte interna do dente, chamado de "canal". Após isso, ele é preenchido com material adequado.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="TreatmentsItem TreatmentsItem--protese">
+
+				<a id="popover-protese-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
+
+				<div id="popover-protese" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>Cuida da recuperação das coroas dentais e da reparação de espaços decorrentes da perda de dentes. Especialização na confecção de coroas, próteses dentárias fixas, removíveis ou próteses totais e de próteses sobre implantes.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="TreatmentsItem TreatmentsItem--buco">
+
+				<a id="popover-buco-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
+
+				<div id="popover-buco" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>O cirurgião bucomaxilofacial é um profissional da Odontologia que trata de doenças e tumores da boca, corrige anomalias faciais como maxilar ou mandíbula muito grande, pequena ou desviada para os lados (assimetrias). Além disso, é ele quem cuida dos enxertos para reposição de osso perdido ou atrofiado na boca (maxilar e mandíbula), podendo também realizar implantes dentários. Está apto a tratar de casos mais complexos de reconstruções, traumas e fraturas faciais. Dores faciais (na ATM) e problemas de apneia do sono também estão dentro da sua área de atuação.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="TreatmentsItem TreatmentsItem--dentistica">
+
+				<a id="popover-dentistica-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
+
+				<div id="popover-dentistica" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>Basicamente consiste em toda a parte estética, estrutural e funcional dentária que pode ser afetada por diversos fatores que vão desde cáries a traumas. Além da beleza estética, a dentística também foca na estrutura e funcionalidade dos dentes, devolvendo ao paciente a confiança na mastigação e para um sorriso.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="TreatmentsItem TreatmentsItem--implantodontia">
+
+				<a id="popover-implantodontia-toggle" class="Popover-toggle TreatmentsItem-link">Ler mais</a>
+
+				<div id="popover-implantodontia" class="Popover Popover--health-plans">
+
+					<div class="Popover-backdrop"></div>
+
+					<div class="Popover-inner HealthPlans HealthPlans--popover">
+
+						<div class="Popover-body">
+
+							<p>A implantodontia é a especialidade odontológica que reestabelece a função mastigatória devido a falta de um ou mais dentes. Em pequeno procedimento cirurgico, um "pino de titânio" é fixado ao osso para servir de suporte aos dentes artificiais, dando ao paciente mais segurança na mastigação, fala e estética.</p>
+
+						</div>
+
+						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+
+	</section>
+
+</main>
+
+<script src="dist/js/citodon.js"></script>
 
 <script>
 
-	/* Popover */
+	var popoverOdontopediatria = new Popover(
+			document.getElementById('popover-odontopediatria'),
+			[document.getElementById('popover-odontopediatria-toggle')]
+	);
 
-	var Popover = (function () {
+	var popoverPeriodontia = new Popover(
+			document.getElementById('popover-periodontia'),
+			[document.getElementById('popover-periodontia-toggle')]
+	);
 
-		/**
-		 * Popover constructor
-		 * @constructor
-		 */
-		function Popover(element) {
+	var popoverEndodontia = new Popover(
+			document.getElementById('popover-endodontia'),
+			[document.getElementById('popover-endodontia-toggle')]
+	);
 
-			var self = this;
+	var popoverProtese = new Popover(
+			document.getElementById('popover-protese'),
+			[document.getElementById('popover-protese-toggle')]
+	);
 
-			this.element = element;
+	var popoverBuco = new Popover(
+			document.getElementById('popover-buco'),
+			[document.getElementById('popover-buco-toggle')]
+	);
 
-			this.isShown = true;
+	var popoverDentistica = new Popover(
+			document.getElementById('popover-dentistica'),
+			[document.getElementById('popover-dentistica-toggle')]
+	);
 
-			try {
-
-				this.element.addEventListener('mouseout', function () {
-
-					self.hide();
-
-				});
-
-			} catch (e) {}
-
-		}
-
-		Popover.prototype.show = function () {
-
-			this.isShown = true;
-
-			try {
-
-				this.element.classList.add('is-shown');
-
-			} catch (e) {}
-
-		};
-
-		Popover.prototype.hide = function () {
-
-			this.isShown = false;
-
-			try {
-
-				this.element.classList.remove('is-shown');
-
-			} catch (e) {}
-
-		};
-
-		Popover.prototype.toggle = function () {
-
-			if (this.isShown)
-				this.hide();
-			else
-				this.show();
-
-		};
-
-		Popover.call = function (id) {
-
-			var popover = document.getElementById(id);
-
-			try {
-
-				if (popover.classList.contains('Popover')) {
-
-					return new Popover(popover);
-
-				}
-
-			} catch (e) {
-
-				return false;
-
-			}
-
-			return false;
-
-		};
-
-		return Popover;
-
-	})();
-
-</script>
-
-<script>
+	var popoverImplantodontia = new Popover(
+			document.getElementById('popover-implantodontia'),
+			[document.getElementById('popover-implantodontia-toggle')]
+	);
 
 </script>
 

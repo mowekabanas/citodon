@@ -90,57 +90,9 @@
 
 							</a>
 
-							<div id="popover-health-plans" class="Popover Popover--health-plans">
-
-								<div class="Popover-backdrop"></div>
-
-								<div class="Popover-inner HealthPlans HealthPlans--popover">
-
-									<ul class="HealthPlans-list">
-
-										<li class="HealthPlansItem">
-
-											<figure class="HealthPlansItemFigure">
-
-												<img src="dist/img/muth.png" alt="Muth" class="HealthPlansItemFigure-img">
-
-												<figcaption class="HealthPlansItemFigure-caption">
-													Muth
-												</figcaption>
-
-											</figure>
-
-										</li>
-
-										<li class="HealthPlansItem">
-
-											<figure class="HealthPlansItemFigure">
-
-												<img src="dist/img/uniodonto.png" alt="Uniodonto" class="HealthPlansItemFigure-img">
-
-												<figcaption class="HealthPlansItemFigure-caption">
-													Uniodonto
-												</figcaption>
-
-											</figure>
-
-										</li>
-
-									</ul>
-
-									<div class="Popover-footer">
-
-									</div>
-
-								</div>
-
-							</div>
-
 						</div>
 
 						<div id="nav-item-phone" class="NavItem NavItem--main NavItem--phone Popover-toggle">
-
-							<div class="Popover-backdrop"></div>
 
 							<a href="#contato" class="NavItem-select-area">
 
@@ -153,30 +105,6 @@
 								</div>
 
 							</a>
-
-							<div id="popover-phone" class="Popover Popover--phone">
-
-								<div class="Popover-inner">
-
-									<p class="Popover-title">Agende uma Visita</p>
-
-									<p>Rua Dr. Geraldo Coelho, 162, Centro<br/>
-										Palmital</p>
-									<a href="mailto:contato@citodon.com" class="Popover-center Popover-email">contato@citodon.com</a>
-
-									<div class="Popover-footer">
-
-										<button class="Button">
-
-											<span>Envie uma mensagem!</span>
-
-										</button>
-
-									</div>
-
-								</div>
-
-							</div>
 
 						</div>
 
@@ -329,6 +257,8 @@
 
 						<div class="Popover-footer">
 
+							<button class="Button Popover-close">Fechar</button>
+
 						</div>
 
 					</div>
@@ -375,6 +305,8 @@
 						</div>
 
 						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
 
 						</div>
 
@@ -423,6 +355,8 @@
 
 						<div class="Popover-footer">
 
+							<button class="Button Popover-close">Fechar</button>
+
 						</div>
 
 					</div>
@@ -469,6 +403,8 @@
 						</div>
 
 						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
 
 						</div>
 
@@ -517,6 +453,8 @@
 
 						<div class="Popover-footer">
 
+							<button class="Button Popover-close">Fechar</button>
+
 						</div>
 
 					</div>
@@ -563,6 +501,8 @@
 						</div>
 
 						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
 
 						</div>
 
@@ -611,6 +551,8 @@
 						</div>
 
 						<div class="Popover-footer">
+
+							<button class="Button Popover-close">Fechar</button>
 
 						</div>
 
@@ -929,48 +871,41 @@
 	for (var i = requiredFields.length; i--; )
 		requiredFields[i].requiredField = new RequiredField(requiredFields[i], '.ContactFormField-input');
 
-	/* Toggle Popover Buttons */
+	/* Popovers */
 
-	var popoverOdontopediatria = new Toggle(
-			document.getElementById('popover-odontopediatria-toggle'),
-			[document.getElementById('popover-odontopediatria')],
-			'is-hover'
+	var popoverOdontopediatria = new Popover(
+			document.getElementById('popover-odontopediatria'),
+			[document.getElementById('popover-odontopediatria-toggle')]
 	);
 
-	var popoverPeriodontia = new Toggle(
-			document.getElementById('popover-periodontia-toggle'),
-			[document.getElementById('popover-periodontia')],
-			'is-hover'
+	var popoverPeriodontia = new Popover(
+			document.getElementById('popover-periodontia'),
+			[document.getElementById('popover-periodontia-toggle')]
 	);
 
-	var popoverEndodontia = new Toggle(
-			document.getElementById('popover-endodontia-toggle'),
-			[document.getElementById('popover-endodontia')],
-			'is-hover'
+	var popoverEndodontia = new Popover(
+			document.getElementById('popover-endodontia'),
+			[document.getElementById('popover-endodontia-toggle')]
 	);
 
-	var popoverProtese = new Toggle(
-			document.getElementById('popover-protese-toggle'),
-			[document.getElementById('popover-protese')],
-			'is-hover'
+	var popoverProtese = new Popover(
+			document.getElementById('popover-protese'),
+			[document.getElementById('popover-protese-toggle')]
 	);
 
-	var popoverBuco = new Toggle(
-			document.getElementById('popover-buco-toggle'),
-			[document.getElementById('popover-buco')],
-			'is-hover'
+	var popoverBuco = new Popover(
+			document.getElementById('popover-buco'),
+			[document.getElementById('popover-buco-toggle')]
 	);
 
-	var popoverDentistica = new Toggle(
-			document.getElementById('popover-dentistica-toggle'),
-			[document.getElementById('popover-dentistica')],
-			'is-hover'
+	var popoverDentistica = new Popover(
+			document.getElementById('popover-dentistica'),
+			[document.getElementById('popover-dentistica-toggle')]
 	);
 
-	var popoverImplantodontia = new Toggle(
-			document.getElementById('popover-implantodontia-toggle'),
-			[document.getElementById('popover-implantodontia')],
-			'is-hover'
+	var popoverImplantodontia = new Popover(
+			document.getElementById('popover-implantodontia'),
+			[document.getElementById('popover-implantodontia-toggle')]
 	);
 
 </script>
