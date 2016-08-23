@@ -1,5 +1,5 @@
 
-/* Mowe Logo 1.0 */
+/* Mowe Logo 1.6 */
 
 var Logo = (function () {
 

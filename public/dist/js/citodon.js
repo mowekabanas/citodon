@@ -473,7 +473,7 @@ var Popover = (function () {
 
 		};
 
-		this.onToggleClick = function (event) {
+		this.onToggleTouch = function (event) {
 
 			self.active();
 
@@ -512,9 +512,10 @@ var Popover = (function () {
 
 		for (var i = this.toggleList.length; i--; ) {
 
+
 			this.toggleList[i].addEventListener('mouseover', this.onToggleMouseOver, false);
 			this.toggleList[i].addEventListener('mouseout', this.onToggleMouseOut, false);
-			this.toggleList[i].addEventListener('click', this.onToggleClick, false);
+			this.toggleList[i].addEventListener('touchstart', this.onToggleTouch, false);
 
 		}
 
@@ -703,8 +704,6 @@ var Toggle = (function () {
 		};
 
 		this.onTouchStart = function (event) {
-
-			console.log('asdfapsdfoi');
 
 			self.toggle();
 

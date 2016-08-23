@@ -37,8 +37,6 @@ var Toggle = (function () {
 
 		this.onTouchStart = function (event) {
 
-			console.log('asdfapsdfoi');
-
 			self.toggle();
 
 
