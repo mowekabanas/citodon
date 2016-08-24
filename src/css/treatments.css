@@ -5,7 +5,6 @@
 	padding: 3em 0;
 	position: relative;
 	text-align: center;
-	overflow: hidden;
 }
 
 /* Treatments background */
@@ -51,6 +50,7 @@
 	flex-flow: row wrap;
 	-webkit-justify-content: flex-start;
 	justify-content: flex-start;
+	overflow: hidden;
 	position: relative;
 	width: 100%;
 }

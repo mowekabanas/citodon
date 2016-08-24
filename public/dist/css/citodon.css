@@ -2583,6 +2583,7 @@ p {
   flex-flow: row wrap;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
+  overflow: hidden;
   position: relative;
   width: 100%;
 }
