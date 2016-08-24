@@ -5,6 +5,7 @@
 	padding: 3em 0;
 	position: relative;
 	text-align: center;
+	overflow: hidden;
 }
 
 /* Treatments background */
