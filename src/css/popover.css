@@ -108,8 +108,9 @@
 		opacity: 0;
 		pointer-events: none;
 		top: 0;
-		left: auto;
-		width: 18em;
+		left: 50%;
+		margin-left: -10em;
+		width: 20em;
 		display: block;
 		height: auto;
 	}

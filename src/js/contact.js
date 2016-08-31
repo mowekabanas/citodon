@@ -1,154 +1,168 @@
 
-/* Contact */
+	/* Contact */
 
-var Contact = (function () {
+	/* Contact email manipulation */
 
-	/**
-	 * Contact constructor
-	 * @constructor
-	 */
-	function Contact() {
+	var formSentCount = 0;
+	var formSentCountLimit = 2;
 
-		/* Contact email manipulation */
+	var requestURL = 'http://service.elbit.com.br/mailman/citodon/';
+	var formLocked = false;
 
-		var formSentCount = 0;
-		var formSentCountLimit = 2;
+	var form = {
+		viewport: document.getElementById('cForm')
+	};
 
-		var requestURL = 'http://mailman.letsmowe.com/citodon/';
-		var formLocked = false;
+	form.fields = {};
+	form.sendButton = {};
 
-		var form = {
-			viewport: document.getElementById('cForm')
-		};
+	form.fields.cName = document.getElementById('cName');
+	form.fields.cCity = document.getElementById('cCity');
+	form.fields.cPhone = document.getElementById('cPhone');
+	form.fields.cEmail = document.getElementById('cEmail');
+	form.fields.cMessage = document.getElementById('cMessage');
+	form.sendButton.viewport = document.getElementById('cSubmit');
+	// form.fields.cAddress = document.getElementById('cAddress');
 
-		form.fields = {};
-		form.sendButton = {};
+	form.states = [
+		'is-error',
+		'is-fail',
+		'is-sending',
+		'is-success'
+	];
 
-		form.fields.cName = document.getElementById('cName');
-		form.fields.cCity = document.getElementById('cCity');
-		form.fields.cPhone = document.getElementById('cPhone');
-		form.fields.cEmail = document.getElementById('cEmail');
-		form.fields.cMessage = document.getElementById('cMessage');
-		form.sendButton.viewport = document.getElementById('cSubmit');
-		// form.fields.cAddress = document.getElementById('cAddress');
+	form.changeState = function (state) {
 
-		form.states = [
-			'is-error',
-			'is-fail',
-			'is-sending',
-			'is-success'
-		];
+		if (form.viewport) {
 
-		form.changeState = function (state) {
+			for (var i = form.states.length; i--; )
+				form.viewport.classList.remove(form.states[i])
 
-			if (form.viewport) {
+			form.viewport.classList.add(state);
 
-				for (var i = form.states.length; i--; )
-					form.viewport.classList.remove(form.states[i])
+		}
 
-				form.viewport.classList.add(state);
+	};
 
-			}
+	// send the ajax request
+	form.sendRequest = function(requestData) {
 
-		};
+		if (requestData) {
 
-		// send the ajax request
-		form.sendRequest = function(requestData) {
+			// vanilla js
+			var xhr = new XMLHttpRequest();
 
-			if (requestData) {
+			// "beforeSend"
+			formLocked = true;
+			form.changeState('is-sending');
 
-				// ajax request
-				$.ajax({
-					cache: false,
-					crossDomain: true,
-					data: requestData,
-					method: 'get',
-					beforeSend: function() {
-						formLocked = true;
-						form.changeState('is-sending');
-					},
-					error: function (data) {
-						console.log(data);
-						form.changeState('is-fail');
-						form.send(requestData, 5000);
-					},
-					success: function (data) {
-						console.log(data);
-						if (data.sent)
-							form.changeState('is-success');
-						else
-							form.changeState('is-error');
-						formLocked = false;
-					},
-					timeout: 12000,
-					url: requestURL
-				});
+			xhr.ontimeout = function (e) {
+				console.log(e);
+				form.changeState('is-fail');
+			};
 
-			}
+			xhr.onerror = function() {
+				form.changeState('is-error');
+				//form.send(requestData, 5000);
+			};
 
-		};
+			xhr.onreadystatechange = function(e) {
 
-		// control the time delay to init the ajax request
-		form.send = function(requestData, delay) {
+				if (xhr.readyState == 4) {
 
-			if (requestData) {
-
-				if (delay) {
-					setTimeout(function() {
-						form.sendRequest(requestData);
-					}, delay)
-				} else {
-					form.sendRequest(requestData);
-				}
-
-			}
-
-		};
-
-		// form submit button listener
-		form.sendButton.viewport.addEventListener('click', function (ev) {
-
-			ev.preventDefault();
-
-			if (!formLocked) {
-
-				if (formSentCount < formSentCountLimit) {
-
-					var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
-
-					if (allow) {
-
-						// lock the form
-						formLocked = true;
-
-						// count the request
-						formSentCount++;
-
-						// get object data
-						var requestData = {
-							cName: form.fields.cName.value,
-							cPhone: form.fields.cPhone.value,
-							cEmail: form.fields.cEmail.value,
-							cAddress: "",
-							cCity: form.fields.cCity.value,
-							cMessage: form.fields.cMessage.value
-						};
-
-						// send
-						form.send(requestData, false);
-
+					if (xhr.status == 200) {
+						console.log(xhr.responseText);
+						form.changeState('is-success');
 					} else {
 						form.changeState('is-error');
 					}
 
 				}
 
+				formLocked = false;
+
+			};
+
+			xhr.withCredentials = true;
+			xhr.open('GET', requestURL + "?" + form.requestParams(requestData), true);
+			xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhr.timeout = 12000;
+
+			xhr.send(null);
+
+		}
+
+	};
+
+	// transform object into uri string
+	form.requestParams = function (requestData) {
+
+		var y = '', e = encodeURIComponent;
+
+		for (var x in requestData) {
+			y += '&' + e(x) + '=' + e(requestData[x]);
+		}
+
+		//&_t= ==> equals to cache: false;
+		return y.slice(1) + '&_t=' + new Date().getTime();
+
+	};
+
+	// control the time delay to init the ajax request
+	form.send = function(requestData, delay) {
+
+		if (requestData) {
+
+			if (delay) {
+				setTimeout(function() {
+					form.sendRequest(requestData);
+				}, delay)
+			} else {
+				form.sendRequest(requestData);
 			}
 
-		});
+		}
 
-	}
+	};
 
-	return Contact;
+	// form submit button listener
+	form.sendButton.viewport.addEventListener('click', function (ev) {
 
-})();
+		ev.preventDefault();
+
+		if (!formLocked) {
+
+			if (formSentCount < formSentCountLimit) {
+
+				var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
+
+				if (allow) {
+
+					// lock the form
+					formLocked = true;
+
+					// count the request
+					formSentCount++;
+
+					// get object data
+					var requestData = {
+						cName: form.fields.cName.value,
+						cPhone: form.fields.cPhone.value,
+						cEmail: form.fields.cEmail.value,
+						cAddress: "",
+						cCity: form.fields.cCity.value,
+						cMessage: form.fields.cMessage.value
+					};
+
+					// send
+					form.send(requestData, false);
+
+				} else {
+					form.changeState('is-error');
+				}
+
+			}
+
+		}
+
+	});

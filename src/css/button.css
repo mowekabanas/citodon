@@ -30,7 +30,7 @@
 }
 
 .Button span {
-	font-weight: 700;
+	font-weight: 500;
 	line-height: 1.36;
 	font-size: 1.125em;
 }
@@ -40,8 +40,8 @@
 .Button--pink {
 	background-color: #c2185b;
 	border: solid 2px #c2185b;
-	padding: .75em;
 	border-radius: 4px;
+	color: #fff;
 }
 
 .Button--pink:hover {

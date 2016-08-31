@@ -17,7 +17,7 @@
 </script>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
-<link rel="stylesheet" href="dist/css/citodon.css"/>
+<link rel="stylesheet" href="dist/css/citodon.min.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -36,7 +36,7 @@
 
 	</div>
 
-	<div class="Aside-inner">
+	<div id="topo" class="Aside-inner">
 
 		<header class="Header Aside-header">
 
@@ -634,7 +634,7 @@
 
 					</figure>
 
-					<p class="StaffMember-license">CRO/SP: 99506 – CRO/PR: 22071</p>
+					<p class="StaffMember-license">CRO/SP: 99506</p>
 
 					<ul class="StaffMember-formation">
 						<li>Graduado em Odontologia pela UNOPAR – Londrina/PR</li>
@@ -701,14 +701,14 @@
 				<div class="ContactFormField">
 
 					<label for="cName">NOME</label>
-					<input id="cName" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
+					<input value="cristiano" id="cName" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
 
 				</div>
 
 				<div class="ContactFormField">
 
 					<label for="cCity">CIDADE</label>
-					<input id="cCity" type="text" autocomplete="off" class="ContactFormField-input" placeholder="CIDADE"/>
+					<input value="palmital" id="cCity" type="text" autocomplete="off" class="ContactFormField-input" placeholder="CIDADE"/>
 
 				</div>
 
@@ -716,15 +716,15 @@
 
 					<div class="ContactFormField ContactFormField--split">
 
-						<label for="cPhone">TELEFONE</label>
-						<input id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
+						<label for="cEmail">EMAIL</label>
+						<input value="email@cristiano.com" id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
 
 					</div>
 
 					<div class="ContactFormField ContactFormField--split">
 
-						<label for="cEmail">EMAIL</label>
-						<input id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
+						<label for="cPhone">TELEFONE</label>
+						<input value="1822212121" id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
 
 					</div>
 
@@ -856,7 +856,7 @@
 
 </footer>
 
-<script src="dist/js/citodon.js"></script>
+<script src="dist/js/citodon.min.js"></script>
 
 <script>
 
