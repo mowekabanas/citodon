@@ -570,22 +570,6 @@ p {
   height: 6em;
 }
 
-/* Contact Form send button (submit) */
-
-/* TEMPORARY STYLED */
-
-/*.ContactFormField--submit {*/
-
-/*background-color: #9e9e9e !important;*/
-
-/*border-radius: .25em;*/
-
-/*margin-top: .5em;*/
-
-/*padding: .5em;*/
-
-/*}*/
-
 /* Contact Form Field input textarea */
 
 .ContactFormField input,
@@ -650,6 +634,36 @@ p {
   background-color: #ffebee;
   /*red-50*/
   border-color: #d50000;
+}
+
+/* Webkit fallback (hide placeholder on input focus) */
+
+.ContactFormField :focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* Contact Form Field empty input/textarea style */
+
+.ContactFormField.is-empty  :-moz-placeholder {
+  color: rgba(213,0,0,0.5);
+}
+
+/* ff 18- */
+
+.ContactFormField.is-empty  :-ms-input-placeholder {
+  color: rgba(213,0,0,0.5);
+}
+
+.ContactFormField.is-empty  ::-webkit-input-placeholder {
+  color: rgba(213,0,0,0.5);
+}
+
+/* Contact Form Field empty input/textarea style (general) */
+
+.ContactFormField.is-empty input,
+.ContactFormField.is-empty textarea {
+  color: #d50000;
+  /*red-a700*/
 }
 
 @media (min-width: 48em) {
@@ -1204,12 +1218,21 @@ p {
 /* Health Plans Item Figure img */
 
 .HealthPlansItemFigure-img {
+  max-height: 6em;
   margin-bottom: 1em;
 }
 
 .HealthPlans--popover .HealthPlansItemFigure-img {
   width: 100%;
   margin-bottom: .5em;
+}
+
+@media (min-width: 48em) {
+  /* Health Plans Item Figure img */
+
+  .HealthPlansItemFigure-img {
+    max-height: 5em;
+  }
 }
 /* HealthPlans Item */
 
@@ -1991,48 +2014,40 @@ p {
   font-size: 1.125em;
   font-weight: 400;
   line-height: 1.4;
-  max-width: 18em;
   margin-bottom: .275em;
 }
+
+/* StaffMember formation list */
+
+.StaffMember ul {
+  padding: .275em 0;
+}
+
+/* StaffMember formation items */
 
 .StaffMember ul li {
   color: #757575;
   font-size: 1.125em;
   font-weight: 400;
   line-height: 1.4;
-  max-width: 18em;
+  margin-bottom: .5em;
 }
 
 @media (min-width: 48em) {
   /* Staff Member */
 
   .StaffMember {
-    max-width: 50%;
+    max-width: 60%;
   }
 }
 
 @media (min-width: 60em) {
   /* Staff Member */
 
-  /*three columns*/
-
-  /*.StaffMember {*/
-
-  /*width: auto;*/
-
-  /*margin: 0 1% 1em 1%;*/
-
-  /*}*/
-}
-
-@media (min-width: 72em) {
-  /* Staff Member */
-
-  /*.StaffMember {*/
-
-  /*max-width: %;*/
-
-  /*}*/
+  .StaffMember {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
 }
 /* Staff */
 

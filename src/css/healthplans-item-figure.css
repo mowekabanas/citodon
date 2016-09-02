@@ -21,10 +21,21 @@
 /* Health Plans Item Figure img */
 
 .HealthPlansItemFigure-img {
+	max-height: 6em;
 	margin-bottom: 1em;
 }
 
 .HealthPlans--popover .HealthPlansItemFigure-img {
 	width: 100%;
 	margin-bottom: .5em;
+}
+
+@media (min-width: 48em) {
+
+	/* Health Plans Item Figure img */
+
+	.HealthPlansItemFigure-img {
+		max-height: 5em;
+	}
+
 }

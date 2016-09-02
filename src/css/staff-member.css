@@ -32,16 +32,23 @@
 	font-size: 1.125em;
 	font-weight: 400;
 	line-height: 1.4;
-	max-width: 18em;
 	margin-bottom: .275em;
 }
+
+/* StaffMember formation list */
+
+.StaffMember ul {
+	padding: .275em 0;
+}
+
+/* StaffMember formation items */
 
 .StaffMember ul li {
 	color: #757575;
 	font-size: 1.125em;
 	font-weight: 400;
 	line-height: 1.4;
-	max-width: 18em;
+	margin-bottom: .5em;
 }
 
 @media (min-width: 48em) {
@@ -49,29 +56,19 @@
 	/* Staff Member */
 
 	.StaffMember {
-		max-width: 50%;
+		max-width: 60%;
 	}
 
 }
 
 @media (min-width: 60em) {
 
-	/* Staff Member */
-
-	/*three columns*/
-	/*.StaffMember {*/
-		/*width: auto;*/
-		/*margin: 0 1% 1em 1%;*/
-	/*}*/
-
-}
-
-@media (min-width: 72em) {
 
 	/* Staff Member */
 
-	/*.StaffMember {*/
-		/*max-width: %;*/
-	/*}*/
+	.StaffMember {
+		padding-right: 3em;
+		padding-left: 3em;
+	}
 
 }
