@@ -11,7 +11,7 @@
 	var formSentCount = 0;
 	var formSentCountLimit = 2;
 
-	var requestURL = 'http://service.elbit.com.br/mailman/citodon';
+	var requestURL = 'http://service.elbit.com.br/mailman/citodon/';
 	var formLocked = false;
 
 	var form = {
