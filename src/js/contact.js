@@ -6,7 +6,7 @@
 	var formSentCount = 0;
 	var formSentCountLimit = 2;
 
-	var requestURL = 'http://service.elbit.com.br/mailman/citodon/';
+	var requestURL = 'https://mailman-server-rtirhisruv.now.sh/mailman/citodon';
 	var formLocked = false;
 
 	var form = {
@@ -41,6 +41,15 @@
 			form.viewport.classList.add(state);
 
 		}
+
+	};
+
+	form.changeStateError = function (state, msg) {
+
+		this.changeState(state);
+
+		if (state == "is-error")
+			form.viewport.querySelector(".ContactFormStatus-text--error").innerText = msg;
 
 	};
 
@@ -83,12 +92,12 @@
 
 			};
 
-			xhr.withCredentials = true;
-			xhr.open('GET', requestURL + "?" + form.requestParams(requestData), true);
+			//xhr.withCredentials = true;
+			xhr.open('GET', requestURL + "?" + form.requestParams(requestData));
 			xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-			xhr.timeout = 12000;
+			xhr.timeout = 10000;
 
-			xhr.send(null);
+			xhr.send();
 
 		}
 
@@ -134,17 +143,41 @@
 
 			if (formSentCount < formSentCountLimit) {
 
-				var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
+				var allow = true;
+				var msg = "";
+
+				/* Form input validation */
+
+				if (form.fields.cName.value && form.fields.cCity.value && form.fields.cMessage.value) {
+
+					if (form.fields.cPhone.value || form.fields.cEmail.value) {
+
+						if (!form.fields.cPhone.parentNode.classList.contains("is-error") && !form.fields.cEmail.parentNode.classList.contains("is-error")) {
+
+							allow = true;
+
+						} else {
+							msg = "Não foi possível enviar, informe os dados corretamente.";
+							allow = false;
+						}
+
+					} else {
+						msg = "Não foi possível enviar, informe pelos menos um email ou um telefone.";
+						allow = false;
+					}
+
+				} else {
+					msg = "Não foi possível enviar, preencha os campos e tente novamente.";
+					allow = false;
+				}
+
+				// var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cMessage.value);
 
 				if (allow) {
 
-					// lock the form
 					formLocked = true;
-
-					// count the request
 					formSentCount++;
 
-					// get object data
 					var requestData = {
 						cName: form.fields.cName.value,
 						cPhone: form.fields.cPhone.value,
@@ -154,14 +187,44 @@
 						cMessage: form.fields.cMessage.value
 					};
 
-					// send
 					form.send(requestData, false);
 
 				} else {
-					form.changeState('is-error');
+					form.changeStateError('is-error', msg);
 				}
 
 			}
+
+			// if (formSentCount < formSentCountLimit) {
+			//
+			// 	var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
+			//
+			// 	if (allow) {
+			//
+			// 		// lock the form
+			// 		formLocked = true;
+			//
+			// 		// count the request
+			// 		formSentCount++;
+			//
+			// 		// get object data
+			// 		var requestData = {
+			// 			cName: form.fields.cName.value,
+			// 			cPhone: form.fields.cPhone.value,
+			// 			cEmail: form.fields.cEmail.value,
+			// 			cAddress: "",
+			// 			cCity: form.fields.cCity.value,
+			// 			cMessage: form.fields.cMessage.value
+			// 		};
+			//
+			// 		// send
+			// 		form.send(requestData, false);
+			//
+			// 	} else {
+			// 		form.changeState('is-error');
+			// 	}
+			//
+			// }
 
 		}
 

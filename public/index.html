@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="">
+<html lang="pt-br">
 <meta charset="UTF-8">
-<title>Clínica Citodon - Palmital</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-<meta name="theme-color" content="#b71c1c" />
+
+<title>Clínica Citodon - Palmital</title>
+
+<link rel="canonical" href="https://citodon.com.br"/>
+
+<meta name="theme-color" content="#b71c1c"/>
+<meta property="og:url" content="https://citodon.com.br">
+<meta property="og:title" content="Citodon - Palmital">
+<meta property="og:description" content="Centro Integrado de Tratamento Odontológico">
+<meta property="og:image" content="https://citodon.com.br/dist/img/meta-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:type" content="website">
+
 <script>
 	(function(d) {
 		var config = {
@@ -722,46 +735,46 @@
 
 			</div>
 
-			<form id="cForm" class="ContactForm">
+			<form id="cForm" class="ContactForm" novalidate>
 
-				<div class="ContactFormField">
+				<div class="ContactFormField" data-empty="Informe um nome" data-invalid="Informe dados válidos">
 
 					<label for="cName">NOME</label>
-					<input id="cName" type="text" autocomplete="off" class="ContactFormField-input" placeholder="NOME"/>
+					<input id="cName" type="text" autocomplete="off" spellcheck="false" class="ContactFormField-input" placeholder="Nome"/>
 
 				</div>
 
-				<div class="ContactFormField">
+				<div class="ContactFormField" data-empty="Informe uma cidade" data-invalid="Informe dados válidos">
 
 					<label for="cCity">CIDADE</label>
-					<input id="cCity" type="text" autocomplete="off" class="ContactFormField-input" placeholder="CIDADE"/>
+					<input id="cCity" type="text" autocomplete="off" spellcheck="false" class="ContactFormField-input" placeholder="Cidade"/>
 
 				</div>
 
-				<div class="ContactFormField--double">
+				<div class="ContactForm-row">
 
-					<div class="ContactFormField ContactFormField--split">
+					<div class="ContactFormField ContactFormField--split" data-field-group="communication" data-empty="Informe um email" data-invalid="Informe um email válido">
 
-						<label for="cEmail">EMAIL</label>
-						<input id="cEmail" type="email" autocomplete="off" class="ContactFormField-input" placeholder="EMAIL"/>
-
-					</div>
-
-					<div class="ContactFormField ContactFormField--split">
-
-						<label for="cPhone">TELEFONE</label>
-						<input id="cPhone" type="text" autocomplete="off" class="ContactFormField-input" placeholder="TELEFONE"/>
-
-					</div>
+					<label for="cEmail">EMAIL</label>
+					<input id="cEmail" type="email" autocomplete="off" spellcheck="false" class="ContactFormField-input" placeholder="E-mail"/>
 
 				</div>
 
-				<div class="ContactFormField">
+				<div class="ContactFormField ContactFormField--split" data-field-group="communication" data-empty="Informe um telefone" data-invalid="Informe um telefone válido">
 
-					<label for="cMessage">MENSAGEM</label>
-					<textarea id="cMessage" class="ContactFormField-input ContactFormField--message" placeholder="MENSAGEM"></textarea>
+					<label for="cPhone">TELEFONE</label>
+					<input id="cPhone" type="tel" autocomplete="off" class="ContactFormField-input" placeholder="Telefone"/>
 
 				</div>
+
+				</div>
+
+				<div class="ContactFormField" data-empty="Informe uma mensagem">
+
+				<label for="cMessage">MENSAGEM</label>
+				<textarea id="cMessage" spellcheck="false" class="ContactFormField-input ContactFormField--message" placeholder="Mensagem"></textarea>
+
+			</div>
 
 				<div class="ContactFormStatus">
 
@@ -785,7 +798,7 @@
 
 				<div class="ContactFormButton">
 
-					<button id="cSubmit" type="submit" value="Enviar" class="Button Button--pink ContactFormField-button">
+					<button id="cSubmit" type="submit" value="Enviar" class="ContactFormField-button Button Button--pink ">
 
 						<span>Enviar</span>
 
