@@ -182,3 +182,98 @@ gulp.task('serve', function () {
 });
 
 gulp.task('default', ['serve', 'css-watch', 'js-watch']);
+
+/*----------------------*/
+/* FAVICON */
+
+var realFavicon = require('gulp-real-favicon');
+var fs = require('fs');
+
+var FAVICON_DATA_FILE = 'faviconData.json';
+var MASTER_PICTURE_PATH = 'public/dist/icons/original.png';
+var DEST_ICONS = 'public/dist/icons';
+var ICONS_PREFIX = 'https://citodon.com.br/dist/icons/';
+var APP_NAME = 'Citodon - Palmital';
+var BG_COLOR = '#b91d47';
+var HTML_INJECT_FILES_PATH = 'public/meta.html';
+var HTML_INJECT_FILES_DEST = 'public';
+
+gulp.task('generate-favicon', function(done) {
+	realFavicon.generateFavicon({
+		masterPicture: MASTER_PICTURE_PATH,
+		dest: DEST_ICONS,
+		iconsPath: ICONS_PREFIX,
+		design: {
+			ios: {
+				pictureAspect: 'noChange',
+				assets: {
+					ios6AndPriorIcons: false,
+					ios7AndLaterIcons: true,
+					precomposedIcons: false,
+					declareOnlyDefaultIcon: true
+				},
+				appName: APP_NAME
+			},
+			desktopBrowser: {},
+			windows: {
+				pictureAspect: 'noChange',
+				backgroundColor: BG_COLOR,
+				onConflict: 'override',
+				assets: {
+					windows80Ie10Tile: false,
+					windows10Ie11EdgeTiles: {
+						small: false,
+						medium: true,
+						big: false,
+						rectangle: false
+					}
+				},
+				appName: APP_NAME
+			},
+			androidChrome: {
+				pictureAspect: 'shadow',
+				themeColor: BG_COLOR,
+				manifest: {
+					name: APP_NAME,
+					display: 'standalone',
+					orientation: 'notSet',
+					onConflict: 'override',
+					declared: true
+				},
+				assets: {
+					legacyIcon: false,
+					lowResolutionIcons: false
+				}
+			},
+			safariPinnedTab: {
+				pictureAspect: 'blackAndWhite',
+				threshold: 92.96875,
+				themeColor: BG_COLOR
+			}
+		},
+		settings: {
+			compression: 2,
+			scalingAlgorithm: 'Mitchell',
+			errorOnImageTooSmall: false
+		},
+		markupFile: FAVICON_DATA_FILE
+	}, function() {
+		done();
+	});
+});
+
+gulp.task('inject-favicon-markups', function() {
+	return gulp.src([HTML_INJECT_FILES_PATH])
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+		.pipe(gulp.dest(HTML_INJECT_FILES_DEST));
+});
+
+gulp.task('check-for-favicon-update', function(done) {
+	var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+	realFavicon.checkForUpdates(currentVersion, function(err) {
+		if (err) {
+			throw err;
+		}
+	});
+});
+

@@ -3,8 +3,11 @@
 
 	/* Contact email manipulation */
 
-	var formSentCount = 0;
-	var formSentCountLimit = 2;
+	var formSentCount, formSentTry;
+	var formSentCountLimit, formSentTryLimit;
+
+	formSentCount = formSentTry = 0;
+	formSentCountLimit = formSentTryLimit = 2;
 
 	var requestURL = 'https://mailman-server-rtirhisruv.now.sh/mailman/citodon';
 	var formLocked = false;
@@ -68,11 +71,13 @@
 			xhr.ontimeout = function (e) {
 				console.log(e);
 				form.changeState('is-fail');
+
+				if (formSentTry < formSentTryLimit)
+					form.send(requestData, 5000);
 			};
 
 			xhr.onerror = function() {
 				form.changeState('is-error');
-				//form.send(requestData, 5000);
 			};
 
 			xhr.onreadystatechange = function(e) {
@@ -121,6 +126,8 @@
 	form.send = function(requestData, delay) {
 
 		if (requestData) {
+
+			formSentTry++;
 
 			if (delay) {
 				setTimeout(function() {
@@ -193,38 +200,9 @@
 					form.changeStateError('is-error', msg);
 				}
 
+			} else {
+				form.changeStateError('is-error', "Limite de mensagens atingido por sessão");
 			}
-
-			// if (formSentCount < formSentCountLimit) {
-			//
-			// 	var allow = !!(form.fields.cName.value && (form.fields.cPhone.value || form.fields.cEmail.value) && form.fields.cCity.value && form.fields.cMessage.value);
-			//
-			// 	if (allow) {
-			//
-			// 		// lock the form
-			// 		formLocked = true;
-			//
-			// 		// count the request
-			// 		formSentCount++;
-			//
-			// 		// get object data
-			// 		var requestData = {
-			// 			cName: form.fields.cName.value,
-			// 			cPhone: form.fields.cPhone.value,
-			// 			cEmail: form.fields.cEmail.value,
-			// 			cAddress: "",
-			// 			cCity: form.fields.cCity.value,
-			// 			cMessage: form.fields.cMessage.value
-			// 		};
-			//
-			// 		// send
-			// 		form.send(requestData, false);
-			//
-			// 	} else {
-			// 		form.changeState('is-error');
-			// 	}
-			//
-			// }
 
 		}
 
